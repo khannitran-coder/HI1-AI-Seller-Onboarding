@@ -1,13 +1,15 @@
 # Schema tracker
 
-v0.1.0 – pilot, chưa COO duyệt. [CHỜ COO DUYỆT – D-04]
+v0.1.0 – pilot, chưa COO duyệt
 
-Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-04]. Enum ngoài yêu cầu gốc cần Claude/COO kiểm tra; chưa ánh xạ CMS thật [CHỜ XÁC MINH]. Không tự thêm cột để hợp thức hoá dữ liệu thiếu. Ô trống nghĩa chưa biết/chưa áp dụng, không đồng nghĩa đạt; giữ merchant_id bắt buộc.
+Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-06]. Enum ngoài yêu cầu gốc cần Claude/COO kiểm tra; chưa ánh xạ CMS thật [CHỜ XÁC MINH]. Không tự thêm cột để hợp thức hoá dữ liệu thiếu. Ô trống nghĩa chưa biết/chưa áp dụng, không đồng nghĩa đạt; giữ merchant_id và created_at bắt buộc.
 
 | Cột (đúng thứ tự) | Kiểu | Giá trị cho phép / quy tắc |
 |---|---|---|
 | merchant_id | chuỗi | Mã hồ sơ không PII; ví dụ SIM-001; bắt buộc |
 | source_channel | chuỗi | Tên kênh trong danh mục đã duyệt; chưa có danh mục thì để trống |
+| created_at | thời gian | Thời điểm nhận lead, ISO 8601 có múi giờ; bắt buộc |
+| first_contact_at | thời gian | Lần liên hệ đầu đã được duyệt gửi, ISO 8601 có múi giờ; trống nếu chưa liên hệ |
 | seller_type | enum | doanh nghiệp / hộ kinh doanh / HTX; cá nhân tự do chờ QĐ-07, không tự nhận |
 | product_category | chuỗi | Danh mục ngành hàng APPROVED; chưa có thì chờ xác minh |
 | owner_role | chuỗi | Vai trò/mã nội bộ được phân công, không tên người/SĐT |
@@ -32,4 +34,6 @@ Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-04]. Enum n
 
 Mọi cột cấm dữ liệu Đỏ. Trường tự do phải che PII, không ghi tên người/SĐT hoặc URL có token. AI chỉ đọc; nhân viên chịu trách nhiệm ghi sau duyệt. Đồng bộ Sheet–CMS chưa được thiết lập trong repo.
 
-Schema hiện chưa có created_at, lịch sử phân công/liên hệ và lịch làm việc: không đủ để tự tính tuổi hồ sơ hoặc SLA theo giờ làm việc. Không lấy status_updated_at thay thời điểm tạo; không suy tuổi từ merchant_id. Báo cáo phải ghi “Chưa có căn cứ xác nhận” nếu không có nhật ký được cấp quyền. handling_minutes do người ghi nhận thời gian thao tác, không lấy chênh lệch thời điểm bao gồm chờ.
+Tuổi hồ sơ = thời điểm chốt − created_at, quy đổi cùng múi giờ; thiếu created_at ghi “Chưa có căn cứ xác nhận”, không lấy status_updated_at thay thế hoặc suy từ merchant_id. created_at sau thời điểm chốt là lỗi dữ liệu, không trả tuổi âm. Thời gian phản hồi đầu tiên = first_contact_at − created_at; first_contact_at trống thì chưa có phản hồi đầu, không coi là 0. Mốc liên hệ trước mốc nhận lead phải chuyển người xác minh.
+
+Schema chưa có lịch sử phân công và lịch làm việc: chưa đủ để tính mọi SLA theo giờ làm việc. Không tự suy lịch làm việc. handling_minutes do người ghi nhận thời gian thao tác, không lấy chênh lệch thời điểm bao gồm chờ. Tổng cộng 25 cột; AI chỉ đọc, owner/người ghi và quyền review/nghiệm thu chờ xác nhận [CHỜ COO DUYỆT – D-06].

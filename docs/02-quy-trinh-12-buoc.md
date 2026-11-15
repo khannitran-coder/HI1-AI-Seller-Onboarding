@@ -1,6 +1,6 @@
 # Quy trình 12 bước
 
-v0.1.0 – pilot, chưa COO duyệt. [CHỜ COO DUYỆT – D-04]
+v0.1.0 – pilot, chưa COO duyệt
 
 | Bước | AI làm | Người làm | Skill dùng |
 |---|---|---|---|

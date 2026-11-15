@@ -1,6 +1,6 @@
 # Danh mục kho tri thức APPROVED
 
-v0.1.0 – pilot, chưa COO duyệt. [CHỜ COO DUYỆT – D-04]
+v0.1.0 – pilot, chưa COO duyệt
 
 Chỉ nạp tài liệu được owner xác nhận APPROVED và còn hiệu lực. Các ô tên/owner/version/ngày hiệu lực cố ý trống; chưa có tài liệu APPROVED nào được xác nhận trong gói này. Không upload bản pilot để thay nguồn duyệt.
 

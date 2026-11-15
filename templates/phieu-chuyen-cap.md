@@ -1,6 +1,6 @@
 # Nháp phiếu chuyển cấp
 
-[CHỜ COO DUYỆT – D-04] — Cấp 1: nhân viên + Trưởng nhóm; cấp 2: bộ phận chuyên môn phù hợp; cấp 3: COO.
+[CHỜ COO DUYỆT – D-05] — Cấp 1: nhân viên + Trưởng nhóm; cấp 2: bộ phận chuyên môn phù hợp; cấp 3: COO.
 
 | Trường | Nội dung |
 |---|---|

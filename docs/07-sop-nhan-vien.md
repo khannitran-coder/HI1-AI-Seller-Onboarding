@@ -1,6 +1,6 @@
 # SOP hằng ngày cho nhân viên
 
-v0.1.0 – pilot, chưa COO duyệt. [CHỜ COO DUYỆT – D-04]
+v0.1.0 – pilot, chưa COO duyệt
 
 1. Mở tracker trong phạm vi được giao; kiểm người phụ trách, việc tiếp theo, hạn đã xác nhận. Không đưa dữ liệu Đỏ vào AI; che tên/SĐT trước khi dùng gói Claude doanh nghiệp.
 2. Kiểm kho tri thức APPROVED, phiên bản và quyền truy cập. Thiếu/hết hiệu lực: dừng phần phụ thuộc, ghi “Chưa có căn cứ xác nhận”, nhờ Trưởng nhóm cập nhật nguồn.

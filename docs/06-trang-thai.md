@@ -1,8 +1,8 @@
 # Trạng thái và điều kiện vào
 
-v0.1.0 – pilot, chưa COO duyệt. [CHỜ COO DUYỆT – D-04]
+v0.1.0 – pilot, chưa COO duyệt
 
-Đây là nhãn nghiệp vụ, ánh xạ mã CMS thật **[CHỜ XÁC MINH]**. Điều kiện dưới đây là dự thảo [CHỜ COO DUYỆT – D-04]. Người cập nhật sau kiểm tra bằng chứng, không chuyển theo suy đoán của AI.
+Đây là nhãn nghiệp vụ, ánh xạ mã CMS thật **[CHỜ XÁC MINH]**. Điều kiện dưới đây là dự thảo [CHỜ COO DUYỆT – D-05]. Người cập nhật sau kiểm tra bằng chứng, không chuyển theo suy đoán của AI.
 
 | Trạng thái | Điều kiện vào |
 |---|---|

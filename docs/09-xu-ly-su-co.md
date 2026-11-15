@@ -16,7 +16,11 @@ v0.1.1 – pilot, chưa COO duyệt
 | Sửa đồng thời Sheet | Không tự gộp; đối chiếu thủ công với nguồn | Owner dùng lịch sử phiên bản/thời gian của Sheet |
 | Shop duyệt nhưng sản phẩm ẩn | Không Sẵn sàng bán; tạo việc dưới dạng nháp | Chuyển owner/kiểm duyệt |
 | Menu/giao diện App đổi phiên bản | Ngừng hướng dẫn bấm nút | Yêu cầu cập nhật ảnh hướng dẫn đã che dữ liệu |
+| Ảnh/tệp đã upload lên form CMS trước khi bấm Lưu (có thể đã ghi lên máy chủ) | AI không tự upload | Người thao tác |
+| Thông tin đăng nhập shop xuất hiện trong nhóm chat/tài liệu | AI không lặp lại, không lưu; báo Trưởng nhóm | Trưởng nhóm đổi mật khẩu |
 
 Nguồn: HI1-P1A-SOL-001 v0.1 mục §7; bảng hỏi COO mục Q9 (phiên bản chưa được cung cấp); BRD HI1-AI-BRD-SD-1.2 mục NFR-05.
 
 Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực tiếp đọc bản gốc.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ

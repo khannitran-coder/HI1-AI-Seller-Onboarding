@@ -5,9 +5,9 @@ description: "Chuẩn hoá nháp tiêu đề/mô tả từ dữ kiện nhà bán
 
 # first-product-assistant
 
-version: 0.1.1
+version: 0.1.2
 
-v0.1.1 – pilot, chưa COO duyệt
+v0.1.2 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -28,6 +28,21 @@ Tên, mô tả, giá, tồn, biến thể, đơn vị, khối lượng/kích th�
 3. Đối chiếu dữ kiện, liệt kê trường thiếu/mâu thuẫn; giá/xuất xứ mâu thuẫn thì yêu cầu nhà bán xác minh, không chọn một giá trị thay họ.
 4. Soạn tiêu đề/mô tả nháp chỉ từ dữ kiện nhất quán. Liệt kê claim cần chứng cứ: chính hãng, công dụng, chứng nhận, xuất xứ; không đưa claim chưa xác minh thành khẳng định trong nháp.
 5. Hàng có điều kiện gắn cờ đúng “Chờ kiểm tra ngành hàng”, chuyển cấp 2 ngành hàng-pháp chế. Xuất nháp, trường thiếu, claim cần chứng cứ và câu hỏi nhà bán cần xác nhận trong Tình trạng.
+
+## Khung nội dung SEO sản phẩm
+
+[CHỜ COO DUYỆT – D-04] Chỉ chuẩn hoá nháp từ dữ kiện có căn cứ, không thêm công dụng/ưu đãi/chứng nhận.
+
+- Tên: [quy cách] + [tên SP] + [thương hiệu] + [dung tích/khối lượng] - [loại SP], [công dụng chính]. Thiếu căn cứ cho thành phần nào thì liệt kê thiếu, không bịa.
+- Mô tả ngắn: một câu tiêu đề.
+- Mô tả gồm bốn mục: thông tin sản phẩm; công dụng CHỈ theo hồ sơ công bố; điểm nổi bật có chứng cứ; hướng dẫn sử dụng và bảo quản.
+- Dùng 3–4 hashtag, cuối là thương hiệu.
+- Khối lượng quy ra gam, giữ giá trị gốc để người duyệt đối chiếu (ví dụ SIM-201: 1 kg → 1000 gam); thiếu đơn vị thì hỏi, không suy đoán.
+- Ảnh vuông 1:1 là yêu cầu chuẩn bị cho người thao tác; Skill không tự upload lên CMS.
+- Khi nguồn lệch: ưu tiên hồ sơ công bố mới nhất làm nguồn đề xuất và báo người duyệt; phải xác minh phiên bản/hiệu lực, liệt kê mâu thuẫn và dừng kết luận phụ thuộc cho tới khi người duyệt xác nhận. Không tự chọn giá/tồn/xuất xứ hoặc thay dữ kiện.
+- Không chép câu quảng cáo điều trị; không suy công dụng từ lời quảng cáo trên nhãn.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
 
 Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
 

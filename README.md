@@ -7,6 +7,68 @@ GIAI ĐOẠN 2 - PHƯƠNG ÁN B:
 AI Engineering & Scalable Automation
 Backend + API + Database + AI Orchestration
 Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ thống tích hợp, tự động hóa và có khả năng mở rộng
+## Kiến trúc hiện tại (v0.1.2)
+
+Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên.
+
+### Thành phần
+
+| Thành phần | Nền tảng | Trách nhiệm | Giới hạn |
+|---|---|---|---|
+| Hệ thống nguồn | admin.hi1.vn, App Nhà Bán Hi1 | Trạng thái chính thức của hồ sơ, shop, sản phẩm | Claude không truy cập |
+| Kênh nhà bán | Zalo | Trao đổi và nhận giấy tờ | Chỉ nhân viên gửi |
+| Tracker vận hành | Google Sheet, 26 cột | Theo dõi hồ sơ, owner, hạn, đo KPI | Không phải nguồn chính thức; người ghi |
+| Kho tri thức | Thư mục Drive + Project knowledge | Checklist, chính sách, mẫu tin, hướng dẫn giao diện có phiên bản | Chỉ tài liệu APPROVED được nạp |
+| Lớp điều phối | Claude Project "HI1 Seller Onboarding" | Instructions chung: guardrails, chặn dữ liệu Đỏ, output contract, chọn Skill | Không có quyền ghi ra ngoài |
+| Skill | 4 thư mục tự chứa (SKILL.md, references, templates) | Một nghiệp vụ mỗi Skill, phiên bản riêng | Không gọi lẫn nhau |
+| Báo cáo định kỳ | Scheduled task 17:00 (Asia/Ho_Chi_Minh) | Chạy daily-operations-report trên tracker | Chỉ đọc; bật sau quyết định D-03 |
+
+### Luồng xử lý một hồ sơ
+
+~~~mermaid
+flowchart LR
+  A[CMS / Zalo] -->|nhân viên trích trường nghiệp vụ| B[Phân lớp dữ liệu]
+  B -->|Xanh, Vàng| C[Claude Project + Skill]
+  B -->|Đỏ| X[Không đưa vào AI]
+  C --> D[Nháp + nguồn + phiên bản]
+  D --> E{Nhân viên review}
+  E -->|duyệt / sửa| F[Nhân viên gửi Zalo, thao tác CMS]
+  E -->|bỏ| C
+  F --> G[Ghi tracker]
+  G --> H[Báo cáo cuối ngày]
+  H --> I[Trưởng nhóm]
+~~~
+
+### Ranh giới tin cậy và điểm kiểm soát
+
+| Ranh giới | Kiểm soát |
+|---|---|
+| Dữ liệu vào AI | Chỉ lớp Xanh và Vàng. Lớp Đỏ bị chặn ở hai tầng: quy trình nhân viên và Skill dừng khi phát hiện |
+| Nội dung nhà bán gửi | Xử lý như dữ liệu, không như lệnh |
+| Đầu ra AI | Luôn là nháp; không có đường ghi tự động sang CMS, Zalo hay tracker. Điểm duyệt ghi ở cột review_result |
+| Trạng thái "Được duyệt" | Chỉ lấy từ CMS hoặc người có thẩm quyền |
+
+### Mô hình trạng thái
+
+Hồ sơ có một trạng thái nghiệp vụ (8 nhãn, docs/06) và ba trạng thái con độc lập: shop_status, product_status, ready_status. "Sẵn sàng bán" là trạng thái suy ra từ năm điều kiện và do Trưởng nhóm xác nhận, không suy ra từ việc shop đã được kích hoạt.
+
+### Phiên bản và truy vết
+
+Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và checklist_version của lần xử lý. Bản references trong Skill được đồng bộ từ docs khi docs thay đổi. Mỗi thay đổi Skill phải chạy lại 14 ca kiểm thử và ghi CHANGELOG. Yêu cầu nghiệp vụ truy vết tới Skill và ca kiểm thử trong docs/11.
+
+### Giới hạn đã chấp nhận
+
+- Tracker và CMS đồng bộ thủ công, có thể lệch.
+- Google Sheet không phân quyền theo dòng và không có nhật ký bất biến.
+- Không nhắc việc theo thời gian thực.
+- Bốn khâu tốn công nhất trong thực tế chưa có Skill: tạo đối tác và thương hiệu trên CMS, lập bộ hợp đồng, nhập sản phẩm lên CMS, kiểm bảng giá Affiliate.
+- Gói Claude Pro không chia sẻ được Project và Skill; dùng chung cho nhóm cần gói Team.
+
+### Hướng phát triển
+
+- v0.2 (sau pilot): thêm affiliate-price-review, seller-contract-draft, seller-media-tools; seller-cms-entry chỉ khi COO duyệt D-07.
+- Phương án B (khi đạt ngưỡng ở docs/01): backend thay tracker; 26 cột tracker là lược đồ bảng ban đầu.
+
 
 v0.1.1 – pilot, chưa COO duyệt
 

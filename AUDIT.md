@@ -46,4 +46,4 @@ Chưa merge. Merge sau khi F1–F3 đã sửa, F7 đã xử lý và Claude kiể
 
 Còn mở: F6 – 14 ca chưa chạy trên Claude (chạy tuần 1 theo plan); F7 – repo còn public; FR-06, FR-09 chưa có Skill riêng (xử lý bằng Project instructions + kho tri thức, theo dõi khi pilot).
 
-Kết luận: Nội dung đạt để merge. Điều kiện merge còn lại: Chi chuyển repo sang private (F7).
+Kết luận: Nội dung đạt. Ngày 16/11/2026 Chi quyết định merge khi repo còn public và chuyển repo sang private ngay sau đó; F7 chuyển thành việc của Chi.

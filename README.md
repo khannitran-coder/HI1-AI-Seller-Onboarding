@@ -1,5 +1,13 @@
 # HI1 Seller Onboarding — Phương án A
 
+GIAI ĐOẠN 1 - PHƯƠNG ÁN A: Ưu tiên hiện tại AI Adoption & Rapid Production Claude Cowork + AI Skills + low-code/no-code
+Mục tiêu: Đưa AI vào quy trình Phát triển & Hỗ trợ Nhà bán đang vận hành tại HI1.
+
+GIAI ĐOẠN 2 - PHƯƠNG ÁN B:
+AI Engineering & Scalable Automation
+Backend + API + Database + AI Orchestration
+Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ thống tích hợp, tự động hóa và có khả năng mở rộng
+
 v0.1.1 – pilot, chưa COO duyệt
 
 Gói tài liệu dùng cho nhóm Phát triển & Hỗ trợ Nhà bán Hi1: Claude Cowork production-assist, mức tự chủ 3 (AI chỉ đọc và soạn nháp; người duyệt trước gửi/lưu). [CHỜ COO DUYỆT – D-01] Trạng thái **v0.1.1 – pilot, chưa COO duyệt**. Chỉ dùng giả lập SIM-xxx trước khi có nguồn và quyền được duyệt. Không có dữ liệu thật/PII trong repo.

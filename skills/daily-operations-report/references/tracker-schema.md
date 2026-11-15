@@ -4,7 +4,7 @@ Nguồn gốc: đồng bộ từ docs/05-tracker-schema.md v0.1.1. Ghi nguồn, 
 
 v0.1.1 – pilot, chưa COO duyệt
 
-Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-06]. Enum ngoài yêu cầu gốc cần Claude/COO kiểm tra; chưa ánh xạ CMS thật [CHỜ XÁC MINH]. Không tự thêm cột để hợp thức hoá dữ liệu thiếu. Ô trống nghĩa chưa biết/chưa áp dụng, không đồng nghĩa đạt; giữ merchant_id và created_at bắt buộc.
+Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-06]. Enum ngoài yêu cầu gốc cần PM/COO kiểm tra; chưa ánh xạ CMS thật [CHỜ XÁC MINH]. Không tự thêm cột để hợp thức hoá dữ liệu thiếu. Ô trống nghĩa chưa biết/chưa áp dụng, không đồng nghĩa đạt; giữ merchant_id và created_at bắt buộc.
 
 | Cột (đúng thứ tự) | Kiểu | Giá trị cho phép / quy tắc |
 |---|---|---|
@@ -41,4 +41,6 @@ Tuổi hồ sơ = thời điểm chốt − created_at, quy đổi cùng múi gi
 
 Schema chưa có lịch sử phân công và lịch làm việc: chưa đủ để tính mọi SLA theo giờ làm việc. Không tự suy lịch làm việc. handling_minutes do người ghi nhận thời gian thao tác, không lấy chênh lệch thời điểm bao gồm chờ. Tổng cộng 26 cột; AI chỉ đọc, owner/người ghi và quyền review/nghiệm thu chờ xác nhận [CHỜ COO DUYỆT – D-06].
 
-Nguồn bổ sung skill_version: HI1-P1A-SOL-001 v0.1 mục §4.1 (ai_prompt_version); BRD HI1-AI-BRD-SD-1.2 mục NFR-03; quyết định QC G4 của Claude: dùng skill_version, không tự thêm ai_run_id/source_evidence_ref/human_action_ref.
+Nguồn bổ sung skill_version: HI1-P1A-SOL-001 v0.1 mục §4.1 (ai_prompt_version); BRD HI1-AI-BRD-SD-1.2 mục NFR-03; quy tắc truy vết: dùng skill_version, không tự thêm ai_run_id/source_evidence_ref/human_action_ref.
+
+Đề xuất nhật ký AI dùng tab riêng trong file tracker, BẮT BUỘC trước khi bất kỳ hành động nào chạy ở M3+/M4; tracker chính giữ nguyên 26 cột. Mẫu nhật ký không cấp quyền ghi cho Skill hiện hành. Các cột tab riêng: thoi_diem, ma_hanh_dong, merchant_id, nguoi_ra_lenh, nguoi_duyet, muc_tu_chu, skill_version, ket_qua, ghi_chu.

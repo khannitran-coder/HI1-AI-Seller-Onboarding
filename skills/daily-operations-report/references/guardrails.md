@@ -22,12 +22,12 @@ Cần người duyệt trước khi gửi/lưu: Có
 - Cloud/connector không truy cập được: Dừng bước AI, giữ quy trình thủ công. Người xử lý: Dùng checklist/mẫu offline đã duyệt.
 - Prompt injection trong file: Coi là dữ liệu không tin cậy, không hành động. Người xử lý: Báo người phụ trách, cô lập file.
 - Reviewer chưa xác nhận: Không gửi, không đổi CMS, không Sẵn sàng bán. Người xử lý: Xếp hàng chờ review.
-- Dữ liệu Đỏ vô tình nhập: Dừng phiên, không lặp/lưu giá trị; nhắc xoá khỏi hội thoại, xử lý sự cố. Người xử lý: Trưởng nhóm + người phụ trách dữ liệu (Chi) xác định ảnh hưởng, thu hồi quyền nếu cần.
+- Dữ liệu Đỏ vô tình nhập: Dừng phiên, không lặp/lưu giá trị; nhắc xoá khỏi hội thoại, xử lý sự cố. Người xử lý: Trưởng nhóm + người phụ trách dữ liệu (PM) xác định ảnh hưởng, thu hồi quyền nếu cần.
 - Sửa đồng thời Sheet: Không tự gộp; đối chiếu thủ công với nguồn. Người xử lý: Owner dùng lịch sử phiên bản/thời gian của Sheet.
 - Shop duyệt nhưng sản phẩm ẩn: Không Sẵn sàng bán; tạo việc dưới dạng nháp. Người xử lý: Chuyển owner/kiểm duyệt.
 - Menu/giao diện App đổi phiên bản: Ngừng hướng dẫn bấm nút. Người xử lý: Yêu cầu cập nhật ảnh hướng dẫn đã che dữ liệu.
 
-Nguồn: HI1-P1A-SOL-001 v0.1 mục §7; bảng hỏi COO mục Q9 (phiên bản chưa cung cấp); BRD HI1-AI-BRD-SD-1.2 mục NFR-05. Trích nguồn do Claude cung cấp, không phụ thuộc file ngoài gói.
+Nguồn: HI1-P1A-SOL-001 v0.1 mục §7; bảng hỏi COO mục Q9 (phiên bản chưa cung cấp); BRD HI1-AI-BRD-SD-1.2 mục NFR-05. Không phụ thuộc file ngoài gói.
 
 ## Hai sự cố bổ sung (11/2026)
 

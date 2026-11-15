@@ -1,5 +1,7 @@
 # HI1 Seller Onboarding — Phương án A
 
+Tác giả: PM - TKC
+
 GIAI ĐOẠN 1 - PHƯƠNG ÁN A: Ưu tiên hiện tại AI Adoption & Rapid Production Claude Cowork + AI Skills + low-code/no-code
 Mục tiêu: Đưa AI vào quy trình Phát triển & Hỗ trợ Nhà bán đang vận hành tại HI1.
 
@@ -9,13 +11,13 @@ Backend + API + Database + AI Orchestration
 Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ thống tích hợp, tự động hóa và có khả năng mở rộng
 ## Kiến trúc hiện tại (v0.1.2)
 
-Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên.
+Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên. Mức tự chủ được quy định theo từng hành động tại docs/12; hiện tại tất cả ở M3 hoặc thấp hơn.
 
 ### Thành phần
 
 | Thành phần | Nền tảng | Trách nhiệm | Giới hạn |
 |---|---|---|---|
-| Hệ thống nguồn | admin.hi1.vn, App Nhà Bán Hi1 | Trạng thái chính thức của hồ sơ, shop, sản phẩm | Claude không truy cập |
+| Hệ thống nguồn | admin.hi1.vn, App Nhà Bán Hi1 | Trạng thái chính thức của hồ sơ, shop, sản phẩm | v0.1.x: Claude Project không truy cập – do thiết kế, không phải giới hạn kỹ thuật. Mở theo mức D-07a (chỉ đọc) / D-07b (điền trước nút Lưu), xem docs/12 |
 | Kênh nhà bán | Zalo | Trao đổi và nhận giấy tờ | Chỉ nhân viên gửi |
 | Tracker vận hành | Google Sheet, 26 cột | Theo dõi hồ sơ, owner, hạn, đo KPI | Không phải nguồn chính thức; người ghi |
 | Kho tri thức | Thư mục Drive + Project knowledge | Checklist, chính sách, mẫu tin, hướng dẫn giao diện có phiên bản | Chỉ tài liệu APPROVED được nạp |
@@ -56,6 +58,25 @@ Hồ sơ có một trạng thái nghiệp vụ (8 nhãn, docs/06) và ba trạng
 
 Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và checklist_version của lần xử lý. Bản references trong Skill được đồng bộ từ docs khi docs thay đổi. Mỗi thay đổi Skill phải chạy lại 14 ca kiểm thử và ghi CHANGELOG. Yêu cầu nghiệp vụ truy vết tới Skill và ca kiểm thử trong docs/11.
 
+### Mức tự chủ
+
+Đề xuất – chưa có hiệu lực; chưa bật quyền hay connector. [CHỜ COO DUYỆT – D-07a] [CHỜ COO DUYỆT – D-07b] [CHỜ COO DUYỆT – D-08b] [CHỜ COO DUYỆT – D-09].
+
+| Mã | Hành động | Hiện tại | Đề xuất | Quyết định |
+|---|---|---|---|---|
+| A01 | Đọc trang danh sách/trạng thái hồ sơ, shop, sản phẩm trên admin.hi1.vn | M0 | M4 | D-07a |
+| A02 | Ghi tracker các cột vận hành: status_updated_at, shop_status, product_status, last_action, next_action, contact_status, risk_flags | M0 (người ghi) | M4 | D-09 |
+| A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | M3 | M4 (tạo nháp tự động mỗi ngày, vẫn chưa gửi) | D-09 |
+| A04 | Gửi tin nhắc việc mẫu D và tin hướng dẫn mẫu H qua Zalo web | M0 | M3+ | D-09 |
+| A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | M0 | M3 | D-07b |
+| A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | M0 | M4 với bản sao, người kiểm trước khi gửi | D-08b (phạm vi hợp đồng) |
+| A07 | Bấm Lưu/Tạo mới, Duyệt, Kích hoạt, Đăng công khai, Xoá/Gộp tài khoản | M0 | M0 | Không mở |
+| A08 | Nhập mật khẩu, OTP, số tài khoản, CCCD; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | M0 | M0 | Không mở |
+
+Rủi ro đầy đủ và quy tắc nâng/hạ mức ở docs/12. Tab nhật ký AI riêng trong file tracker theo templates/nhat-ky-ai-header.csv là BẮT BUỘC trước khi bất kỳ hành động nào chạy ở M3+/M4; tracker chính giữ 26 cột.
+
+Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
+
 ### Giới hạn đã chấp nhận
 
 - Tracker và CMS đồng bộ thủ công, có thể lệch.
@@ -66,7 +87,8 @@ Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và c
 
 ### Hướng phát triển
 
-- v0.2 (sau pilot): thêm affiliate-price-review, seller-contract-draft, seller-media-tools; seller-cms-entry chỉ khi COO duyệt D-07.
+- v0.2 (sau pilot): thêm affiliate-price-review, seller-contract-draft, seller-media-tools.
+- seller-cms-entry: 07a chỉ đọc trong pilot nếu COO duyệt; 07b điền trước nút Lưu sau pilot; 07c (AI bấm Lưu/Duyệt) không làm.
 - Phương án B (khi đạt ngưỡng ở docs/01): backend thay tracker; 26 cột tracker là lược đồ bảng ban đầu.
 
 
@@ -93,24 +115,24 @@ Thiếu nguồn ghi “Chưa có căn cứ xác nhận”. [CHỜ COO DUYỆT �
 - project/: instructions và danh mục kho tri thức APPROVED còn trống thông tin xác nhận.
 - skills/: bốn thư mục Skill; seller-communication/templates/ chứa mẫu A–D.
 - templates/: header tracker đúng 26 cột và phiếu chuyển cấp.
-- tests/test-cases.md: 14 ca giả lập và tiêu chí đạt; chưa có kết quả chạy Claude.
-- CHANGELOG.md: lịch sử thay đổi; AUDIT.md: kết quả audit của Claude và điều kiện trước merge.
+- tests/test-cases.md: 14 ca giả lập và tiêu chí đạt; chưa có kết quả chạy trên Claude Project.
+- CHANGELOG.md: lịch sử thay đổi; AUDIT.md: kết quả kiểm định và điều kiện trước merge.
 
-Tài liệu quản trị, chi phí và phê duyệt do Chi giữ ở Drive, không đưa vào đây.
+Tài liệu quản trị, ngân sách và phê duyệt PM lưu nội bộ, không đưa vào đây.
 
 ## Cài đặt cho người cấu hình
 
-1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude doanh nghiệp được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
+1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Tạo Claude Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md).
 3. Đóng gói từng folder dưới skills/ thành một zip riêng, giữ SKILL.md ở gốc folder cùng references và templates nếu có. Upload/cài đủ 4 Skill dạng folder/zip trong mục Skills của giao diện hiện hành; xác minh chúng khả dụng khi dùng Project. Nếu giao diện không hỗ trợ, dừng và nhờ người cấu hình xác nhận, không giả định upload vào kho tri thức là cài Skill.
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
-7. Chạy đủ [14 ca](tests/test-cases.md), ghi kết quả thực tế. Claude audit PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
+7. Chạy đủ [14 ca](tests/test-cases.md), ghi kết quả thực tế. người kiểm định kiểm tra PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
 
-Nhãn chờ COO duyệt áp theo chủ đề: D-01 phạm vi pilot/quyền AI; D-02 phân loại dữ liệu; D-03 gói Claude/connector/task; D-04 checklist/mẫu tin/SLA; D-05 trạng thái/sẵn sàng bán/chuyển cấp; D-06 owner/schema/quyền review và nghiệm thu tracker. Các nhãn không phải bằng chứng đã phê duyệt.
+Nhãn chờ COO duyệt áp theo chủ đề: D-01 phạm vi pilot/quyền AI; D-02 phân loại dữ liệu; D-03 gói Claude Team/connector/task; D-04 checklist/mẫu tin/SLA; D-05 trạng thái/sẵn sàng bán/chuyển cấp; D-06 owner/schema/quyền review và nghiệm thu tracker. Các nhãn không phải bằng chứng đã phê duyệt.
 
-**Chưa merge:** Chi chuyển repo sang private trước khi merge theo F7 của Claude; sau khi sửa F1–F3 và xử lý F7, chờ Claude kiểm lại commit mới.
+**Chưa merge:** PM chuyển repo sang private trước khi merge theo F7; sau khi sửa F1–F3 và xử lý F7, chờ người kiểm định kiểm tra lại commit mới.
 
 ## Tài liệu vận hành bổ sung
 
@@ -119,4 +141,4 @@ Nhãn chờ COO duyệt áp theo chủ đề: D-01 phạm vi pilot/quyền AI; D
 - [Truy vết yêu cầu](docs/11-truy-vet-yeu-cau.md).
 - [Nháp phiếu bàn giao duyệt](templates/phieu-ban-giao-duyet.md), khác phiếu chuyển cấp.
 
-Bản v0.1.1 bổ sung từ trích nguồn và quyết định QC do Claude cung cấp; không tuyên bố Codex đã đọc toàn văn nguồn. 14 ca vẫn chưa chạy trên Claude. Không tự thêm trường ngoài schema 26 cột đã yêu cầu.
+Bản v0.1.1 bổ sung theo kết quả kiểm định nguồn. 14 ca vẫn chưa chạy trên Claude Project. Không tự thêm trường ngoài schema 26 cột đã yêu cầu.

@@ -42,3 +42,16 @@ Chưa có trích nội dung WF-A01…A06/ánh xạ FR trong kết quả QC đư�
 Nguồn: BRD HI1-AI-BRD-SD-1.2 mục PDHB-FR-01…15 và PDHB-BR-01…12; kết quả QC G6 của Claude (trích danh sách yêu cầu).
 
 Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực tiếp đọc bản gốc.
+
+## Khâu thực tế chưa có Skill
+
+| Khâu | Trạng thái | Phụ thuộc |
+|---|---|---|
+| Tạo đối tác/thương hiệu trên CMS | backlog v0.2 | D-07/D-08 |
+| Bộ hợp đồng + phụ lục Affiliate + bảng giá | backlog v0.2 | D-07/D-08 |
+| Nhập sản phẩm lên CMS | backlog v0.2 | D-07/D-08 |
+| Kiểm bảng giá Affiliate | backlog v0.2 | D-07/D-08 |
+
+[CHỜ COO DUYỆT – D-07] Quyền CMS; [CHỜ COO DUYỆT – D-08] quy trình bảo mật liên quan. Chưa cấp quyền hoặc triển khai các khâu này trong v0.1.2.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ

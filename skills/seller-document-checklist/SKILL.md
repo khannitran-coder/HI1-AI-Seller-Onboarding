@@ -5,9 +5,9 @@ description: "Đối chiếu danh sách tên/loại chứng từ với checklist
 
 # seller-document-checklist
 
-version: 0.1.1
+version: 0.1.2
 
-v0.1.1 – pilot, chưa COO duyệt
+v0.1.2 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -29,15 +29,25 @@ Loại hình nhà bán; ngành hàng; danh sách tài liệu đã nộp chỉ t�
 4. File lỗi/không đọc được: ghi “Chưa xác minh”, không gắn đạt/không đạt. Chỉ dùng Cần xác minh trong cột phân loại.
 5. Khi hồ sơ đủ theo checklist APPROVED hiện hành, soạn nháp phiếu templates/phieu-ban-giao-duyet.md để người có quyền chuyển duyệt; không tự quyết định. Xuất bảng mục | Đủ / Thiếu / Cần xác minh | lý do | căn cứ; đề xuất việc người cần kiểm tra, không tự gửi yêu cầu.
 
-Checklist khởi điểm từ BRD v1.0 (chưa cung cấp bản nguồn, chưa duyệt) [CHỜ COO DUYỆT – D-04]:
+Checklist thực tế của nhóm (thay checklist dự thảo trước) [CHỜ COO DUYỆT – D-04]:
 
-| Nhóm | Mục cần đối chiếu |
+| Mục | Nội dung cần kiểm |
 |---|---|
-| Pháp lý | CCCD người đại diện (chỉ có/không); ĐKKD còn hiệu lực; MST đang hoạt động; tài khoản ngân hàng đứng tên DN/HKD (chỉ có/không) |
-| Sản phẩm | Hoá đơn GTGT vào/ra; công bố chất lượng |
-| Thực phẩm/OCOP | Thêm giấy ATVSTP, chứng nhận OCOP; phạm vi áp dụng từng loại cần COO xác nhận, không tự miễn |
+| 1 | ĐKKD (PDF) |
+| 2 | Tên shop |
+| 3 | SĐT quản trị (không đổi được sau khi tạo shop – phải nhắc) |
+| 4 | Địa chỉ kho lấy hàng |
+| 5 | Logo |
+| 6 | Email |
+| 7 | Tài khoản ngân hàng đứng tên công ty, không dùng tài khoản cá nhân (chỉ kiểm có/không, không đọc số) |
+| 8 | Giấy tờ sản phẩm (công bố, chứng nhận) |
+| 9 | Bộ hợp đồng + phụ lục |
 
-Loại hình nhận dự thảo: doanh nghiệp, hộ kinh doanh, HTX. Cá nhân tự do chờ QĐ-07 [CHỜ COO DUYỆT – D-04]; dừng kết luận nhận hồ sơ, chuyển Trưởng nhóm. Checklist không phải giấy phép thu thập dữ liệu Đỏ.
+Điều kiện chủ thể [CHỜ COO DUYỆT – D-04]: doanh nghiệp, HTX hoặc hộ kinh doanh có MST và xuất được hoá đơn. Nhóm hàng thực phẩm/OCOP giữ thêm ATVSTP, chứng nhận OCOP; phạm vi áp dụng từng mục cần COO xác nhận, không tự miễn. Cá nhân tự do chưa có căn cứ nhận hồ sơ, chuyển Trưởng nhóm.
+
+Chỉ nhận danh sách tên/loại, cờ có/không và thông tin đã che; tên người/SĐT/email cá nhân dùng placeholder. Không nhận giá trị tài khoản ngân hàng hoặc ảnh giấy tờ. “Có” không xác nhận đúng chủ thể hay hợp lệ.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
 
 Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
 
@@ -67,11 +77,11 @@ Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu
 
 ## Ví dụ 1 case giả lập
 
-SIM-001, doanh nghiệp, ngành hàng giả lập thông thường, danh sách tên tài liệu thiếu công bố chất lượng, checklist_version=BRD v1.0 dự thảo. Đầu ra minh hoạ trong Tình trạng:
+SIM-001, doanh nghiệp, ngành hàng giả lập thông thường, danh sách tên tài liệu thiếu công bố chất lượng, checklist_version=checklist vận hành 11/2026 dự thảo. Đầu ra minh hoạ trong Tình trạng:
 
 | Mục | Đủ / Thiếu / Cần xác minh | Lý do | Căn cứ |
 |---|---|---|---|
-| Công bố chất lượng | Thiếu | Không có trong danh sách | BRD v1.0 dự thảo [CHỜ COO DUYỆT – D-04], Chưa có căn cứ xác nhận |
+| Công bố chất lượng | Thiếu | Không có trong danh sách | Checklist vận hành 11/2026 dự thảo [CHỜ COO DUYỆT – D-04], Chưa có căn cứ xác nhận |
 
 Thiếu/vướng: chưa có checklist APPROVED. Việc cần làm: xin nguồn hiện hành. Ai làm: nhân viên + Trưởng nhóm. Hạn: Chưa xác nhận. Khi nào chuyển cấp: thiếu nguồn sang cấp 1; ngoại lệ chính sách sang COO. Nguồn (tài liệu + phiên bản): Chưa có căn cứ xác nhận.
 

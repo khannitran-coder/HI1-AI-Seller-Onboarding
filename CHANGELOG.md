@@ -31,3 +31,14 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - Kiểm tra tĩnh: zip độc lập, frontmatter/description, schema/CSV 26 cột, đủ 15 FR/12 BR, bản sao đồng bộ, quét PII và whitespace (kết quả trong PR).
 - Chạy lại 14 ca trên Claude: chưa chạy, ghi kết quả ở tuần 1; bảng truy vết chỉ ra phạm vi chưa được ca hiện có kiểm trực tiếp.
 - Chưa có trích WF-A01…A06 hoặc toàn văn PLAN-001/v0.2 trong lần QC này; không tự dựng nội dung hoặc thêm tài liệu quản trị. Giữ điều kiện Sẵn sàng bán tại docs/06.
+
+## v0.1.2 — 2026-11-16
+
+- Người thực hiện: Codex theo yêu cầu Chi/Claude, dùng nội dung vận hành nội bộ đã lược thông tin nội bộ.
+- seller-document-checklist, seller-communication, first-product-assistant: v0.1.1 → v0.1.2. Checklist 9 mục và điều kiện chủ thể; mẫu E–I, không chứa thông tin đăng nhập; khung SEO và chuẩn bị ảnh/khối lượng.
+- Thêm 2 sự cố trong docs/09 và đồng bộ 4 bản references/guardrails.md; ghi backlog v0.2 trong docs/11.
+- daily-operations-report giữ version 0.1.1 vì quy trình không đổi; reference an toàn được đồng bộ theo F1.
+- README giữ nguyên phần giới thiệu Chi và hướng dẫn cũ; chèn nguyên văn kiến trúc v0.1.2 (chỉ chuẩn hoá Markdown).
+- Kiểm tra tĩnh: zip Skill tự chứa, YAML/description, schema 26 cột, quét chuỗi cấm/PII và whitespace; xem kết quả trong PR.
+- Chạy lại 14 ca trên Claude: chưa chạy, chờ Claude/người kiểm thực hiện; không tuyên bố đạt kiểm thử hành vi.
+- Chưa COO duyệt D-04/D-07/D-08; không triển khai quyền ghi CMS hoặc gửi tin bằng AI. Không merge, chờ Claude audit.

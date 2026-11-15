@@ -28,3 +28,10 @@ Cần người duyệt trước khi gửi/lưu: Có
 - Menu/giao diện App đổi phiên bản: Ngừng hướng dẫn bấm nút. Người xử lý: Yêu cầu cập nhật ảnh hướng dẫn đã che dữ liệu.
 
 Nguồn: HI1-P1A-SOL-001 v0.1 mục §7; bảng hỏi COO mục Q9 (phiên bản chưa cung cấp); BRD HI1-AI-BRD-SD-1.2 mục NFR-05. Trích nguồn do Claude cung cấp, không phụ thuộc file ngoài gói.
+
+## Hai sự cố bổ sung (11/2026)
+
+- Ảnh/tệp đã upload lên form CMS trước khi bấm Lưu (có thể đã ghi lên máy chủ): AI không tự upload. Người xử lý: Người thao tác.
+- Thông tin đăng nhập shop xuất hiện trong nhóm chat/tài liệu: AI không lặp lại, không lưu; báo Trưởng nhóm. Người xử lý: Trưởng nhóm đổi mật khẩu.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ

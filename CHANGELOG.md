@@ -42,3 +42,9 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - Kiểm tra tĩnh: zip Skill tự chứa, YAML/description, schema 26 cột, quét chuỗi cấm/PII và whitespace; xem kết quả trong PR.
 - Chạy lại 14 ca trên Claude: chưa chạy, chờ Claude/người kiểm thực hiện; không tuyên bố đạt kiểm thử hành vi.
 - Chưa COO duyệt D-04/D-07/D-08; không triển khai quyền ghi CMS hoặc gửi tin bằng AI. Không merge, chờ Claude audit.
+
+### Sửa F8 theo audit Claude — 2026-11-16
+
+- Người thực hiện: Codex theo yêu cầu Claude/Chi. Mẫu F dùng nguyên văn tin được cung cấp; ghi chú xác nhận hiệu lực dòng Tammi nằm trong phần không gửi.
+- Tách phần “Tin gửi nhà bán” và “Ghi chú cho nhân viên (không gửi)” ở đủ chín mẫu A–I; metadata, nhãn duyệt và ghi chú nội bộ nằm sau phân cách.
+- Kiểm tra tĩnh và quét chuỗi bí mật lại trước merge; 14 ca hành vi trên Claude vẫn chưa chạy. Giữ phiên bản đợt sửa trước merge v0.1.2.

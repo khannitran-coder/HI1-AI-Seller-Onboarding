@@ -55,3 +55,18 @@ Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực ti�
 [CHỜ COO DUYỆT – D-07] Quyền CMS; [CHỜ COO DUYỆT – D-08] quy trình bảo mật liên quan. Chưa cấp quyền hoặc triển khai các khâu này trong v0.1.2.
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+
+## Truy vết đề xuất tự chủ A01–A08
+
+Chỉ là đề xuất chưa có hiệu lực. Bốn Skill hiện hành không đổi. Đây là mã hành động, không phải mã WF-A01…A06; không suy ánh xạ workflow nguồn. Ca kiểm thử quyền mới chưa được thiết kế/chạy.
+
+| ID | Yêu cầu (1 dòng) | Bước | Skill/file | Ca test | Quyết định |
+|---|---|---|---|---|---|
+| A01 | Đọc trang danh sách/trạng thái hồ sơ, shop, sản phẩm trên admin.hi1.vn | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-07a |
+| A02 | Ghi tracker các cột vận hành: status_updated_at, shop_status, product_status, last_action, next_action, contact_status, risk_flags | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-09 |
+| A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-09 |
+| A04 | Gửi tin nhắc việc mẫu D và tin hướng dẫn mẫu H qua Zalo web | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-09 |
+| A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-07b |
+| A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-08b (phạm vi hợp đồng) |
+| A07 | Bấm Lưu/Tạo mới, Duyệt, Kích hoạt, Đăng công khai, Xoá/Gộp tài khoản | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | Không mở |
+| A08 | Nhập mật khẩu, OTP, số tài khoản, CCCD; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | Không mở |

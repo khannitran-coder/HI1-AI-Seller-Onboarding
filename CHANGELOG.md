@@ -48,3 +48,12 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - Người thực hiện: Codex theo yêu cầu Claude/Chi. Mẫu F dùng nguyên văn tin được cung cấp; ghi chú xác nhận hiệu lực dòng Tammi nằm trong phần không gửi.
 - Tách phần “Tin gửi nhà bán” và “Ghi chú cho nhân viên (không gửi)” ở đủ chín mẫu A–I; metadata, nhãn duyệt và ghi chú nội bộ nằm sau phân cách.
 - Kiểm tra tĩnh và quét chuỗi bí mật lại trước merge; 14 ca hành vi trên Claude vẫn chưa chạy. Giữ phiên bản đợt sửa trước merge v0.1.2.
+
+## v0.1.3 — 2026-11-16
+
+- Người thực hiện: Codex theo yêu cầu Chi/Claude.
+- Thêm ma trận tự chủ M0–M5, A01–A08, điều kiện nâng/hạ, nút dừng, nhật ký và rủi ro R01–R09: ĐỀ XUẤT, chưa có hiệu lực.
+- README làm rõ giới hạn theo thiết kế, mức theo hành động và lộ trình D-07a/D-07b; docs/03 trỏ đề xuất; docs/11 truy vết hành động/quyết định.
+- Không đổi hành vi hoặc version bốn Skill; không bật connector/quyền, không đổi schema tracker 26 cột. Không triển khai cơ chế nhật ký hoặc hậu kiểm trong lần này.
+- Kiểm tra tĩnh: mã hành động/quyết định, liên kết, quét chuỗi bí mật và diff whitespace; không cần chạy lại 14 ca hành vi vì chỉ sửa tài liệu, không sửa Skill.
+- Chưa merge; chờ Claude audit. Lộ trình từ M0 và cách đáp ứng ≥30 lượt thật cần COO làm rõ trước khi áp dụng; đánh giá rủi ro và người theo dõi là đề xuất.

@@ -9,13 +9,13 @@ Backend + API + Database + AI Orchestration
 Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ thống tích hợp, tự động hóa và có khả năng mở rộng
 ## Kiến trúc hiện tại (v0.1.2)
 
-Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên.
+Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên. Mức tự chủ được quy định theo từng hành động tại docs/12; hiện tại tất cả ở M3 hoặc thấp hơn.
 
 ### Thành phần
 
 | Thành phần | Nền tảng | Trách nhiệm | Giới hạn |
 |---|---|---|---|
-| Hệ thống nguồn | admin.hi1.vn, App Nhà Bán Hi1 | Trạng thái chính thức của hồ sơ, shop, sản phẩm | Claude không truy cập |
+| Hệ thống nguồn | admin.hi1.vn, App Nhà Bán Hi1 | Trạng thái chính thức của hồ sơ, shop, sản phẩm | v0.1.x: Claude không truy cập – do thiết kế, không phải giới hạn kỹ thuật. Mở theo mức D-07a (chỉ đọc) / D-07b (điền trước nút Lưu), xem docs/12 |
 | Kênh nhà bán | Zalo | Trao đổi và nhận giấy tờ | Chỉ nhân viên gửi |
 | Tracker vận hành | Google Sheet, 26 cột | Theo dõi hồ sơ, owner, hạn, đo KPI | Không phải nguồn chính thức; người ghi |
 | Kho tri thức | Thư mục Drive + Project knowledge | Checklist, chính sách, mẫu tin, hướng dẫn giao diện có phiên bản | Chỉ tài liệu APPROVED được nạp |
@@ -56,6 +56,25 @@ Hồ sơ có một trạng thái nghiệp vụ (8 nhãn, docs/06) và ba trạng
 
 Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và checklist_version của lần xử lý. Bản references trong Skill được đồng bộ từ docs khi docs thay đổi. Mỗi thay đổi Skill phải chạy lại 14 ca kiểm thử và ghi CHANGELOG. Yêu cầu nghiệp vụ truy vết tới Skill và ca kiểm thử trong docs/11.
 
+### Mức tự chủ
+
+Đề xuất – chưa có hiệu lực; chưa bật quyền hay connector. [CHỜ COO DUYỆT – D-07a] [CHỜ COO DUYỆT – D-07b] [CHỜ COO DUYỆT – D-08b] [CHỜ COO DUYỆT – D-09].
+
+| Mã | Hành động | Hiện tại | Đề xuất | Quyết định |
+|---|---|---|---|---|
+| A01 | Đọc trang danh sách/trạng thái hồ sơ, shop, sản phẩm trên admin.hi1.vn | M0 | M4 | D-07a |
+| A02 | Ghi tracker các cột vận hành: status_updated_at, shop_status, product_status, last_action, next_action, contact_status, risk_flags | M0 (người ghi) | M4 | D-09 |
+| A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | M3 | M4 (tạo nháp tự động mỗi ngày, vẫn chưa gửi) | D-09 |
+| A04 | Gửi tin nhắc việc mẫu D và tin hướng dẫn mẫu H qua Zalo web | M0 | M3+ | D-09 |
+| A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | M0 | M3 | D-07b |
+| A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | M0 | M4 với bản sao, người kiểm trước khi gửi | D-08b (phạm vi hợp đồng) |
+| A07 | Bấm Lưu/Tạo mới, Duyệt, Kích hoạt, Đăng công khai, Xoá/Gộp tài khoản | M0 | M0 | Không mở |
+| A08 | Nhập mật khẩu, OTP, số tài khoản, CCCD; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | M0 | M0 | Không mở |
+
+Rủi ro chi tiết và quy tắc nâng/hạ mức ở docs/12.
+
+Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
+
 ### Giới hạn đã chấp nhận
 
 - Tracker và CMS đồng bộ thủ công, có thể lệch.
@@ -66,7 +85,8 @@ Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và c
 
 ### Hướng phát triển
 
-- v0.2 (sau pilot): thêm affiliate-price-review, seller-contract-draft, seller-media-tools; seller-cms-entry chỉ khi COO duyệt D-07.
+- v0.2 (sau pilot): thêm affiliate-price-review, seller-contract-draft, seller-media-tools.
+- seller-cms-entry: 07a chỉ đọc trong pilot nếu COO duyệt; 07b điền trước nút Lưu sau pilot; 07c (AI bấm Lưu/Duyệt) không làm.
 - Phương án B (khi đạt ngưỡng ở docs/01): backend thay tracker; 26 cột tracker là lược đồ bảng ban đầu.
 
 

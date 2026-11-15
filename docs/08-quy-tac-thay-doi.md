@@ -14,3 +14,5 @@ Version theo từng Skill: ten-skill v0.1.0 → v0.1.1; sửa version trong thâ
 ## Đồng bộ bản đóng gói Skill
 
 Khi sửa docs/03-guardrails.md hoặc docs/05-tracker-schema.md, phải đồng bộ references tương ứng trong các Skill, kiểm tra từng zip độc lập và ghi CHANGELOG. Giữ khối chặn dữ liệu Đỏ và output contract đồng bộ giữa bốn Skill và project instructions. Khi sửa phiếu chuyển cấp, đồng bộ template trong daily-operations-report. Owner duy trì đề xuất là Chi, chờ xác nhận [CHỜ COO DUYỆT – D-06]. Thay prompt/diễn đạt do Chi sửa, Trưởng nhóm kiểm; đổi quyền/nguồn/connector cần COO quyết [CHỜ COO DUYỆT – D-03].
+
+Khi đổi ma trận sự cố, đồng bộ phần fail-safe trong references/guardrails.md của cả bốn Skill. Khi đổi phiếu bàn giao duyệt, đồng bộ templates/phieu-ban-giao-duyet.md và bản trong seller-document-checklist. Ghi version Skill thực tế sinh nháp vào skill_version; không sửa lịch sử phiên bản của nháp cũ.

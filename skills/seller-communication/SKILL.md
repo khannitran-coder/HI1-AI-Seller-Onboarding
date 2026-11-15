@@ -5,9 +5,9 @@ description: "Soạn nháp tin lịch sự theo mẫu A–D, giữ placeholder v
 
 # seller-communication
 
-version: 0.1.0
+version: 0.1.1
 
-v0.1.0 – pilot, chưa COO duyệt
+v0.1.1 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -29,11 +29,13 @@ merchant_id; trạng thái; missing_items (có thể rỗng); mẫu A–D. Mẫu
 4. Giữ [Tên NB], [Tên nhân viên], [Mã hồ sơ], [kênh chính thức], [thời điểm] khi trường tương ứng xuất hiện; các placeholder khác giữ nguyên nếu chưa có nguồn. Không điền PII. Mốc chưa xác nhận không được bịa.
 5. Đặt nháp tin trong Tình trạng, liệt kê placeholder cần người xác nhận. Nhân viên duyệt và tự gửi qua kênh chính thức.
 
+Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
+
 ### Output contract
 
 Trả đúng thứ tự sau, kể cả khi dừng hoặc thiếu nguồn:
 
-- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh]
+- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh; thêm dòng “Rủi ro:” nếu có rủi ro]
 - Thiếu/vướng: [mục thiếu, mâu thuẫn, nguồn thiếu]
 - Việc cần làm: [hành động đề xuất; không tự thực thi]
 - Ai làm: [vai trò được phân công; chưa rõ thì chờ phân công]

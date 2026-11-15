@@ -21,3 +21,13 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - Ghi nguyên kết quả Claude audit vào AUDIT.md; F7 do Chi chuyển repo sang private trước merge, chưa xác nhận hoàn tất.
 - Kiểm tra tĩnh: frontmatter, độ dài description, đường dẫn và file trong từng zip Skill, header 25 cột, bản sao đồng bộ, quét dữ liệu nhạy cảm và diff whitespace (kết quả cụ thể trong PR).
 - F6: 14 ca chưa chạy trên Claude; kết quả chạy sẽ ghi CHANGELOG ở tuần 1. Không suy kết quả hành vi từ kiểm tra tĩnh. Chưa merge, chờ Claude kiểm lại commit mới.
+
+## v0.1.1 — 2026-11-16
+
+- Người thực hiện: Codex theo kết quả QC/trích nguồn Claude do Chi cung cấp; chưa đọc trực tiếp toàn văn tài liệu nguồn.
+- G1–G6: thêm ma trận 10 sự cố, vòng đời kho tri thức, phiếu bàn giao duyệt, skill_version (26 cột), SOP một hồ sơ 8 bước và truy vết 15 FR/12 BR.
+- Bốn Skill v0.1.0 → v0.1.1; bổ sung Rủi ro trong Tình trạng nếu có, giữ contract COO; giữ phân loại dữ liệu theo v1.3 (L1/L2).
+- Đồng bộ references fail-safe/schema và template đóng gói; không sửa AUDIT.md; không đổi phần KHỚP đã được Claude xác nhận.
+- Kiểm tra tĩnh: zip độc lập, frontmatter/description, schema/CSV 26 cột, đủ 15 FR/12 BR, bản sao đồng bộ, quét PII và whitespace (kết quả trong PR).
+- Chạy lại 14 ca trên Claude: chưa chạy, ghi kết quả ở tuần 1; bảng truy vết chỉ ra phạm vi chưa được ca hiện có kiểm trực tiếp.
+- Chưa có trích WF-A01…A06 hoặc toàn văn PLAN-001/v0.2 trong lần QC này; không tự dựng nội dung hoặc thêm tài liệu quản trị. Giữ điều kiện Sẵn sàng bán tại docs/06.

@@ -5,9 +5,9 @@ description: "Đối chiếu danh sách tên/loại chứng từ với checklist
 
 # seller-document-checklist
 
-version: 0.1.0
+version: 0.1.1
 
-v0.1.0 – pilot, chưa COO duyệt
+v0.1.1 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -27,7 +27,7 @@ Loại hình nhà bán; ngành hàng; danh sách tài liệu đã nộp chỉ t�
 2. Xác nhận loại hình, ngành hàng và checklist_version có nguồn APPROVED. Không có thì chỉ minh hoạ SIM, không kết luận hồ sơ thật.
 3. Đối chiếu từng mục; phân biệt tài liệu có mặt với nội dung/hiệu lực đã được người xác minh. Tên chủ thể do người đã kiểm tra cung cấp dưới dạng mã placeholder nếu lệch: dừng, chỉ rõ tên trường lệch, không nhắc giá trị thật.
 4. File lỗi/không đọc được: ghi “Chưa xác minh”, không gắn đạt/không đạt. Chỉ dùng Cần xác minh trong cột phân loại.
-5. Xuất bảng mục | Đủ / Thiếu / Cần xác minh | lý do | căn cứ; đề xuất việc người cần kiểm tra, không tự gửi yêu cầu.
+5. Khi hồ sơ đủ theo checklist APPROVED hiện hành, soạn nháp phiếu templates/phieu-ban-giao-duyet.md để người có quyền chuyển duyệt; không tự quyết định. Xuất bảng mục | Đủ / Thiếu / Cần xác minh | lý do | căn cứ; đề xuất việc người cần kiểm tra, không tự gửi yêu cầu.
 
 Checklist khởi điểm từ BRD v1.0 (chưa cung cấp bản nguồn, chưa duyệt) [CHỜ COO DUYỆT – D-04]:
 
@@ -39,11 +39,13 @@ Checklist khởi điểm từ BRD v1.0 (chưa cung cấp bản nguồn, chưa du
 
 Loại hình nhận dự thảo: doanh nghiệp, hộ kinh doanh, HTX. Cá nhân tự do chờ QĐ-07 [CHỜ COO DUYỆT – D-04]; dừng kết luận nhận hồ sơ, chuyển Trưởng nhóm. Checklist không phải giấy phép thu thập dữ liệu Đỏ.
 
+Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
+
 ### Output contract
 
 Trả đúng thứ tự sau, kể cả khi dừng hoặc thiếu nguồn:
 
-- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh]
+- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh; thêm dòng “Rủi ro:” nếu có rủi ro]
 - Thiếu/vướng: [mục thiếu, mâu thuẫn, nguồn thiếu]
 - Việc cần làm: [hành động đề xuất; không tự thực thi]
 - Ai làm: [vai trò được phân công; chưa rõ thì chờ phân công]

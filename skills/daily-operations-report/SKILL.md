@@ -5,9 +5,9 @@ description: "Đọc tracker chỉ đọc để tổng hợp trạng thái, tu�
 
 # daily-operations-report
 
-version: 0.1.0
+version: 0.1.1
 
-v0.1.0 – pilot, chưa COO duyệt
+v0.1.1 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -32,11 +32,13 @@ Google Sheet tracker chỉ đọc đã được cấp quyền và che PII; thờ
 
 SLA pilot [CHỜ COO DUYỆT – D-04]: phân công 2h làm việc, phản hồi đầu 4h, nhắc sau 1 ngày, báo Trưởng nhóm sau 2 ngày không tiến triển. Chưa có lịch làm việc và định nghĩa ngày/giờ cho các mốc còn lại; không tự diễn giải. Chỉ minh hoạ pilot, không dùng như SLA đã duyệt hoặc cam kết.
 
+Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
+
 ### Output contract
 
 Trả đúng thứ tự sau, kể cả khi dừng hoặc thiếu nguồn:
 
-- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh]
+- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh; thêm dòng “Rủi ro:” nếu có rủi ro]
 - Thiếu/vướng: [mục thiếu, mâu thuẫn, nguồn thiếu]
 - Việc cần làm: [hành động đề xuất; không tự thực thi]
 - Ai làm: [vai trò được phân công; chưa rõ thì chờ phân công]

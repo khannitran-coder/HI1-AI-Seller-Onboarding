@@ -11,7 +11,7 @@ v0.1.0 – pilot, chưa COO duyệt
 | 5. Yêu cầu bổ sung | Soạn nháp mục thiếu | Duyệt và gửi qua kênh chính thức | seller-communication (B) |
 | 6. Hướng dẫn gian hàng (App Nhà Bán Hi1) | Tóm tắt hướng dẫn APPROVED đúng phiên bản | Hướng dẫn thao tác; nhà bán thực hiện | seller-communication (C, chỉ sau bằng chứng duyệt) |
 | 7. Chuẩn hoá sản phẩm đầu tiên | Nháp tiêu đề/mô tả, gắn cờ claim | Nhà bán xác nhận; người có quyền nhập/đăng | first-product-assistant |
-| 8. Chuyển duyệt | Nháp tóm tắt/phiếu | Người có quyền chuyển và duyệt trên CMS | seller-document-checklist |
+| 8. Chuyển duyệt | Nháp [phiếu bàn giao duyệt](../templates/phieu-ban-giao-duyet.md) | Người có quyền chuyển và duyệt trên CMS | seller-document-checklist |
 | 9. Hướng dẫn vận hành đơn | Tóm tắt hướng dẫn APPROVED | Hướng dẫn và xác nhận nhà bán biết xử lý đơn | Không dùng Skill riêng |
 | 10. Kiểm tra sẵn sàng bán | Tổng hợp bằng chứng còn thiếu | Trưởng nhóm xác nhận đủ điều kiện | daily-operations-report |
 | 11. Bàn giao + hẹn chăm sóc | Nháp nhắc việc | Bàn giao, thống nhất mốc chăm sóc | seller-communication (D) |

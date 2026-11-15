@@ -5,9 +5,9 @@ description: "Chuẩn hoá nháp tiêu đề/mô tả từ dữ kiện nhà bán
 
 # first-product-assistant
 
-version: 0.1.0
+version: 0.1.1
 
-v0.1.0 – pilot, chưa COO duyệt
+v0.1.1 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -29,11 +29,13 @@ Tên, mô tả, giá, tồn, biến thể, đơn vị, khối lượng/kích th�
 4. Soạn tiêu đề/mô tả nháp chỉ từ dữ kiện nhất quán. Liệt kê claim cần chứng cứ: chính hãng, công dụng, chứng nhận, xuất xứ; không đưa claim chưa xác minh thành khẳng định trong nháp.
 5. Hàng có điều kiện gắn cờ đúng “Chờ kiểm tra ngành hàng”, chuyển cấp 2 ngành hàng-pháp chế. Xuất nháp, trường thiếu, claim cần chứng cứ và câu hỏi nhà bán cần xác nhận trong Tình trạng.
 
+Giữ khung COO mục II.C làm contract chính; bổ sung “Rủi ro:” trong Tình trạng nếu có, theo HI1-P1A-SOL-001 v0.1 §5. Không thay bằng contract trường máy của SOL-001.
+
 ### Output contract
 
 Trả đúng thứ tự sau, kể cả khi dừng hoặc thiếu nguồn:
 
-- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh]
+- Tình trạng: [kết quả hoặc Dừng/Chưa xác minh; thêm dòng “Rủi ro:” nếu có rủi ro]
 - Thiếu/vướng: [mục thiếu, mâu thuẫn, nguồn thiếu]
 - Việc cần làm: [hành động đề xuất; không tự thực thi]
 - Ai làm: [vai trò được phân công; chưa rõ thì chờ phân công]

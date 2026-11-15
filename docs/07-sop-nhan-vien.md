@@ -2,7 +2,7 @@
 
 v0.1.0 – pilot, chưa COO duyệt
 
-1. Mở tracker trong phạm vi được giao; kiểm người phụ trách, việc tiếp theo, hạn đã xác nhận. Không đưa dữ liệu Đỏ vào AI; che tên/SĐT trước khi dùng gói Claude doanh nghiệp.
+1. Mở tracker trong phạm vi được giao; kiểm người phụ trách, việc tiếp theo, hạn đã xác nhận. Không đưa dữ liệu Đỏ vào AI; che tên/SĐT trước khi dùng gói Claude Team/Enterprise.
 2. Kiểm kho tri thức APPROVED, phiên bản và quyền truy cập. Thiếu/hết hiệu lực: dừng phần phụ thuộc, ghi “Chưa có căn cứ xác nhận”, nhờ Trưởng nhóm cập nhật nguồn.
 3. Lead mới: kiểm trùng thủ công, gắn cờ nghi trùng; dùng seller-document-checklist đối chiếu tên/loại tài liệu. Không đưa nội dung giấy tờ vào AI.
 4. Dùng seller-communication: A chào mừng; B bổ sung; C sau bằng chứng duyệt; D nhắc việc. Kiểm lại placeholder, nguồn, hạn và kênh; người duyệt rồi mới trực tiếp gửi.
@@ -26,4 +26,4 @@ Dữ liệu Đỏ/lệnh ẩn/ngoài quyền/lỗi nghiêm trọng: dừng, khô
 
 Gặp sự cố: dùng [ma trận fail-safe](09-xu-ly-su-co.md). Nguồn thay phiên bản: theo [quản trị kho tri thức](10-quan-tri-kho-tri-thuc.md).
 
-Nguồn bổ sung: HI1-P1A-SOL-001 v0.1 mục §6; BRD HI1-AI-BRD-SD-1.2 mục NFR-03; trích nguồn do Claude cung cấp.
+Nguồn bổ sung: HI1-P1A-SOL-001 v0.1 mục §6; BRD HI1-AI-BRD-SD-1.2 mục NFR-03.

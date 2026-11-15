@@ -1,9 +1,9 @@
-# Audit của Claude – PR #1 (v0.1.0)
+# Nhật ký kiểm định
 
-Ngày audit: 16/11/2026 · Người audit: Claude (theo yêu cầu của Chi) · Đối tượng: nhánh feat/seller-onboarding-package, commit 0b3352e
+Ngày audit: 16/11/2026 · Người kiểm định: PM - TKC · Đối tượng: nhánh feat/seller-onboarding-package, commit 0b3352e
 
 ## Phạm vi
-4 Skill, project instructions, docs 01–08, templates, tracker schema, 14 ca test. Audit tĩnh (đọc nội dung, kiểm cấu trúc, frontmatter, dữ liệu nhạy cảm). Chưa chạy Skill trên Claude.
+4 Skill, project instructions, docs 01–08, templates, tracker schema, 14 ca test. Audit tĩnh (đọc nội dung, kiểm cấu trúc, frontmatter, dữ liệu nhạy cảm). Chưa chạy Skill trên Claude Project.
 
 ## Phát hiện
 | Mã | Mức | Nội dung | Xử lý |
@@ -14,20 +14,20 @@ Ngày audit: 16/11/2026 · Người audit: Claude (theo yêu cầu của Chi) ·
 | F4 | Nên sửa | Mọi nhãn chờ duyệt đều là D-04 | Ánh xạ D-01…D-06 đúng chủ đề |
 | F5 | Nhỏ | Dòng trống thừa | Xoá |
 | F6 | Ghi nhận | 14 ca chưa chạy; nội dung an toàn lặp ở 4 Skill | Chạy ở tuần 1; giữ đồng bộ qua quy tắc thay đổi |
-| F7 | Chặn vận hành | Repo đang public; chứa quy tắc vận hành và cơ chế chống prompt injection nội bộ | Chi chuyển repo sang private trước khi merge |
+| F7 | Chặn vận hành | Repo đang public; chứa quy tắc vận hành và cơ chế chống prompt injection nội bộ | PM chuyển repo sang private trước khi merge |
 
 Điểm tốt: không có dữ liệu thật/PII; guardrails đầy đủ và đúng BRD; xử lý dữ liệu Đỏ, prompt injection, ngoài quyền nhất quán; Skill 04 không bịa tuổi hồ sơ/SLA; test case có tiêu chí đạt rõ.
 
 ## Câu hỏi
-- Ai là owner duy trì bản references trong Skill khi docs thay đổi? (đề xuất: Chi)
+- Ai là owner duy trì bản references trong Skill khi docs thay đổi? (đề xuất: PM)
 - Tracker dùng Google Sheet nào, ai có quyền ghi? (chờ D-06)
 
 ## Kết luận
-Chưa merge. Merge sau khi F1–F3 đã sửa, F7 đã xử lý và Claude kiểm lại commit mới.
+Chưa merge. Merge sau khi F1–F3 đã sửa, F7 đã xử lý và người kiểm định kiểm tra lại commit mới.
 
 ## Audit lại – 16/11/2026
 
-Đối tượng: commit 43961cf (sửa F1–F5) và fb53c15 (bổ sung theo QC nguồn). Nguồn đối chiếu: BRD HI1-AI-BRD-SD-1.2, Architecture Review v1.3, HI1-P1A-SOL-001 v0.1, bảng hỏi COO – do Claude đọc nguyên văn; Codex không đọc trực tiếp thread ChatGPT.
+Đối tượng: commit 43961cf (sửa F1–F5) và fb53c15 (bổ sung theo QC nguồn). Nguồn đối chiếu: BRD HI1-AI-BRD-SD-1.2, Architecture Review v1.3, HI1-P1A-SOL-001 v0.1, bảng hỏi COO.
 
 | Mã | Kết quả |
 |---|---|
@@ -44,6 +44,6 @@ Chưa merge. Merge sau khi F1–F3 đã sửa, F7 đã xử lý và Claude kiể
 | G6 | Đạt – docs/11 phủ đủ FR-01…15, BR-01…12 |
 | L1, L2 | Chấp nhận – giữ khung COO II.C (thêm dòng Rủi ro) và phân loại dữ liệu theo v1.3 |
 
-Còn mở: F6 – 14 ca chưa chạy trên Claude (chạy tuần 1 theo plan); F7 – repo còn public; FR-06, FR-09 chưa có Skill riêng (xử lý bằng Project instructions + kho tri thức, theo dõi khi pilot).
+Còn mở: F6 – 14 ca chưa chạy trên Claude Project (chạy tuần 1 theo plan); F7 – repo còn public; FR-06, FR-09 chưa có Skill riêng (xử lý bằng Project instructions + kho tri thức, theo dõi khi pilot).
 
-Kết luận: Nội dung đạt. Ngày 16/11/2026 Chi quyết định merge khi repo còn public và chuyển repo sang private ngay sau đó; F7 chuyển thành việc của Chi.
+Kết luận: Nội dung đạt. Ngày 16/11/2026 PM quyết định merge khi repo còn public và chuyển repo sang private ngay sau đó; F7 chuyển thành việc của PM.

@@ -2,9 +2,9 @@
 
 v0.1.1 – pilot, chưa COO duyệt
 
-[CHỜ COO DUYỆT – D-01] Phạm vi pilot; các nhãn D theo tài liệu đích tiếp tục áp dụng. Đây là truy vết tài liệu vận hành, không xác nhận nghiệm thu. Nội dung yêu cầu do Claude trích từ BRD; Codex không suy thêm chi tiết ngoài trích dẫn.
+[CHỜ COO DUYỆT – D-01] Phạm vi pilot; các nhãn D theo tài liệu đích tiếp tục áp dụng. Đây là truy vết tài liệu vận hành, không xác nhận nghiệm thu. Nội dung yêu cầu đối chiếu theo BRD, không suy thêm đầy đủ ngoài yêu cầu.
 
-Cột ca test chỉ ánh xạ thiết kế; 14 ca chưa chạy trên Claude. “Liên quan/chưa phủ” không đồng nghĩa được kiểm đủ. FR-06 và FR-09 không có Skill riêng: Project instructions + kho tri thức xử lý; đây là lựa chọn đã ghi nhận, không phải lỗi.
+Cột ca test chỉ ánh xạ thiết kế; 14 ca chưa chạy trên Claude Project. “Liên quan/chưa phủ” không đồng nghĩa được kiểm đủ. FR-06 và FR-09 không có Skill riêng: Project instructions + kho tri thức xử lý; đây là lựa chọn đã ghi nhận, không phải lỗi.
 
 | ID | Yêu cầu (1 dòng) | Bước | Skill/file | Ca test |
 |---|---|---|---|---|
@@ -36,12 +36,11 @@ Cột ca test chỉ ánh xạ thiết kế; 14 ca chưa chạy trên Claude. “
 | PDHB-BR-11 | Không Ready khi thiếu một mục | 10 | docs/06 | TC-07 (sản phẩm ẩn; chưa phủ mọi điều kiện) |
 | PDHB-BR-12 | SLA chỉ là pilot | 12 | daily-operations-report | TC-09 |
 
-Chưa có trích nội dung WF-A01…A06/ánh xạ FR trong kết quả QC được cung cấp; không tự đặt tên hoặc suy ánh xạ workflow. Bảng trên chỉ dùng 12 bước repo và danh sách FR/BR Claude đã cung cấp.
+Chưa có trích nội dung WF-A01…A06/ánh xạ FR trong kết quả QC được cung cấp; không tự đặt tên hoặc suy ánh xạ workflow. Bảng trên chỉ dùng 12 bước repo và danh sách FR/BR đã xác định.
 
 
-Nguồn: BRD HI1-AI-BRD-SD-1.2 mục PDHB-FR-01…15 và PDHB-BR-01…12; kết quả QC G6 của Claude (trích danh sách yêu cầu).
+Nguồn: BRD HI1-AI-BRD-SD-1.2 mục PDHB-FR-01…15 và PDHB-BR-01…12.
 
-Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực tiếp đọc bản gốc.
 
 ## Khâu thực tế chưa có Skill
 

@@ -22,5 +22,3 @@ Không chép PII/dữ liệu Đỏ từ lý do gốc sang AI/repo; nếu lý do 
 Cần người duyệt trước khi gửi/lưu: Có
 
 Nguồn: bảng hỏi COO mục Q10 (phiên bản chưa được cung cấp); BRD HI1-AI-BRD-SD-1.2 mục PDHB-FR-08.
-
-Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực tiếp đọc bản gốc.

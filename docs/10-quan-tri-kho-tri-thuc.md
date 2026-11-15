@@ -16,6 +16,4 @@ Khi checklist đổi phiên bản, kết quả kiểm cũ hết giá trị (SA-B
 
 Bài học/sự cố chỉ vào kho dưới dạng case đã ẩn danh; không đưa case thật có PII lên cloud. Chỉ dùng mã SIM-xxx trong repo. Theo dõi danh mục tại [knowledge-base-index](../project/knowledge-base-index.md); không nạp bản pilot thành chính sách APPROVED.
 
-Nguồn: HI1-P1A-SOL-001 v0.1 mục §8; BRD HI1-AI-BRD-SD-1.2 mục NFR-05/NFR-07; SA-BR-16 (trích trong kết quả QC Claude, chưa cung cấp tài liệu/phiên bản riêng).
-
-Trích nguồn do Claude cung cấp trong yêu cầu QC; Codex không trực tiếp đọc bản gốc.
+Nguồn: HI1-P1A-SOL-001 v0.1 mục §8; BRD HI1-AI-BRD-SD-1.2 mục NFR-05/NFR-07; SA-BR-16 (chưa cung cấp tài liệu/phiên bản riêng).

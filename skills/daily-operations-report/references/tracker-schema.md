@@ -44,3 +44,7 @@ Schema chưa có lịch sử phân công và lịch làm việc: chưa đủ đ�
 Nguồn bổ sung skill_version: HI1-P1A-SOL-001 v0.1 mục §4.1 (ai_prompt_version); BRD HI1-AI-BRD-SD-1.2 mục NFR-03; quy tắc truy vết: dùng skill_version, không tự thêm ai_run_id/source_evidence_ref/human_action_ref.
 
 Đề xuất nhật ký AI dùng tab riêng trong file tracker, BẮT BUỘC trước khi bất kỳ hành động nào chạy ở M3+/M4; tracker chính giữ nguyên 26 cột. Mẫu nhật ký không cấp quyền ghi cho Skill hiện hành. Các cột tab riêng: thoi_diem, ma_hanh_dong, merchant_id, nguoi_ra_lenh, nguoi_duyet, muc_tu_chu, skill_version, ket_qua, ghi_chu.
+
+Giá trị hợp lệ dùng cho script nằm ở tracker-schema.json; sửa nghiệp vụ thì sửa cả hai.
+
+Script chỉ tính dòng hợp lệ, loại cả hai dòng trùng; ô enum trống được phép trừ cột bắt buộc. risk_flags phân cách bằng dấu chấm phẩy. Phản hồi đầu tính giờ lịch, không phải giờ làm việc. Tỷ lệ review_result có mẫu số là mọi dòng hợp lệ ai_used=true, kể cả chưa ghi kết quả; thiếu kết quả không tự coi là duyệt.

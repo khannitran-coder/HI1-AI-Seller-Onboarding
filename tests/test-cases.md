@@ -47,3 +47,13 @@ Kiểm chạy script không thay thế kiểm hành vi Skill/guardrails trên m�
 ### Kiểm định K1 — map mẫu thật
 
 Chạy fixture cũ bằng --map tests/fixtures/sim-map.json; fixture bang-gia-mau-that-sim.xlsx dùng mặc định Bang_Nhap_Affiliate, không có % nhà bán/Cơ sở tính. Cả hai phủ PR-01…PR-06. Mẫu thật có 7 vi phạm vì PR-03 đồng thời PR-01. Kiểm thêm alias không dấu/hoa thường/khoảng trắng, thiếu cột liệt kê tên, đọc công thức và thiếu cache. make_fixture.py tạo cả hai, giữ nguyên file đã có; dùng --output-dir để tạo bộ mới.
+
+## Báo cáo tracker v0.2.1
+
+| Mã | Input SIM | Kết quả mong đợi | Tiêu chí đạt |
+|---|---|---|---|
+| TR-01 | tracker-clean-sim.csv, --as-of 2026-11-16T17:00:00+07:00 | Không lỗi, exit 0; JSON khớp expected/tracker-clean.json | 3 dòng hợp lệ; số liệu chính xác; định dạng md không đổi phép tính |
+| TR-02 | tracker-sim.csv (15 dòng, chuỗi mô phỏng được manifest đánh dấu) | Có lỗi, exit 2; khớp expected/tracker-errors.json | Thiếu/trùng merchant_id, enum, thời gian, thứ tự mốc, ready mâu thuẫn, handling sai, nghi dữ liệu Đỏ; không in giá trị bị chặn, chỉ tính 3 dòng hợp lệ |
+| TR-03 | tracker-clean-sim.csv cùng thời điểm chốt | 2 quá hạn; tuổi 2/1/0,5 ngày; phản hồi đầu trung bình/trung vị 3 giờ; handling tổng 60/trung bình 20 | Trạng thái kết thúc không vào quá hạn; tỷ lệ review trên 2 dòng AI là 0,5 duyệt nguyên/0,5 sửa nhỏ |
+
+Expected JSON cho hai fixture giá và hai fixture tracker được so bằng workflow, gồm exit code. Kiểm thêm header thiếu/sai thứ tự, thời gian thiếu múi giờ và output không lặp giá trị nhạy cảm trước merge. Đây là kiểm code, không xác nhận hành vi mô hình đã đạt mọi guardrail.

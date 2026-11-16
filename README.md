@@ -128,7 +128,7 @@ Tài liệu quản trị, ngân sách và phê duyệt PM lưu nội bộ, khôn
 
 1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Tạo Claude Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md).
-3. Đóng gói từng folder dưới skills/ thành một zip riêng, giữ SKILL.md ở gốc folder cùng references và templates nếu có. Chỉ upload/cài 6 Skill trong skills/ dạng folder/zip; tuyệt đối không cài skills-draft/. Cài Skill trong mục Skills của giao diện hiện hành; xác minh chúng khả dụng khi dùng Project. Nếu giao diện không hỗ trợ, dừng và nhờ người cấu hình xác nhận, không giả định upload vào kho tri thức là cài Skill.
+3. Chạy `python tools/build_skills.py` → lấy zip trong dist/. Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
@@ -158,3 +158,13 @@ Chỉ đóng gói từng folder trong skills/. Hai Skill mới version 0.1.0; b�
 Cài được không có nghĩa được tự làm A06: mức hiện tại vẫn theo docs/12, người kiểm đầu ra trước gửi; chưa bật connector/quyền mới. Các quy tắc giá còn [CHỜ COO DUYỆT – D-04].
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+
+## Tự kiểm và báo cáo CSV v0.2.1
+
+Mọi PR phải qua kiểm tra tự động. Chạy `python tools/build_skills.py --check` để kiểm mà không tạo zip; chạy không có cờ để lấy zip trong dist/. dist/ không lưu vào Git. Frontmatter dùng name và description dạng scalar một dòng (chuỗi có nháy khi cần), không cần PM sửa mã.
+
+Daily report dùng JSON nghiệp vụ trong folder references của Skill; đổi enum/quy tắc chỉ sửa JSON và đồng bộ mô tả .md, không sửa Python. Mẫu lệnh: `python skills/daily-operations-report/scripts/tracker_report.py tracker.csv --as-of 2026-11-16T17:00:00+07:00`; thêm `--format md` để xem Markdown. File tracker.csv là input do người cấp, không đưa dữ liệu thật vào repo.
+
+Dòng lỗi không được cộng vào số liệu; dòng trùng loại cả hai. Chuỗi nghi dữ liệu Đỏ chỉ được báo dòng/cột, không in giá trị. Mẫu tracker-sim.csv là fixture mô phỏng được đánh dấu trong fixture-manifest.json; không phải PII thật. Không miễn các quy tắc bí mật khác. Đầu ra trung bình/trung vị giờ lịch không thay SLA giờ làm việc.
+
+Hai bản nháp vẫn chưa cài/kích hoạt; tên tác giả trong chúng được giữ theo quyết định PM, không thuộc tiêu chí lỗi của công cụ.

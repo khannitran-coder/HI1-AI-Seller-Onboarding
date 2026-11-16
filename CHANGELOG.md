@@ -85,3 +85,13 @@ Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược 
 - PR-03 dùng trạng thái lệch giá và công thức cho người kiểm, không bắt cột Cơ sở tính. % nhà bán tuỳ chọn; PR-02 đọc dòng KIỂM TRA khi không có cột này.
 - Giữ fixture cũ + map SIM riêng; thêm fixture tiêu đề mẫu thật, generator tạo cả hai, không ghi đè. Ghi rõ PM cần đối chiếu file mẫu trống theo D-04.
 - Kết quả chạy hai fixture và nhánh lỗi/alias/công thức ghi trong PR. Giữ version 0.1.0 trong đợt sửa trước merge; không bật quyền mới.
+
+## v0.2.1 — 2026-11-16
+
+- Người thực hiện: PM - TKC.
+- Thêm JSON nghiệp vụ và tracker_report.py (thư viện chuẩn, dưới 250 dòng), xuất JSON/Markdown, không in ô lỗi hoặc tính dòng lỗi.
+- daily-operations-report v0.1.1 → v0.2.1: có code phải chạy script và dùng nguyên số liệu; không có code ghi “số liệu chưa qua script”. Các Skill khác không đổi.
+- tools/build_skills.py kiểm/zip skills/ bằng thư viện chuẩn; không đóng bản nháp, dist/ bị Git bỏ qua. Tên tác giả hai bản nháp theo quyết định PM được giữ nguyên, không làm lỗi kiểm tra.
+- Workflow pull_request và push main kiểm gói, so hai fixture giá và hai fixture tracker với expected JSON. Fixture dữ liệu Đỏ chỉ mô phỏng và được manifest đánh dấu.
+- Giữ nguyên các commit PM 0a7661f, 0654406; không sửa tác giả bản nháp, không viết lại lịch sử.
+- Chưa bật connector/quyền; kết quả tự kiểm/workflow ghi tại PR.

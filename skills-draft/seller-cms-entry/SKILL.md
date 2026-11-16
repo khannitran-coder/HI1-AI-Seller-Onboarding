@@ -7,7 +7,7 @@ description: "Bản nháp hướng dẫn nhập liệu ba form Đối tác, Thư
 
 BẢN NHÁP – không cài đặt, không dùng cho tới khi COO duyệt D-07a/D-07b
 
-Tác giả: PM - TKC
+Tác giả: Khanh Huyen
 
 version: 0.0.1
 

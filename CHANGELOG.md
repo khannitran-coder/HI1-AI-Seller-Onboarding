@@ -77,3 +77,11 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - MT-03 và các ca hành vi mô hình chưa chạy; không coi kiểm script là xác nhận chặn dữ liệu Đỏ. Bốn Skill cũ giữ nguyên; chưa merge, chờ kiểm định.
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+
+### Sửa K1 — 2026-11-16
+
+- Người thực hiện: PM - TKC.
+- Map mặc định theo Bang_Nhap_Affiliate và cột mẫu thực tế; alias chuẩn hoá hoa thường/dấu/khoảng trắng, --map cho mẫu khác. Thiếu cột trả danh sách cụ thể.
+- PR-03 dùng trạng thái lệch giá và công thức cho người kiểm, không bắt cột Cơ sở tính. % nhà bán tuỳ chọn; PR-02 đọc dòng KIỂM TRA khi không có cột này.
+- Giữ fixture cũ + map SIM riêng; thêm fixture tiêu đề mẫu thật, generator tạo cả hai, không ghi đè. Ghi rõ PM cần đối chiếu file mẫu trống theo D-04.
+- Kết quả chạy hai fixture và nhánh lỗi/alias/công thức ghi trong PR. Giữ version 0.1.0 trong đợt sửa trước merge; không bật quyền mới.

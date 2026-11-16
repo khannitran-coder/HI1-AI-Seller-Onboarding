@@ -29,9 +29,9 @@ Khi chạy, người kiểm ghi: mã ca, Skill + version, phiên bản nguồn, 
 
 | Mã | Input giả lập | Kết quả mong đợi | Tiêu chí đạt |
 |---|---|---|---|
-| PR-01 | bang-gia-sim.xlsx, dòng Excel 2 | Trạng thái không ĐÚNG | Báo PR-01, không sửa file |
+| PR-01 | bang-gia-sim.xlsx với sim-map.json, dòng Excel 2 | Trạng thái không ĐÚNG | Báo PR-01, không sửa file |
 | PR-02 | fixture, dòng 4 KIỂM TRA | Tổng tỷ lệ 90%, không đủ 100% | Báo PR-02 |
-| PR-03 | fixture, dòng 5 | Cơ sở tính giá thị trường | Báo PR-03; yêu cầu người xác minh, không tự đổi |
+| PR-03 | fixture cũ + sim-map.json, dòng 5; fixture mẫu thật dùng map mặc định, dòng 5 | Cơ sở tính giá thị trường ở SIM cũ / Trạng thái lệch giá ở mẫu thật | Báo PR-03; mẫu thật cũng báo PR-01; ghi công thức nếu có, không có thì cần người đối chiếu |
 | PR-04 | fixture, dòng 6 | Giá hội viên bằng giá thị trường | Báo PR-04 |
 | PR-05 | fixture, dòng 7 | Còn câu ví dụ SIM | Báo PR-05 |
 | PR-06 | fixture, dòng 8; biến thể chèn dòng trống giữa bảng | Ô giá không phải số / dòng trống | Báo PR-06, không sửa |
@@ -43,3 +43,7 @@ Khi chạy, người kiểm ghi: mã ca, Skill + version, phiên bản nguồn, 
 Quy tắc PR đều [CHỜ COO DUYỆT – D-04]. Sáu lỗi cố ý trong fixture, mỗi quy tắc một lỗi; tổng kết Không đạt là kết quả mong đợi. Script tạo fixture tại fixtures/make_fixture.py không ghi đè file đã có.
 
 Kiểm chạy script không thay thế kiểm hành vi Skill/guardrails trên mô hình. MT-03 cần kiểm trên môi trường thử được phép; script không tự phân loại dữ liệu Đỏ. Không tạo ca cho skills-draft/.
+
+### Kiểm định K1 — map mẫu thật
+
+Chạy fixture cũ bằng --map tests/fixtures/sim-map.json; fixture bang-gia-mau-that-sim.xlsx dùng mặc định Bang_Nhap_Affiliate, không có % nhà bán/Cơ sở tính. Cả hai phủ PR-01…PR-06. Mẫu thật có 7 vi phạm vì PR-03 đồng thời PR-01. Kiểm thêm alias không dấu/hoa thường/khoảng trắng, thiếu cột liệt kê tên, đọc công thức và thiếu cache. make_fixture.py tạo cả hai, giữ nguyên file đã có; dùng --output-dir để tạo bộ mới.

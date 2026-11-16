@@ -37,4 +37,4 @@ Loại: Đính chính (sai thực tế) · Chỉnh sửa (thiếu, khó hiểu) 
 
 - Ví dụ thực tế phải che dữ liệu: không ghi CCCD, số tài khoản, SĐT, tên nhà bán thật.
 - Nội dung gắn nhãn [CHỜ COO DUYỆT] là dự thảo: vẫn góp ý được, quyết định thuộc COO.
-- Góp ý gửi PM theo kênh và hạn PM thông báo. PM tổng hợp, phản hồi từng góp ý, cập nhật phiên bản mới và ghi CHANGELOG.
+- Góp ý gửi Chi/HUyền theo kênh và hạn Chi thông báo. Huyền tổng hợp, phản hồi từng góp ý, cập nhật phiên bản mới và ghi CHANGELOG.

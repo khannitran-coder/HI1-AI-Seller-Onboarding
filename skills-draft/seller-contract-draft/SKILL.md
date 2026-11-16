@@ -7,7 +7,7 @@ description: "Bản nháp quy trình chuẩn bị hợp đồng và phụ lục 
 
 BẢN NHÁP – không cài đặt, không dùng cho tới khi COO duyệt D-08b
 
-Tác giả: PM - TKC
+Tác giả: Khanh Huyen
 
 version: 0.0.1
 

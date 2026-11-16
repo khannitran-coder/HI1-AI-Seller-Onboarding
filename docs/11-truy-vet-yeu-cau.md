@@ -4,7 +4,7 @@ v0.1.1 – pilot, chưa COO duyệt
 
 [CHỜ COO DUYỆT – D-01] Phạm vi pilot; các nhãn D theo tài liệu đích tiếp tục áp dụng. Đây là truy vết tài liệu vận hành, không xác nhận nghiệm thu. Nội dung yêu cầu đối chiếu theo BRD, không suy thêm đầy đủ ngoài yêu cầu.
 
-Cột ca test chỉ ánh xạ thiết kế; 14 ca chưa chạy trên Claude Project. “Liên quan/chưa phủ” không đồng nghĩa được kiểm đủ. FR-06 và FR-09 không có Skill riêng: Project instructions + kho tri thức xử lý; đây là lựa chọn đã ghi nhận, không phải lỗi.
+Cột ca test chỉ ánh xạ thiết kế; 14 ca pilot chưa chạy trên Claude Project. “Liên quan/chưa phủ” không đồng nghĩa được kiểm đủ. FR-06 và FR-09 không có Skill riêng: Project instructions + kho tri thức xử lý; đây là lựa chọn đã ghi nhận, không phải lỗi.
 
 | ID | Yêu cầu (1 dòng) | Bước | Skill/file | Ca test |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@ Cột ca test chỉ ánh xạ thiết kế; 14 ca chưa chạy trên Claude Proj
 | PDHB-FR-08 | Chuyển đúng người duyệt, lưu nguyên văn kết quả | 8 | seller-document-checklist; templates/phieu-ban-giao-duyet.md | TC-08 (quyền; chưa phủ điền phiếu/lưu lý do) |
 | PDHB-FR-09 | Hướng dẫn vận hành đơn | 9 | Project instructions + kho tri thức; không có Skill riêng ở v0.1.0, giữ ở v0.1.1 | SAFE-04 (nguồn; chưa phủ vận hành đơn) |
 | PDHB-FR-10 | Đánh giá sẵn sàng bán độc lập | 10 | docs/06; daily-operations-report | TC-07 |
-| PDHB-FR-11 | Bàn giao + follow-up | 11 | seller-communication (D); docs/02 | Chưa có ca trực tiếp trong 14 ca |
+| PDHB-FR-11 | Bàn giao + follow-up | 11 | seller-communication (D); docs/02 | Chưa có ca trực tiếp trong 14 ca pilot |
 | PDHB-FR-12 | Báo cáo tồn/ngoại lệ | 12 | daily-operations-report | TC-09 |
 | PDHB-FR-13 | Theo dõi trạng thái đa lớp | 1–12 | docs/05; docs/06 | TC-07 (một nhánh) |
 | PDHB-FR-14 | Phiếu chuyển cấp | ngoại lệ | templates/phieu-chuyen-cap.md; daily-operations-report | TC-08, TC-09 (liên quan, chưa phủ mọi cấp) |
@@ -82,3 +82,5 @@ Chỉ là đề xuất chưa có hiệu lực. Bốn Skill hiện hành không �
 Bảng này bổ sung phương tiện hỗ trợ, không mở rộng quyền hiện hành. Trạng thái đóng gói ở trên không phải phê duyệt quyền tự động hoá.
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+
+Tổng bộ kiểm thử là 27 ca thiết kế: 14 ca pilot bắt buộc (TC/SAFE) và 13 ca công cụ (PR/MT/TR). Trạng thái chạy thực tế xem tests/test-cases.md và README; ánh xạ không thay kết quả kiểm định.

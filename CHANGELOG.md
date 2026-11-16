@@ -66,3 +66,22 @@ Khi đổi Skill: ghi ngày, người, tên Skill + version trước/sau, lý do
 - Thêm mẫu nhật ký AI 9 cột ở tab riêng, bắt buộc trước M3+/M4; tracker chính vẫn 26 cột. Chưa bật quyền hoặc connector.
 - Chuẩn hoá tác giả và vai trò PM trong nội dung tệp, đồng bộ references; không đổi hành vi hoặc version bốn Skill, không sửa lịch sử commit.
 - Kiểm tra: quét dấu vết tác giả/công cụ soạn và chuỗi bí mật; kiểm gói Skill, schema và liên kết. 14 ca hành vi chưa chạy.
+
+## v0.2.0 — 2026-11-16
+
+- Người thực hiện: PM - TKC.
+- Hai Skill cài được version 0.1.0: affiliate-price-review (Excel chỉ đọc) và seller-media-tools (ảnh/PDF bản sao); references tự chứa, không thay quyền A06.
+- Hai Skill bản nháp version 0.0.1 trong skills-draft/: seller-contract-draft (D-08b) và seller-cms-entry (D-07a/D-07b), chưa cài/kích hoạt. Script Windows/Office chỉ là bản nháp chưa chạy.
+- Fixture bảng giá SIM và script tạo; thêm PR-01…PR-06/MT-01…MT-04; cập nhật README, docs/02, docs/11, docs/12.
+- Đã chạy công cụ ảnh vuông nền mờ/nền trắng, gộp 3 PDF SIM và kiểm thứ tự 6 trang; kiểm chống ghi đè và nguồn không đổi; fixture báo đúng sáu lỗi. Thiếu cache và dòng trống được kiểm thêm; kết quả trong PR.
+- MT-03 và các ca hành vi mô hình chưa chạy; không coi kiểm script là xác nhận chặn dữ liệu Đỏ. Bốn Skill cũ giữ nguyên; chưa merge, chờ kiểm định.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+
+### Sửa K1 — 2026-11-16
+
+- Người thực hiện: PM - TKC.
+- Map mặc định theo Bang_Nhap_Affiliate và cột mẫu thực tế; alias chuẩn hoá hoa thường/dấu/khoảng trắng, --map cho mẫu khác. Thiếu cột trả danh sách cụ thể.
+- PR-03 dùng trạng thái lệch giá và công thức cho người kiểm, không bắt cột Cơ sở tính. % nhà bán tuỳ chọn; PR-02 đọc dòng KIỂM TRA khi không có cột này.
+- Giữ fixture cũ + map SIM riêng; thêm fixture tiêu đề mẫu thật, generator tạo cả hai, không ghi đè. Ghi rõ PM cần đối chiếu file mẫu trống theo D-04.
+- Kết quả chạy hai fixture và nhánh lỗi/alias/công thức ghi trong PR. Giữ version 0.1.0 trong đợt sửa trước merge; không bật quyền mới.

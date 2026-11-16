@@ -42,14 +42,14 @@ Chưa có trích nội dung WF-A01…A06/ánh xạ FR trong kết quả QC đư�
 Nguồn: BRD HI1-AI-BRD-SD-1.2 mục PDHB-FR-01…15 và PDHB-BR-01…12.
 
 
-## Khâu thực tế chưa có Skill
+## Khâu thực tế và trạng thái đóng gói
 
 | Khâu | Trạng thái | Phụ thuộc |
 |---|---|---|
-| Tạo đối tác/thương hiệu trên CMS | backlog v0.2 | D-07/D-08 |
-| Bộ hợp đồng + phụ lục Affiliate + bảng giá | backlog v0.2 | D-07/D-08 |
-| Nhập sản phẩm lên CMS | backlog v0.2 | D-07/D-08 |
-| Kiểm bảng giá Affiliate | backlog v0.2 | D-07/D-08 |
+| Tạo đối tác/thương hiệu trên CMS | seller-cms-entry: bản nháp, không cài/dùng | D-07a/D-07b |
+| Bộ hợp đồng + phụ lục Affiliate + bảng giá | seller-contract-draft: bản nháp, không cài/dùng | D-08b |
+| Nhập sản phẩm lên CMS | seller-cms-entry: bản nháp, không cài/dùng | D-07b |
+| Kiểm bảng giá Affiliate | affiliate-price-review: cài được, kiểm nháp, chưa tự bật A06 | D-04/D-08b |
 
 [CHỜ COO DUYỆT – D-07] Quyền CMS; [CHỜ COO DUYỆT – D-08] quy trình bảo mật liên quan. Chưa cấp quyền hoặc triển khai các khâu này trong v0.1.2.
 
@@ -69,3 +69,16 @@ Chỉ là đề xuất chưa có hiệu lực. Bốn Skill hiện hành không �
 | A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | D-08b (phạm vi hợp đồng) |
 | A07 | Bấm Lưu/Tạo mới, Duyệt, Kích hoạt, Đăng công khai, Xoá/Gộp tài khoản | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | Không mở |
 | A08 | Nhập mật khẩu, OTP, số tài khoản, CCCD; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | theo hành động | docs/12-ma-tran-tu-chu-va-rui-ro.md; chưa triển khai | Chưa có ca cho quyền đề xuất | Không mở |
+
+## Bổ sung truy vết v0.2.0
+
+| Skill | Yêu cầu / bước | Hành động | Ca test | Trạng thái / quyết định |
+|---|---|---|---|---|
+| affiliate-price-review | FR-07/FR-08, chuẩn bị bảng giá bước 7–8 | A06 | PR-01…PR-06 | Cài được, chỉ kiểm nháp; D-04, D-08b; chưa tự bật A06 |
+| seller-media-tools | FR-07/FR-08, ảnh/PDF bước 7–8 | A06 | MT-01…MT-04 | Cài được, chỉ bản sao; người kiểm; chưa tự bật A06 |
+| seller-contract-draft | FR-08, chuẩn bị bộ hợp đồng | A06 | Không viết ca cho bản nháp | skills-draft/, 0.0.1; KHÔNG cài/dùng trước D-08b |
+| seller-cms-entry | FR-06/FR-07, chuẩn bị form | A01/A05 | Không viết ca cho bản nháp | skills-draft/, 0.0.1; KHÔNG cài/dùng trước D-07a/D-07b |
+
+Bảng này bổ sung phương tiện hỗ trợ, không mở rộng quyền hiện hành. Trạng thái đóng gói ở trên không phải phê duyệt quyền tự động hoá.
+
+Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ

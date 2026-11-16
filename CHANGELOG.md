@@ -95,3 +95,27 @@ Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược 
 - Workflow pull_request và push main kiểm gói, so hai fixture giá và hai fixture tracker với expected JSON. Fixture dữ liệu Đỏ chỉ mô phỏng và được manifest đánh dấu.
 - Giữ nguyên các commit PM 0a7661f, 0654406; không sửa tác giả bản nháp, không viết lại lịch sử.
 - Chưa bật connector/quyền; kết quả tự kiểm/workflow ghi tại PR.
+
+## v0.2.2 — 2026-11-16
+
+- Người thực hiện: PM - TKC.
+- Bản tài liệu cho vòng góp ý của team/CEO trước khi chốt pilot; README theo vai trò, bảng tám Skill và quyết định đang chờ; thêm docs/00 và mẫu góp ý.
+- Giữ nguyên giới thiệu PM, toàn bộ kiến trúc (chỉ đổi tiêu đề v0.2.2); không sửa Skill/script/workflow hoặc version Skill; giữ tác giả hai bản nháp.
+- Làm rõ 27 ca thiết kế gồm 14 ca pilot và 13 ca công cụ; workflow hiện có chỉ chạy giá/tracker, MT-03 chưa kiểm hành vi mô hình. Không nâng trạng thái ca chưa chạy thành đạt.
+- Các đoạn nhật ký/version lẻ dưới đây chuyển nguyên văn từ README; là lịch sử, không thay trạng thái bản phát hành v0.2.2.
+
+### Thông tin chuyển từ README
+
+v0.1.1 – pilot, chưa COO duyệt
+
+Gói tài liệu dùng cho nhóm Phát triển & Hỗ trợ Nhà bán Hi1: Claude Cowork production-assist, mức tự chủ 3 (AI chỉ đọc và soạn nháp; người duyệt trước gửi/lưu). [CHỜ COO DUYỆT – D-01] Trạng thái **v0.1.1 – pilot, chưa COO duyệt**. Chỉ dùng giả lập SIM-xxx trước khi có nguồn và quyền được duyệt. Không có dữ liệu thật/PII trong repo.
+
+**Chưa merge:** PM chuyển repo sang private trước khi merge theo F7; sau khi sửa F1–F3 và xử lý F7, chờ người kiểm định kiểm tra lại commit mới.
+
+Bản v0.1.1 bổ sung theo kết quả kiểm định nguồn. 14 ca vẫn chưa chạy trên Claude Project. Không tự thêm trường ngoài schema 26 cột đã yêu cầu.
+
+Chỉ đóng gói từng folder trong skills/. Hai Skill mới version 0.1.0; bốn Skill cũ giữ version. Bản nháp skills-draft/ version 0.0.1 không phải Skill dùng được; không cài hoặc chạy cho tới khi COO duyệt mã ghi ở đầu bản nháp.
+
+Hai bản nháp vẫn chưa cài/kích hoạt;tên tác giả trong chúng được giữ theo quyết định PM, không thuộc tiêu chí lỗi của công cụ.
+
+Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ.

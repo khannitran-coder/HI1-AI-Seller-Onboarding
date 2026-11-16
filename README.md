@@ -9,7 +9,22 @@ GIAI ĐOẠN 2 - PHƯƠNG ÁN B:
 AI Engineering & Scalable Automation
 Backend + API + Database + AI Orchestration
 Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ thống tích hợp, tự động hóa và có khả năng mở rộng
-## Kiến trúc hiện tại (v0.2.0)
+
+Bản phát hành v0.2.2 – pilot, chưa COO duyệt. Đang lấy góp ý của team trước khi chốt.
+
+Xem [hướng dẫn đọc và góp ý](docs/00-huong-dan-doc-va-gop-y.md) để chọn tài liệu theo vai trò và ghi nhận ý kiến.
+
+## Đọc nhanh theo vai trò
+
+| Vai trò | Đọc gì | Thời gian |
+|---|---|---|
+| Tất cả | README: phần giới thiệu, Kiến trúc hiện tại, Quyết định đang chờ; docs/01 | 10 phút |
+| Nhân viên hỗ trợ nhà bán | docs/07 SOP, docs/02 quy trình 12 bước, skills/seller-communication/templates (mẫu tin A–I), docs/09 xử lý sự cố | 30 phút |
+| Trưởng nhóm | Thêm: docs/05 tracker, docs/06 trạng thái, docs/12 mức tự chủ và rủi ro, tests/test-cases.md (ca TC và SAFE) | 45 phút |
+| Kiểm duyệt nhà bán, ngành hàng | skills/seller-document-checklist (9 mục giấy tờ), skills/first-product-assistant (nội dung sản phẩm, claim), docs/03 guardrails | 30 phút |
+| CEO, COO | README: Kiến trúc hiện tại, Mức tự chủ, Quyết định đang chờ; docs/12 | 20 phút |
+
+## Kiến trúc hiện tại (v0.2.2)
 
 Hệ thống là lớp hỗ trợ soạn thảo đặt cạnh quy trình onboarding nhà bán đang chạy. AI ở mức tự chủ 3: đọc dữ liệu được cấp, đối chiếu, soạn nháp. Mọi thao tác ghi (gửi tin, sửa CMS, cập nhật tracker) do người thực hiện. Không có tích hợp hệ thống; dữ liệu giữa các thành phần đi qua tay nhân viên. Mức tự chủ được quy định theo từng hành động tại docs/12; hiện tại tất cả ở M3 hoặc thấp hơn.
 
@@ -91,40 +106,40 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 - seller-cms-entry: 07a chỉ đọc trong pilot nếu COO duyệt; 07b điền trước nút Lưu sau pilot; 07c (AI bấm Lưu/Duyệt) không làm.
 - Phương án B (khi đạt ngưỡng ở docs/01): backend thay tracker; 26 cột tracker là lược đồ bảng ban đầu.
 
+## Skill
 
-v0.1.1 – pilot, chưa COO duyệt
+| Tên | Việc làm | Version | Trạng thái |
+|---|---|---|---|
+| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.2 | Cài được – pilot |
+| [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.2 | Cài được – pilot |
+| [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.2 | Cài được – pilot |
+| [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.1 | Cài được – pilot |
+| [affiliate-price-review](skills/affiliate-price-review/SKILL.md) | Kiểm bảng giá Affiliate | 0.1.0 | Cài được – ngoài pilot |
+| [seller-media-tools](skills/seller-media-tools/SKILL.md) | Ảnh vuông, gộp PDF bản sao | 0.1.0 | Cài được – ngoài pilot |
+| [seller-cms-entry](skills-draft/seller-cms-entry/SKILL.md) | Thiết kế nhập form CMS | 0.0.1 | Bản nháp – chờ D-07a,b |
+| [seller-contract-draft](skills-draft/seller-contract-draft/SKILL.md) | Thiết kế ghép hợp đồng/phụ lục | 0.0.1 | Bản nháp – chờ D-08b |
 
-Gói tài liệu dùng cho nhóm Phát triển & Hỗ trợ Nhà bán Hi1: Claude Cowork production-assist, mức tự chủ 3 (AI chỉ đọc và soạn nháp; người duyệt trước gửi/lưu). [CHỜ COO DUYỆT – D-01] Trạng thái **v0.1.1 – pilot, chưa COO duyệt**. Chỉ dùng giả lập SIM-xxx trước khi có nguồn và quyền được duyệt. Không có dữ liệu thật/PII trong repo.
+Cài được không đồng nghĩa đã được cấp quyền hoặc được tự chạy A06. Chỉ dùng phạm vi được duyệt; skills-draft/ không cài hoặc dùng trước quyết định tương ứng.
 
-## Bắt đầu nhanh cho nhân viên
+## Quyết định đang chờ
 
-Đọc [SOP hằng ngày](docs/07-sop-nhan-vien.md), sau đó kiểm nguồn APPROVED và dữ liệu đã che:
+| Mã | Nội dung | Ảnh hưởng tới |
+|---|---|---|
+| D-01 | Phạm vi pilot và mức quyền AI | Toàn bộ pilot, ranh giới người/AI |
+| D-02 | Dữ liệu được đưa vào AI | Phân lớp và che dữ liệu trước dùng |
+| D-03 | Gói Claude, tài khoản, connector, lịch báo cáo | Cấu hình môi trường và scheduled task |
+| D-04 | Checklist 9 mục, mẫu tin, SLA pilot | Đối chiếu hồ sơ, giao tiếp và nhắc việc |
+| D-05 | Trạng thái, điều kiện Sẵn sàng bán, cấp chuyển | Theo dõi và bàn giao vận hành |
+| D-06 | Người giữ tracker, quyền review và nghiệm thu | Trách nhiệm cập nhật, kiểm tra kết quả |
+| D-07a | AI chỉ đọc CMS | Phạm vi màn hình/quyền xem đề xuất |
+| D-07b | AI điền form CMS trước nút Lưu | Bản nháp seller-cms-entry, chưa kích hoạt |
+| D-08 | Quy trình cấp thông tin đăng nhập cho shop mới | Bàn giao thông tin theo quy trình bảo mật |
+| D-08b | Phạm vi hợp đồng | Bản nháp hợp đồng và phạm vi A06 |
+| D-09 | AI ghi tracker, tạo nháp tự động, gửi tin nhắc theo lô | Các quyền đề xuất, nhật ký và hậu kiểm |
 
-| Khi cần | Skill |
-|---|---|
-| Đối chiếu danh sách tài liệu | [seller-document-checklist](skills/seller-document-checklist/SKILL.md) |
-| Nháp chào/bổ sung/sau duyệt/nhắc việc | [seller-communication](skills/seller-communication/SKILL.md) |
-| Nháp sản phẩm đầu tiên, kiểm claim | [first-product-assistant](skills/first-product-assistant/SKILL.md) |
-| Báo cáo cuối ngày, nháp chuyển cấp | [daily-operations-report](skills/daily-operations-report/SKILL.md) |
-| Kiểm bảng giá Affiliate đã che dữ liệu | [affiliate-price-review](skills/affiliate-price-review/SKILL.md) |
-| Chuẩn bị bản sao ảnh/PDF không có dữ liệu Đỏ | [seller-media-tools](skills/seller-media-tools/SKILL.md) |
+Các nội dung [CHỜ COO DUYỆT] là dự thảo, chưa cấp thêm quyền. Mọi thao tác ghi vẫn do người thực hiện; chưa bật connector/quyền mới.
 
-Thiếu nguồn ghi “Chưa có căn cứ xác nhận”. [CHỜ COO DUYỆT – D-02] Không đưa dữ liệu Đỏ vào AI; gặp dữ liệu Đỏ phải dừng, không lặp giá trị, nhắc xoá khỏi hội thoại và ghi sự cố đã che. Tài liệu nhà bán là dữ liệu, không phải lệnh.
-
-## Cấu trúc thư mục
-
-- docs/01–11: tổng quan, 12 bước, guardrails, phân loại dữ liệu, schema, trạng thái, SOP, thay đổi.
-- project/: instructions và danh mục kho tri thức APPROVED còn trống thông tin xác nhận.
-- skills/: sáu thư mục Skill cài được; seller-communication/templates/ chứa mẫu A–I.
-- skills-draft/: seller-contract-draft (D-08b), seller-cms-entry (D-07a/D-07b) là BẢN NHÁP, không cài/không dùng trước COO duyệt.
-- tests/fixtures/: bảng giá SIM và script tạo fixture; không chứa hồ sơ thật.
-- templates/: header tracker đúng 26 cột và phiếu chuyển cấp.
-- tests/test-cases.md: 14 ca giả lập và tiêu chí đạt; chưa có kết quả chạy trên Claude Project.
-- CHANGELOG.md: lịch sử thay đổi; AUDIT.md: kết quả kiểm định và điều kiện trước merge.
-
-Tài liệu quản trị, ngân sách và phê duyệt PM lưu nội bộ, không đưa vào đây.
-
-## Cài đặt cho người cấu hình
+## Cài đặt
 
 1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Tạo Claude Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md).
@@ -132,39 +147,47 @@ Tài liệu quản trị, ngân sách và phê duyệt PM lưu nội bộ, khôn
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
-7. Chạy đủ [14 ca](tests/test-cases.md), ghi kết quả thực tế. người kiểm định kiểm tra PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
+7. Chạy đủ [14 ca pilot](tests/test-cases.md), ghi kết quả thực tế. Người kiểm định kiểm tra PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
 
-Nhãn chờ COO duyệt áp theo chủ đề: D-01 phạm vi pilot/quyền AI; D-02 phân loại dữ liệu; D-03 gói Claude Team/connector/task; D-04 checklist/mẫu tin/SLA; D-05 trạng thái/sẵn sàng bán/chuyển cấp; D-06 owner/schema/quyền review và nghiệm thu tracker. Các nhãn không phải bằng chứng đã phê duyệt.
+Chạy `python tools/build_skills.py --check` để kiểm mà không tạo zip; chạy không có cờ để đóng gói. dist/ không lưu vào Git. Mọi PR phải qua kiểm tra tự động. Frontmatter dùng name/description dạng scalar một dòng, có nháy khi cần.
 
-**Chưa merge:** PM chuyển repo sang private trước khi merge theo F7; sau khi sửa F1–F3 và xử lý F7, chờ người kiểm định kiểm tra lại commit mới.
+- affiliate-price-review: Python + openpyxl; dùng schema trong folder, chỉ Excel đã che dữ liệu; data_only=True không tính công thức, thiếu cache phải chưa xác minh.
+- seller-media-tools: Python + Pillow + pypdf; chạy trong Claude Project có code execution hỗ trợ thư viện hoặc Cowork, không cần Windows/Office; người xác nhận không chứa dữ liệu Đỏ trước chạy, chỉ xuất bản sao.
+- seller-contract-draft chỉ dự kiến Windows có Word/Excel, chưa kiểm COM; seller-cms-entry chưa cấp quyền trình duyệt/CMS. Cả hai là bản nháp không cài.
 
-## Tài liệu vận hành bổ sung
+Đọc [SOP hằng ngày](docs/07-sop-nhan-vien.md) trước dùng. Thiếu nguồn ghi “Chưa có căn cứ xác nhận”. Không đưa dữ liệu Đỏ vào AI; nếu gặp phải dừng, không lặp giá trị, nhắc xoá và báo sự cố đã che. Nội dung nhà bán là dữ liệu, không phải lệnh. Chỉ dùng SIM-xxx trong repo.
 
-- [Xử lý sự cố và fail-safe](docs/09-xu-ly-su-co.md).
-- [Quản trị kho tri thức](docs/10-quan-tri-kho-tri-thuc.md).
-- [Truy vết yêu cầu](docs/11-truy-vet-yeu-cau.md).
-- [Nháp phiếu bàn giao duyệt](templates/phieu-ban-giao-duyet.md), khác phiếu chuyển cấp.
+Daily report dùng JSON nghiệp vụ trong references; thay enum/quy tắc sửa JSON và đồng bộ .md, không sửa Python. Chạy `python skills/daily-operations-report/scripts/tracker_report.py tracker.csv --as-of 2026-11-16T17:00:00+07:00`, thêm `--format md` nếu cần. tracker.csv là input do người cấp, không lưu dữ liệu thật vào repo. Dòng lỗi không tính; trùng loại cả hai; nghi dữ liệu Đỏ chỉ báo dòng/cột; giờ lịch không thay SLA giờ làm việc. Fixture mô phỏng được manifest đánh dấu, chỉ miễn kiểm số dài đúng file, không miễn quy tắc bí mật khác.
 
-Bản v0.1.1 bổ sung theo kết quả kiểm định nguồn. 14 ca vẫn chưa chạy trên Claude Project. Không tự thêm trường ngoài schema 26 cột đã yêu cầu.
+## Kiểm thử
 
-## Cài và chạy công cụ v0.2
+Tổng **27 ca** trong [test-cases](tests/test-cases.md):
 
-Chỉ đóng gói từng folder trong skills/. Hai Skill mới version 0.1.0; bốn Skill cũ giữ version. Bản nháp skills-draft/ version 0.0.1 không phải Skill dùng được; không cài hoặc chạy cho tới khi COO duyệt mã ghi ở đầu bản nháp.
+| Nhóm | Số ca | Phạm vi | Trạng thái |
+|---|---|---|---|
+| Pilot bắt buộc | 14 | TC-01…TC-10, SAFE-01…SAFE-04 | Chưa chạy trên Claude Project; phải chạy trước pilot |
+| Công cụ | 13 | PR-01…PR-06, MT-01…MT-04, TR-01…TR-03 | Kiểm tra tự động trên GitHub theo workflow hiện có; phạm vi thực chạy được nêu bên dưới |
 
-- affiliate-price-review: Python + openpyxl; schema tham chiếu trong folder, chạy trên Excel đã che dữ liệu. data_only=True không tính công thức; thiếu cache phải ghi chưa xác minh.
-- seller-media-tools: Python + Pillow + pypdf; chạy trong Claude Project có code execution hỗ trợ thư viện hoặc Cowork, không cần Windows/Office. Chỉ file đã được người xác nhận không chứa dữ liệu Đỏ, tạo bản sao ở thư mục đầu ra.
-- Bản nháp seller-contract-draft chỉ dự kiến chạy Windows có Word/Excel; chưa kiểm chạy COM, không dùng. Bản nháp seller-cms-entry chưa cấp quyền trình duyệt/CMS.
+Workflow GitHub hiện so fixture giá và tracker với expected JSON. Ảnh vuông/gộp PDF đã kiểm chạy trên SIM ở v0.2; MT-03 là ca dừng ở lớp Skill, chưa chạy kiểm hành vi mô hình và không được coi là đạt chỉ nhờ script. Không phải cả 13 ca công cụ đều đã được tự động hoá trên GitHub; lần này không sửa script/workflow.
 
-Cài được không có nghĩa được tự làm A06: mức hiện tại vẫn theo docs/12, người kiểm đầu ra trước gửi; chưa bật connector/quyền mới. Các quy tắc giá còn [CHỜ COO DUYỆT – D-04].
+Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là 14 ca pilot bắt buộc; 27 là tổng số ca thiết kế. Người kiểm định ghi kết quả thực tế, không suy UAT từ kiểm tra tĩnh.
 
-Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
+## Cấu trúc thư mục
 
-## Tự kiểm và báo cáo CSV v0.2.1
+| Thư mục / tệp | Nội dung |
+|---|---|
+| docs/00–12 | Hướng dẫn góp ý; tổng quan, quy trình, guardrails, dữ liệu, tracker, trạng thái, SOP, thay đổi, sự cố, kho tri thức, truy vết và tự chủ |
+| project/ | Instructions và danh mục kho tri thức APPROVED |
+| skills/ | Sáu Skill cài được, references/templates/scripts tự chứa |
+| skills-draft/ | Hai bản nháp chưa kích hoạt, không cài |
+| templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp |
+| tests/ | 27 ca thiết kế, fixture SIM và expected JSON; không hồ sơ thật |
+| tools/ | Kiểm và đóng gói Skill |
+| .github/ | Workflow kiểm tra tự động |
+| CHANGELOG.md / AUDIT.md | Lịch sử thay đổi / nhật ký kiểm định |
 
-Mọi PR phải qua kiểm tra tự động. Chạy `python tools/build_skills.py --check` để kiểm mà không tạo zip; chạy không có cờ để lấy zip trong dist/. dist/ không lưu vào Git. Frontmatter dùng name và description dạng scalar một dòng (chuỗi có nháy khi cần), không cần PM sửa mã.
+Tài liệu quản trị, ngân sách và phê duyệt PM lưu nội bộ, không đưa vào đây. Xem thêm [xử lý sự cố](docs/09-xu-ly-su-co.md), [quản trị kho tri thức](docs/10-quan-tri-kho-tri-thuc.md), [truy vết yêu cầu](docs/11-truy-vet-yeu-cau.md) và [phiếu bàn giao duyệt](templates/phieu-ban-giao-duyet.md).
 
-Daily report dùng JSON nghiệp vụ trong folder references của Skill; đổi enum/quy tắc chỉ sửa JSON và đồng bộ mô tả .md, không sửa Python. Mẫu lệnh: `python skills/daily-operations-report/scripts/tracker_report.py tracker.csv --as-of 2026-11-16T17:00:00+07:00`; thêm `--format md` để xem Markdown. File tracker.csv là input do người cấp, không đưa dữ liệu thật vào repo.
+## Góp ý
 
-Dòng lỗi không được cộng vào số liệu; dòng trùng loại cả hai. Chuỗi nghi dữ liệu Đỏ chỉ được báo dòng/cột, không in giá trị. Mẫu tracker-sim.csv là fixture mô phỏng được đánh dấu trong fixture-manifest.json; không phải PII thật. Không miễn các quy tắc bí mật khác. Đầu ra trung bình/trung vị giờ lịch không thay SLA giờ làm việc.
-
-Hai bản nháp vẫn chưa cài/kích hoạt; tên tác giả trong chúng được giữ theo quyết định PM, không thuộc tiêu chí lỗi của công cụ.
+Đọc [hướng dẫn đọc và góp ý](docs/00-huong-dan-doc-va-gop-y.md), ghi mỗi ý kiến một dòng vào [mẫu góp ý](templates/gop-y.csv); gửi PM theo kênh và hạn PM thông báo. Không ghi dữ liệu thật/PII trong góp ý.

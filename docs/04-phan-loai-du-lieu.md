@@ -4,6 +4,10 @@ v0.1.0 – pilot, chưa COO duyệt
 
 [CHỜ COO DUYỆT – D-02]
 
+Ý kiến mới đề xuất mở phạm vi dữ liệu khi dùng Claude Team/doanh nghiệp được ghi tại [đề xuất D-02/D-09](de-xuat-d02-d09-mo-du-lieu-va-tu-chu.md). Bảng và quy tắc chặn bên dưới vẫn là hướng dẫn đang áp dụng cho tới khi phạm vi D-02 được chốt và các Skill/Project instructions được cập nhật, kiểm thử đồng bộ.
+
+**Bảng thay thế được đề xuất, chưa áp dụng:** Giữ tên lớp Đỏ để nhận diện rủi ro; đề xuất cho phép xử lý từng mục đích trên môi trường Claude Team/Enterprise đã được tổ chức phê duyệt, đúng quyền hồ sơ. Phạm vi người yêu cầu chọn gồm CCCD, số tài khoản, ảnh giấy tờ tùy thân, mật khẩu, OTP và token. Trước khi mở nhóm bí mật xác thực phải có quyết định riêng của chủ hệ thống/an ninh thông tin và quy trình cấp/thu hồi; không dùng AI để đăng nhập hoặc nhập bí mật vào CMS. Không đưa dữ liệu Đỏ vào repo, tracker, log hay bộ SIM. Nhân viên chỉ gửi trường cần cho việc đã được duyệt, không copy nguyên hồ sơ. Nếu chưa xác minh được điều kiện của một nhóm, tiếp tục chặn nhóm đó theo bảng hiện hành.
+
 | Nhóm | Nội dung | Quy tắc |
 |---|---|---|
 | Xanh | Chính sách đã duyệt, checklist, mẫu tin, hướng dẫn giao diện | Chỉ bản APPROVED hiện hành; bản pilot không tự thành APPROVED |

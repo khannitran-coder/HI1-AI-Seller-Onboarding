@@ -14,6 +14,8 @@ Bản phát hành v0.2.2 – pilot, chưa COO duyệt. Đang lấy góp ý của
 
 Xem [hướng dẫn đọc và góp ý](docs/00-huong-dan-doc-va-gop-y.md) để chọn tài liệu theo vai trò và ghi nhận ý kiến.
 
+Các ý kiến mới trong [phiếu chốt input ngày 18/11/2026](docs/13-gop-y-phieu-chot-2026-11-18.md) đã được tổng hợp để review; các ô quyết định và xác nhận trong phiếu chưa hoàn tất.
+
 ## Đọc nhanh theo vai trò
 
 | Vai trò | Đọc gì | Thời gian |

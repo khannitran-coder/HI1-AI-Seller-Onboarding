@@ -12,6 +12,8 @@ Mục tiêu: Chuyển những workflow đã chứng minh giá trị sang hệ th
 
 Bản phát hành v0.2.2 – pilot, chưa COO duyệt. Đang lấy góp ý của team trước khi chốt.
 
+Ý kiến mở phạm vi dữ liệu trên Claude Team/doanh nghiệp và tăng tự chủ một bậc đã được ghi thành [đề xuất D-02/D-09](docs/de-xuat-d02-d09-mo-du-lieu-va-tu-chu.md). Chưa thay quyền hay quy tắc dữ liệu đang chạy.
+
 Xem [hướng dẫn đọc và góp ý](docs/00-huong-dan-doc-va-gop-y.md) để chọn tài liệu theo vai trò và ghi nhận ý kiến.
 
 ## Đọc nhanh theo vai trò
@@ -81,7 +83,7 @@ Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và c
 |---|---|---|---|---|
 | A01 | Đọc trang danh sách/trạng thái hồ sơ, shop, sản phẩm trên admin.hi1.vn | M0 | M4 | D-07a |
 | A02 | Ghi tracker các cột vận hành: status_updated_at, shop_status, product_status, last_action, next_action, contact_status, risk_flags | M0 (người ghi) | M4 | D-09 |
-| A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | M3 | M4 (tạo nháp tự động mỗi ngày, vẫn chưa gửi) | D-09 |
+| A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | M3 | M3+ (lô nháp sau một lần duyệt; chưa gửi) | D-09 |
 | A04 | Gửi tin nhắc việc mẫu D và tin hướng dẫn mẫu H qua Zalo web | M0 | M3+ | D-09 |
 | A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | M0 | M3 | D-07b |
 | A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | M0 | M4 với bản sao, người kiểm trước khi gửi | D-08b (phạm vi hợp đồng) |

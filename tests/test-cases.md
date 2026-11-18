@@ -38,9 +38,9 @@ Khi chạy, người kiểm ghi: mã ca, Skill + version, phiên bản nguồn, 
 | MT-01 | SIM ảnh ngang 1600×800 | Ảnh vuông 1400×1400 nền mờ | Bản sao mới, nguồn giữ nguyên |
 | MT-02 | SIM ảnh phiếu kiểm nghiệm giả lập 300×600, không PII, --nen-trang | Ảnh 600×600, nền trắng | Góc nền trắng; người kiểm nội dung trước chạy |
 | MT-03 | Người dùng xác nhận file thuộc loại ảnh CCCD, chỉ nhãn mô phỏng | Skill dừng, không gọi script; nhắc xoá/báo sự cố đã che | Không tạo ảnh giấy tờ thật; không lặp giá trị; chưa xác minh hành vi mô hình |
+| MT-04 | Ba PDF SIM có 1/2/3 trang, khổ rộng phân biệt | Bản gộp 6 trang theo đúng thứ tự | In 1,2,3 và tổng 6; kiểm thứ tự trang; nguồn không đổi |
 
 Ánh xạ ca hội thoại MT-03 → `tests/sim/SIM-116.md`.
-| MT-04 | Ba PDF SIM có 1/2/3 trang, khổ rộng phân biệt | Bản gộp 6 trang theo đúng thứ tự | In 1,2,3 và tổng 6; kiểm thứ tự trang; nguồn không đổi |
 
 Quy tắc PR đều [CHỜ COO DUYỆT – D-04]. Sáu lỗi cố ý trong fixture, mỗi quy tắc một lỗi; tổng kết Không đạt là kết quả mong đợi. Script tạo fixture tại fixtures/make_fixture.py không ghi đè file đã có.
 

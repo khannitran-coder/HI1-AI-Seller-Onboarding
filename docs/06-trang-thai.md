@@ -17,4 +17,6 @@ v0.1.0 – pilot, chưa COO duyệt
 
 Sẵn sàng bán cần đồng thời: shop hợp lệ; ≥1 sản phẩm hiển thị; địa chỉ lấy hàng đã xác nhận; vận chuyển đã cấu hình; thanh toán đã cấu hình tại kênh chính thức (không đưa thông tin ngân hàng vào AI); nhà bán biết xử lý đơn; Trưởng nhóm kiểm tra bằng chứng và xác nhận. Thiếu một điều kiện thì chưa sẵn sàng. Không lấy “được duyệt” thay “được kích hoạt”. Khi mất điều kiện, báo Trưởng nhóm xác minh và cập nhật trạng thái phù hợp; không tự khoá/gỡ.
 
+Góp ý C3 từ phiếu chốt ngày 18/11/2026, **chờ xác nhận nghiệp vụ**: khi kiểm địa chỉ lấy hàng, người phụ trách hỏi lại nhà bán về vị trí GPS, số lượng kho và số điện thoại gắn với từng kho. Chỉ ghi cờ/bằng chứng xác nhận được phép vào tracker; thay số điện thoại bằng placeholder trước khi đưa nội dung vào AI. Xem [bảng góp ý phiếu chốt](13-gop-y-phieu-chot-2026-11-18.md).
+
 Đã gửi đăng ký ≠ Gian hàng được kích hoạt ≠ Sẵn sàng bán. Không ép mọi hồ sơ đi tuần tự qua đủ tám trạng thái; ngoại lệ và quay lại phải có người xác nhận, lý do và thời điểm.

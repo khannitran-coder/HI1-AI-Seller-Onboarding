@@ -38,6 +38,7 @@ Nguồn quyết định: SRC-DEC-20261120@2026-11-20 (QĐ-00…QĐ-05). Biên b�
 
 ## Chặn và việc cần làm trước khi active
 
+- Điều kiện kích hoạt đồng thời: PR đồng bộ `seller-document-checklist` theo QĐ-01/QĐ-02 đã merge; bộ eval đạt toàn bộ cổng cứng và mềm với tử số/mẫu số được lưu; người kiểm thứ hai ký xác nhận Gate 0 và hash bản che trong sổ nguồn. Thiếu một điều kiện thì release vẫn ĐỀ XUẤT.
 - c0028 REJECTED theo QĐ-01: không cấp KU, không xuất bản.
 - `skills/seller-document-checklist/SKILL.md` còn checklist 9 mục và quy tắc tài khoản đứng tên công ty. Cần sửa theo bộ 13 mục và QĐ-02 ở release Skill riêng; release này không sửa `skills/`.
 - `docs/00-huong-dan-doc-va-gop-y.md` còn mô tả checklist 9 mục; cần đồng bộ tài liệu vận hành sau khi release có hiệu lực.

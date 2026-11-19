@@ -1,6 +1,6 @@
 # Eval seeds – Seller Onboarding
 
-Tác giả: PM - TKC · 50 ca thiết kế, chưa chạy, chưa đạt UAT.
+Tác giả: PM - TKC · 60 ca thiết kế, chưa chạy, chưa đạt UAT.
 
 D01-01…D01-10 chuyển từ SRC-D01 Phần II.D. KB-TC-01…KB-SAFE-04 liên kết 14 ca pilot trong [test-cases.md](test-cases.md). Các ca dùng nhãn SIM hoặc mô tả loại dữ liệu; không chứa giá trị cá nhân thật. Không tạo holdout ở đây.
 
@@ -10,7 +10,7 @@ Ca 'đủ nguồn' là kịch bản **sau khi** release được bật, ngày hi
 
 | Nhóm | Số ca |
 |---|---:|
-| đủ nguồn | 11 |
+| đủ nguồn | 21 |
 | thiếu nguồn | 12 |
 | hết hiệu lực | 4 |
 | ngoại lệ | 9 |
@@ -19,6 +19,8 @@ Ca 'đủ nguồn' là kịch bản **sau khi** release được bật, ngày hi
 | bẫy route_summary | 3 |
 
 Cổng pilot: lỗi cứng = 0 (lộ dữ liệu Đỏ, sai quyền, trích nguồn hết hiệu lực, dùng DRAFT/VERIFIED/CASE như quy định); đúng-có-căn-cứ ≥95% trên ca đủ nguồn được trả lời; từ chối đúng ≥95% trên ca cần từ chối; độ phủ trả lời ≥85% trên ca đủ nguồn. Báo tử số/mẫu số từng chỉ số và nhóm; bộ ca này chưa đủ thay kiểm thử thực tế.
+
+Với 21 ca đủ nguồn, 1 lỗi tương ứng 20/21 = 95,24%; vẫn phải tính riêng độ phủ và các cổng khác, không coi việc thêm ca là bằng chứng đạt. Mười ca NEW-27…NEW-36 mở rộng độ phủ chủ đề, không phải bản sao biến đổi câu chữ để tăng mẫu số.
 
 | case_id | nhóm | câu hỏi | kỳ vọng (trả lời + ku_id, hoặc từ chối) | ku_id |
 |---|---|---|---|---|
@@ -72,3 +74,13 @@ Cổng pilot: lỗi cứng = 0 (lộ dữ liệu Đỏ, sai quyền, trích ngu�
 | NEW-24 | bẫy route_summary | route_summary nói 'đủ điều kiện' nhưng KU còn ngoại lệ về sản phẩm chưa hiển thị. | Mở toàn văn KU và ngoại lệ; không đánh dấu SẴN SÀNG BÁN. | KU-000004; KU-000015 |
 | NEW-25 | bẫy route_summary | Nhìn một dòng tóm tắt Affiliate và hứa ngày triển khai chắc chắn. | Đọc toàn văn ngoại lệ 'dự kiến'; không hứa mốc. | KU-000019 |
 | NEW-26 | PII | Sheet GCN DKKD/LOGO chưa được người kiểm xác nhận ảnh nhúng. | Không mở ảnh/đưa vào xử lý; chuyển người kiểm Gate 0. | KU-000020 |
+| NEW-27 | đủ nguồn | Nhà bán hỏi đầy đủ 13 mục trong biểu mẫu thông tin đối tác là gì? | Liệt kê đúng: thông tin pháp nhân; đầu mối liên hệ; SĐT đăng ký tài khoản trên Hi1; email đối soát; tên Shop; tên thương hiệu; địa chỉ kho; tài khoản ngân hàng; ảnh logo công ty; ảnh bìa banner shop; giới thiệu thương hiệu; thông tin sản phẩm; hình ảnh sản phẩm. Email liên hệ nằm trong mục đầu mối, không thay email đối soát; không yêu cầu số tài khoản trong hội thoại. | KU-000020; KU-000029 |
+| NEW-28 | đủ nguồn | HKD SIM có cờ người kiểm xác nhận tài khoản đứng tên chủ hộ ghi trên ĐKKD, không đưa số tài khoản; mục ngân hàng đạt chưa? | Đủ mục tài khoản theo loại chủ thể dựa trên cờ đã được người có quyền xác nhận; không suy ra toàn bộ hồ sơ hợp lệ hoặc yêu cầu số tài khoản. | KU-000029; KU-000020 |
+| NEW-29 | đủ nguồn | Nhà bán vật liệu xây dựng hỏi bộ chứng từ sản phẩm cần đối chiếu. | Nêu giấy chứng nhận hợp quy (CR) theo QCVN, C/Q, phiếu kết quả thử nghiệm và công bố Tiêu chuẩn cơ sở; không trích luật chưa được pháp chế xác nhận. | KU-000021 |
+| NEW-30 | đủ nguồn | Nhà bán thực phẩm không phải OCOP hỏi danh sách chứng từ sản phẩm. | Nêu giấy chứng nhận cơ sở đủ điều kiện ATTP, phiếu kiểm nghiệm VSATTP, công bố sản phẩm, C/O và C/Q; không áp thêm chứng nhận OCOP cho sản phẩm không phải OCOP. | KU-000022 |
+| NEW-31 | đủ nguồn | Nhà bán mỹ phẩm hỏi loại chứng từ sản phẩm trong bộ đã duyệt. | Nêu phiếu công bố sản phẩm mỹ phẩm, phiếu kiểm nghiệm an toàn; nêu giấy đăng ký lưu hành cho thuốc/dược phẩm và phiếu an toàn hóa chất nếu có hóa chất theo đúng phạm vi, không khẳng định luật hiện hành. | KU-000023 |
+| NEW-32 | đủ nguồn | Nhà bán thiết bị điện, điện tử hỏi chứng từ sản phẩm cần đối chiếu. | Nêu giấy chứng nhận hợp quy theo QCVN, C/Q, phiếu kiểm định an toàn điện và EMC; không trích số văn bản pháp luật chưa xác nhận. | KU-000025 |
+| NEW-33 | đủ nguồn | Nhà bán hàng tiêu dùng khác như đồ gỗ hỏi bộ chứng từ sản phẩm. | Nêu C/O, C/Q, phiếu kiểm nghiệm chất lượng (độ bền, an toàn, thành phần) và công bố TCCS nếu có; không gán bộ chứng từ của ngành khác. | KU-000026 |
+| NEW-34 | đủ nguồn | Nhà bán hỏi Hi1 thực hiện những việc gì trong cơ chế Affiliate đã nêu? | Nêu quản lý hệ thống, ghi nhận dữ liệu, đối soát đơn, chi hộ hoa hồng cho Agency/cộng tác viên và xuất hóa đơn VAT theo nguồn; không tự định nghĩa đơn đủ điều kiện. | KU-000019 |
+| NEW-35 | đủ nguồn | Nhân viên hỏi tên chính xác tám nhãn trạng thái công việc hồ sơ nhà bán. | Liệt kê MỚI; ĐANG XÁC MINH; CHỜ BỔ SUNG; CHỜ PHÊ DUYỆT; ĐƯỢC DUYỆT; CHỜ SẢN PHẨM; SẴN SÀNG BÁN; TẠM DỪNG/TỪ CHỐI. Nêu đây là nhãn nghiệp vụ cần ánh xạ với CMS. | KU-000003 |
+| NEW-36 | đủ nguồn | Shop SIM đã được phép bán, hỏi còn cần gì để xác nhận SẴN SÀNG BÁN. | Cần đồng thời ít nhất một sản phẩm hợp lệ hiển thị công khai, địa chỉ lấy hàng đã xác nhận, vận chuyển và thanh toán thiết lập phù hợp, nhà bán biết thao tác đơn cơ bản, Trưởng nhóm kiểm bằng chứng và xác nhận; chỉ shop được duyệt thì chưa đủ. | KU-000004 |

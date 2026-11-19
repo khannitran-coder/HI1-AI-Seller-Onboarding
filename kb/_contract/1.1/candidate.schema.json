@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hi1-ku-contract/1.1/candidate.schema.json",
+  "title": "HI1 KU Candidate (do LLM đề xuất, chưa phải canonical)",
+  "description": "Một dòng trong candidates.jsonl. Không chứa ku_id chính thức, status, người duyệt, release. RED không bao giờ xuất hiện.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "batch_id",
+    "revision",
+    "client_record_id",
+    "source_refs",
+    "title",
+    "body",
+    "layer",
+    "authority_type_proposed",
+    "scope",
+    "sensitivity_proposed",
+    "audience_proposed"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "hi1-ku-contract/1.1"
+    },
+    "batch_id": {
+      "type": "string",
+      "description": "Do sổ PM / backend cấp. LLM không tự tạo."
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "client_record_id": {
+      "type": "string",
+      "pattern": "^c[0-9]{4}$",
+      "description": "Duy nhất trong batch+revision, vd c0001."
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content"
+      ],
+      "properties": {
+        "conditions": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "exceptions": {
+          "type": "string"
+        },
+        "required_docs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Chứng từ NHÀ BÁN phải nộp. Trích dẫn nguồn để ở source_refs."
+        }
+      }
+    },
+    "layer": {
+      "enum": [
+        "L1",
+        "L2",
+        "L3"
+      ]
+    },
+    "authority_type_proposed": {
+      "enum": [
+        "RULE",
+        "CASE",
+        "LESSON"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "domain"
+      ],
+      "properties": {
+        "domain": {
+          "enum": [
+            "GOV",
+            "SEL",
+            "CS",
+            "OPS",
+            "CAT",
+            "FIN",
+            "LEG",
+            "MKT",
+            "TECH",
+            "HR"
+          ]
+        },
+        "department": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facets": {
+          "type": "object",
+          "description": "Theo domain profile. Giá trị: mảng enum của domain, \"ALL\" (áp dụng rộng) hoặc null (chưa biết). Vd SEL: seller_type, category, channel.",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "const": "ALL"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "effective_window_proposed": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        }
+      }
+    },
+    "supersedes_proposed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ku_id canonical hoặc client_record_id trong cùng batch."
+    },
+    "relations_proposed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "target"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "supersedes",
+              "exception_of",
+              "depends_on"
+            ]
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sensitivity_proposed": {
+      "enum": [
+        "YELLOW",
+        "GREEN"
+      ]
+    },
+    "owner_proposed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Owner duy trì tri thức theo nguồn/sổ RACI; không suy từ người thực hiện bước. Không rõ → null + missing_owner."
+    },
+    "route_summary": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ocr_confidence": {
+      "enum": [
+        "high",
+        "low",
+        null
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "review_length",
+          "ocr_low",
+          "conflict",
+          "missing_owner",
+          "missing_effective_date",
+          "inferred",
+          "image_described",
+          "gate0_unverified",
+          "scope_unconfirmed"
+        ]
+      }
+    },
+    "inferred_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "version",
+          "locator",
+          "approval_state"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string",
+            "description": ".md: 'L20-L30 §tiêu đề'; Excel: 'Sheet!A1:D9'; docx/pdf: 'Mục/Câu + tiêu đề + đoạn'."
+          },
+          "doc_version": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Phiên bản nội bộ ghi trong tài liệu (vd 0.1.2), khác version = commit/ngày sửa file."
+          },
+          "approval_state": {
+            "enum": [
+              "APPROVED",
+              "PENDING",
+              "UNKNOWN"
+            ],
+            "description": "Lấy từ sổ nguồn hoặc nhãn ghi trong tài liệu cho đúng phiên bản/đoạn trích; LLM không tự phán APPROVED."
+          }
+        }
+      },
+      "description": "Phần tử đầu là nguồn chính."
+    },
+    "audience_proposed": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "staff",
+          "seller",
+          "agent_config"
+        ]
+      },
+      "description": "staff = nhân viên nội bộ; seller = được nói với nhà bán; agent_config = chỉ dùng làm guardrail/cấu hình agent, không xuất vào kho tư vấn."
+    }
+  }
+}

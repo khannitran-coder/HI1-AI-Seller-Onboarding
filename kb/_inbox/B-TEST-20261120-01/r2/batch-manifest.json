@@ -1,0 +1,65 @@
+{
+  "contract_version": "hi1-ku-contract/1.1",
+  "profile": "nocode",
+  "mode": "A",
+  "batch_id": "B-TEST-20261120-01",
+  "revision": 2,
+  "agent": "seller-onboarding",
+  "inputs": [
+    {
+      "source_id": "SRC-D01",
+      "version": "2026-11-19T19:19Z",
+      "gate0_id": "G0-TEST-USERCONF-20261120"
+    },
+    {
+      "source_id": "SRC-D02",
+      "version": "2026-06-25",
+      "gate0_id": "G0-TEST-USERCONF-20261120"
+    },
+    {
+      "source_id": "SRC-D03",
+      "version": "2026-04-23",
+      "gate0_id": "G0-TEST-USERCONF-20261120"
+    },
+    {
+      "source_id": "SRC-R01",
+      "version": "137f43d",
+      "gate0_id": "G0-TEST-REPO-137f43d"
+    },
+    {
+      "source_id": "SRC-R02",
+      "version": "137f43d",
+      "gate0_id": "G0-TEST-REPO-137f43d"
+    },
+    {
+      "source_id": "SRC-R03",
+      "version": "137f43d",
+      "gate0_id": "G0-TEST-REPO-137f43d"
+    }
+  ],
+  "checkpoint": {
+    "phase_done": "P5-QA",
+    "processed": [
+      "SRC-D01",
+      "SRC-D02",
+      "SRC-D03",
+      "SRC-R01",
+      "SRC-R02",
+      "SRC-R03"
+    ],
+    "blocked": [
+      {
+        "source_id": "SRC-D04",
+        "reason": "RED_SUSPECTED_EXCLUDED_BY_PM",
+        "locator": "Ủy quyền KTA scan.pdf – không mở"
+      }
+    ],
+    "pending_human": [
+      "Người kiểm Gate 0: đối chiếu gate0_id với sổ nguồn (hiện do PM xác nhận trong hội thoại)",
+      "COO: quyết định CL-01…CL-04 và D-02…D-06; chỉ định owner tri thức (RACI)",
+      "Owner/Trưởng nhóm: xác minh 29 candidate theo review-index",
+      "PM: cấp ku_id cho candidate được chấp nhận; RULE từ nguồn PENDING không được APPROVED trước khi nguồn APPROVED"
+    ]
+  },
+  "revision_note": "r2 thay r1: contract 1.1 (source_refs + approval_state, audience, required_docs, facets im lặng = null, owner không suy từ người thực hiện)."
+}

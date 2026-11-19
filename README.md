@@ -21,7 +21,7 @@ Xem [hướng dẫn đọc và góp ý](docs/00-huong-dan-doc-va-gop-y.md) để
 | Tất cả | README: phần giới thiệu, Kiến trúc hiện tại, Quyết định đang chờ; docs/01 | 10 phút |
 | Nhân viên hỗ trợ nhà bán | docs/07 SOP, docs/02 quy trình 12 bước, skills/seller-communication/templates (mẫu tin A–I), docs/09 xử lý sự cố | 30 phút |
 | Trưởng nhóm | Thêm: docs/05 tracker, docs/06 trạng thái, docs/12 mức tự chủ và rủi ro, tests/test-cases.md (ca TC và SAFE) | 45 phút |
-| Kiểm duyệt nhà bán, ngành hàng | skills/seller-document-checklist (9 mục giấy tờ), skills/first-product-assistant (nội dung sản phẩm, claim), docs/03 guardrails | 30 phút |
+| Kiểm duyệt nhà bán, ngành hàng | skills/seller-document-checklist (biểu mẫu 13 mục theo KU-000020), skills/first-product-assistant (nội dung sản phẩm, claim), docs/03 guardrails | 30 phút |
 | CEO, COO | README: Kiến trúc hiện tại, Mức tự chủ, Quyết định đang chờ; docs/12 | 20 phút |
 
 ## Kiến trúc hiện tại (v0.2.2)
@@ -71,7 +71,7 @@ Hồ sơ có một trạng thái nghiệp vụ (8 nhãn, docs/06) và ba trạng
 
 ### Phiên bản và truy vết
 
-Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và checklist_version của lần xử lý. Bản references trong Skill được đồng bộ từ docs khi docs thay đổi. Mỗi thay đổi Skill phải chạy lại 14 ca kiểm thử và ghi CHANGELOG. Yêu cầu nghiệp vụ truy vết tới Skill và ca kiểm thử trong docs/11.
+Mỗi Skill có phiên bản riêng; mỗi dòng tracker ghi skill_version và checklist_version của lần xử lý. Bản references trong Skill được đồng bộ từ docs khi docs thay đổi. Mỗi thay đổi Skill phải chạy lại 14 ca nền và ghi CHANGELOG; seller-document-checklist v0.2.0 chạy thêm 3 ca SDC. Yêu cầu nghiệp vụ truy vết tới Skill và ca kiểm thử trong docs/11.
 
 ### Mức tự chủ
 
@@ -110,7 +110,7 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 
 | Tên | Việc làm | Version | Trạng thái |
 |---|---|---|---|
-| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.2 | Cài được – pilot |
+| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu biểu mẫu 13 mục theo KU-000020 | 0.2.0 | Cài được – pilot sau khi release KB active |
 | [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.2 | Cài được – pilot |
 | [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.2 | Cài được – pilot |
 | [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.1 | Cài được – pilot |
@@ -128,7 +128,7 @@ Cài được không đồng nghĩa đã được cấp quyền hoặc được 
 | D-01 | Phạm vi pilot và mức quyền AI | Toàn bộ pilot, ranh giới người/AI |
 | D-02 | Dữ liệu được đưa vào AI | Phân lớp và che dữ liệu trước dùng |
 | D-03 | Gói Claude, tài khoản, connector, lịch báo cáo | Cấu hình môi trường và scheduled task |
-| D-04 | Checklist 9 mục, mẫu tin, SLA pilot | Đối chiếu hồ sơ, giao tiếp và nhắc việc |
+| D-04 | Biểu mẫu hồ sơ 13 mục theo QĐ-01; mẫu tin và SLA pilot cần xác nhận riêng | Đối chiếu hồ sơ, giao tiếp và nhắc việc |
 | D-05 | Trạng thái, điều kiện Sẵn sàng bán, cấp chuyển | Theo dõi và bàn giao vận hành |
 | D-06 | Người giữ tracker, quyền review và nghiệm thu | Trách nhiệm cập nhật, kiểm tra kết quả |
 | D-07a | AI chỉ đọc CMS | Phạm vi màn hình/quyền xem đề xuất |

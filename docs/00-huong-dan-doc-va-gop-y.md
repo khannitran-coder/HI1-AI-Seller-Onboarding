@@ -11,7 +11,7 @@ Mục đích: team nghiệp vụ đọc thiết kế AI hỗ trợ nhà bán, ch
 | Tất cả | README: phần giới thiệu, Kiến trúc hiện tại, Quyết định đang chờ; docs/01 | 10 phút |
 | Nhóm hỗ trợ và phát triển nhà bán | docs/07 SOP, docs/02 quy trình 12 bước, skills/seller-communication/templates (mẫu tin A–I), docs/09 xử lý sự cố | 30 phút |
 |  Nhóm hỗ trợ và phát triển nhà bán | Thêm: docs/05 tracker, docs/06 trạng thái, docs/12 mức tự chủ và rủi ro, tests/test-cases.md (ca TC và SAFE) | 45 phút |
-|  Nhóm hỗ trợ và phát triển nhà bán| skills/seller-document-checklist (9 mục giấy tờ), skills/first-product-assistant (nội dung sản phẩm, claim), docs/03 guardrails | 30 phút |
+|  Nhóm hỗ trợ và phát triển nhà bán| skills/seller-document-checklist (biểu mẫu 13 mục theo KU-000020), skills/first-product-assistant (nội dung sản phẩm, claim), docs/03 guardrails | 30 phút |
 | COO | README: Kiến trúc hiện tại, Mức tự chủ, Quyết định đang chờ; docs/12 | 20 phút |
 
 Không cần đọc: tools/, các thư mục scripts/, tests/fixtures/, .github/.

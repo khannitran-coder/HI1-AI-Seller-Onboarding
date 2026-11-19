@@ -1,0 +1,31 @@
+ku_id,client_record_id,title,status,authority_type,audience,owner,approved_by,approved_at,decision_ref,supersedes,ghi_chu
+KU-000001,c0001,Phạm vi nghiệp vụ onboarding nhà bán và giới hạn của tài liệu đào tạo,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000002,c0002,Phân biệt Đã gửi đăng ký – Gian hàng được kích hoạt – Sẵn sàng bán,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000003,c0003,8 trạng thái công việc hồ sơ nhà bán và điều kiện vào,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2; điều kiện vào được diễn đạt theo SRC-R02; chờ owner xác nhận
+KU-000004,c0004,Điều kiện để đánh dấu SẴN SÀNG BÁN,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000005,c0005,"Quy trình bước 1–3: nhận lead, kiểm trùng, phân loại nhà bán",APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2; nhãn thiếu thông tin liên hệ chưa thuộc 8 trạng thái; diễn đạt thành ghi nhận
+KU-000006,c0006,Quy trình bước 4–5: đối chiếu checklist hồ sơ và yêu cầu bổ sung,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000007,c0007,Quy trình bước 6–7: hướng dẫn gian hàng trên App Nhà Bán Hi1 và chuẩn hóa sản phẩm đầu tiên,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000008,c0008,"Quy trình bước 8–11: chuyển duyệt, vận hành đơn, kiểm tra sẵn sàng bán, bàn giao",APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000009,c0009,"SLA thí điểm (đề xuất, chưa áp dụng)",APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2; mốc SLA trong nguồn vẫn ghi đề xuất/chưa áp dụng; chưa có ngày hiệu lực
+KU-000010,c0010,Ba cấp chuyển cấp khi vướng hoặc quá hạn và phiếu chuyển cấp tối thiểu,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000011,c0011,"Thẩm quyền duyệt: hồ sơ nhà bán, nội dung sản phẩm, checklist và ngoại lệ",APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000012,c0012,Những việc AI không được tự làm trong onboarding nhà bán,APPROVED,RULE,agent_config,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000013,c0013,Xử lý hồ sơ thiếu hoặc giấy tờ không khớp,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000014,c0014,Nhà bán chưa biết dùng app; trùng tài khoản hoặc không nhận OTP,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000015,c0015,Shop đã duyệt nhưng sản phẩm chưa hiển thị,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000016,c0016,"Nhà bán hỏi phí, doanh thu, bảo đảm bán được hàng",APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000017,c0017,Nhà bán yêu cầu đăng hàng có điều kiện/khó xác minh,APPROVED,RULE,staff,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,Nguồn candidate r2
+KU-000018,c0018,Dữ liệu nhạy cảm trong onboarding và quy tắc tối thiểu hóa,APPROVED,RULE,staff; agent_config,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00; QĐ-05,,Nguồn candidate r2
+KU-000019,c0019,Chính sách phí sàn và chương trình Affiliate cho nhà bán,APPROVED,RULE,staff; seller,Phụ trách Affiliate,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06)
+KU-000020,c0020,Biểu mẫu thông tin đối tác cần cung cấp khi lên sàn (13 mục),APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00; QĐ-01; QĐ-04,,QĐ-00 (D-06) — suy luận cần xác nhận
+KU-000021,c0021,Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Vật liệu xây dựng,APPROVED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06); chỉ danh sách chứng từ được duyệt; căn cứ pháp lý chờ xác nhận
+KU-000022,c0022,Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Thực phẩm & đồ uống,APPROVED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,COO,2026-11-20,QĐ-00; QĐ-03,,QĐ-00 (D-06); chỉ danh sách chứng từ được duyệt; căn cứ pháp lý chờ xác nhận
+KU-000023,c0023,"Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Mỹ phẩm, dược phẩm",APPROVED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06); chỉ danh sách chứng từ được duyệt; căn cứ pháp lý chờ xác nhận
+KU-000024,c0024,Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Hóa chất & nguyên liệu công nghiệp,VERIFIED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,,,QĐ-00; Lưu ý pháp lý,,QĐ-00 (D-06); căn cứ cũ đã bị thay; chờ pháp chế; không dùng tư vấn
+KU-000025,c0025,"Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Điện – điện tử, điện gia dụng, cơ khí",APPROVED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06); chỉ danh sách chứng từ được duyệt; căn cứ pháp lý chờ xác nhận
+KU-000026,c0026,"Chứng nhận/hồ sơ sản phẩm bắt buộc – ngành Hàng tiêu dùng khác (dệt may, đồ gỗ, nhựa, …)",APPROVED,RULE,staff; seller,Kiểm duyệt ngành hàng/pháp chế,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06); chỉ danh sách chứng từ được duyệt; căn cứ pháp lý chờ xác nhận
+KU-000027,c0027,Biểu mẫu danh mục sản phẩm đối tác cung cấp,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00,,QĐ-00 (D-06)
+,c0028,Checklist hồ sơ nhà bán 9 mục (bản nhóm 11/2026),REJECTED,RULE,staff; seller,,,,QĐ-01,,Checklist 9 mục không dùng làm chuẩn; không cấp ku_id.
+KU-000028,c0029,Điều kiện chủ thể được nhận hồ sơ nhà bán,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-00; QĐ-03,,QĐ-00 (D-06)
+KU-000029,c0030,Tài khoản ngân hàng theo loại chủ thể,APPROVED,RULE,staff; seller,Trưởng nhóm Phát triển nhà bán,COO,2026-11-20,QĐ-02,,QĐ-00 (D-06) — suy luận cần xác nhận

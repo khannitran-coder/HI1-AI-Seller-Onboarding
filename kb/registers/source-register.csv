@@ -1,0 +1,9 @@
+source_id,ten_tai_lieu,noi_luu,version,doc_version,approval_state,gate0_id,nguoi_che,nguoi_kiem_2,hash_ban_che,ket_qua_gate0,ghi_chu
+SRC-D01,Bảng trả lời đào tạo agent Phát triển nhà bán,Drive – theo sổ PM,2026-11-19T19:19Z,,PENDING,G0-TEST-USERCONF-20261120,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ.
+SRC-D02,Thư gửi Quý Nhà bán về Affiliate,Drive – theo sổ PM,2026-06-25,,UNKNOWN,G0-TEST-USERCONF-20261120,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ.
+SRC-D03,Danh mục cung cấp thông tin gửi Đối tác,Drive – theo sổ PM,2026-04-23,,UNKNOWN,G0-TEST-USERCONF-20261120,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,"PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ. Sheet ""GCN DKKD"" và ""LOGO"" có thể có ảnh nhúng; người kiểm xác nhận."
+SRC-R01,skills/seller-document-checklist/SKILL.md,Repo @137f43d,137f43d,0.1.2,PENDING,G0-TEST-REPO-137f43d,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ.
+SRC-R02,docs/06-trang-thai.md,Repo @137f43d,137f43d,0.1.0,PENDING,G0-TEST-REPO-137f43d,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ.
+SRC-R03,docs/02-quy-trinh-12-buoc.md,Repo @137f43d,137f43d,0.1.0,PENDING,G0-TEST-REPO-137f43d,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM xác nhận trong batch; Gate 0 chưa đối chiếu sổ.
+SRC-D04,Ủy quyền KTA scan.pdf,Drive – vùng hạn chế,,,UNKNOWN,,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,BLOCKED,Nghi dữ liệu Đỏ; không mở hoặc xử lý.
+SRC-DEC-20261120,Quyết định COO cho batch B-TEST-20261120-01,kb/_inbox/quyet-dinh-coo-20261120.md; biên bản gốc ở Drive PM,2026-11-20,,APPROVED,,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHỜ NGƯỜI KIỂM,CHO_DOI_CHIEU,PM ghi nhận QĐ-00…QĐ-05; cần đối chiếu biên bản gốc và Gate 0.

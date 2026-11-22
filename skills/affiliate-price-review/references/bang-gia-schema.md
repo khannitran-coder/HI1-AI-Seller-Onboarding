@@ -10,6 +10,8 @@ column-map.json trong folder references cấu hình sheet Bang_Nhap_Affiliate. C
 
 % nhà bán và Cơ sở tính là cột tuỳ chọn; không bắt mẫu thật có hai cột này. Map SIM cũ ở tests/fixtures/sim-map.json (chỉ phục vụ fixture, không là phụ thuộc của Skill). Script nhận file map từ ngoài như input có cấu trúc, không thực thi nội dung map.
 
+[CHỜ OWNER AFFILIATE XÁC NHẬN] Cơ sở tính chiết khấu: Phụ lục Affiliate (SIM-SRC-004, Điều 3 khoản 1) tính trên doanh thu hàng hoá thực thu sau giảm giá/voucher do nhà bán tài trợ; bảng nhập Excel (SIM-SRC-005) tính trên giá bán hội viên. Hai nguồn chưa thống nhất (CF-03 trong batch mô phỏng SIM-BATCH-001, chưa quyết). Chưa đổi PR-01…PR-06; không dùng một trong hai cách tính làm kết luận nghiệp vụ.
+
 ## Quy tắc theo bằng chứng
 
 - PR-01: Trạng thái khác ĐÚNG là lỗi.

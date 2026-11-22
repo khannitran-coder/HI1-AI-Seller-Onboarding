@@ -119,3 +119,15 @@ Chỉ đóng gói từng folder trong skills/. Hai Skill mới version 0.1.0; b�
 Hai bản nháp vẫn chưa cài/kích hoạt;tên tác giả trong chúng được giữ theo quyết định PM, không thuộc tiêu chí lỗi của công cụ.
 
 Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ.
+
+## Đối soát label theo kiến trúc Data Pipeline v1.0 — 2026-11-22
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Lý do: đối soát repo với kiến trúc Data Pipeline Tri thức v1.0 sau khi xử lý batch mô phỏng SIM-BATCH-001 (20 candidate KU DRAFT trong kb-workspace); chỉ gắn nhãn và thêm khung trống, không điền nội dung từ candidate vào kho.
+- docs/10 v0.1.1 → v0.1.2: thêm layer, authority_type, scope, sensitivity và approval_state của nguồn (đề xuất, chưa hiệu lực).
+- docs/04 v0.1.0 → v0.1.1: thêm mục Gate 0; merchant_id xếp Vàng [CHỜ COO DUYỆT – D-02].
+- project/knowledge-base-index v0.1.0 → v0.1.1: thêm 3 dòng nhóm tài liệu (hợp đồng và phụ lục; chiết khấu Affiliate; SOP 12 bước/bàn giao/sự cố), để trống.
+- Ghi chú nguồn: Mẫu F (mục 9 và dòng Tammi chưa có nguồn), checklist seller-document-checklist (mục 9, ATVSTP/OCOP chưa có nguồn), bang-gia-schema (cơ sở tính chiết khấu chờ owner xác nhận). Chỉ là ghi chú, không đổi nghiệp vụ; version Skill giữ nguyên (seller-communication 0.1.2, seller-document-checklist 0.1.2, affiliate-price-review 0.1.0).
+- README: thêm dòng kb-workspace/ trong bảng cấu trúc.
+- Chạy lại 14 ca trên Claude Project: chưa chạy; không tuyên bố đạt. Kiểm tra tĩnh bằng công cụ kiểm gói Skill, xem kết quả trong PR.
+- Chưa có tài liệu APPROVED nào; 20 candidate chưa được dùng làm căn cứ trả lời. Ba mâu thuẫn CF-01…CF-03 chờ owner.

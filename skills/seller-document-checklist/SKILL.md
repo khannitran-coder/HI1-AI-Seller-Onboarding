@@ -45,6 +45,8 @@ Checklist thực tế của nhóm (thay checklist dự thảo trước) [CHỜ C
 
 Điều kiện chủ thể [CHỜ COO DUYỆT – D-04]: doanh nghiệp, HTX hoặc hộ kinh doanh có MST và xuất được hoá đơn. Nhóm hàng thực phẩm/OCOP giữ thêm ATVSTP, chứng nhận OCOP; phạm vi áp dụng từng mục cần COO xác nhận, không tự miễn. Cá nhân tự do chưa có căn cứ nhận hồ sơ, chuyển Trưởng nhóm.
 
+Nhãn nguồn theo batch mô phỏng SIM-BATCH-001 (candidate DRAFT, approval_state UNKNOWN, chưa phải nguồn APPROVED): mục 1–7 khớp tờ rơi mở shop (SIM-SRC-002) và mục 1–8 khớp văn bản mở shop (SIM-SRC-001); điều kiện chủ thể DN/HTX/HKD có MST và hoá đơn khớp tờ rơi. [CHƯA CÓ NGUỒN] Mục 9 chỉ có căn cứ gián tiếp từ hợp đồng mẫu; ATVSTP và chứng nhận OCOP chưa có nguồn trong batch, chờ nguồn và owner.
+
 Chỉ nhận danh sách tên/loại, cờ có/không và thông tin đã che; tên người/SĐT/email cá nhân dùng placeholder. Không nhận giá trị tài khoản ngân hàng hoặc ảnh giấy tờ. “Có” không xác nhận đúng chủ thể hay hợp lệ.
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ

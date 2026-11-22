@@ -1,6 +1,6 @@
 # Danh mục kho tri thức APPROVED
 
-v0.1.0 – pilot, chưa COO duyệt
+v0.1.1 – pilot, chưa COO duyệt
 
 Chỉ nạp tài liệu được owner xác nhận APPROVED và còn hiệu lực. Các ô tên/owner/version/ngày hiệu lực cố ý trống; chưa có tài liệu APPROVED nào được xác nhận trong gói này. Không upload bản pilot để thay nguồn duyệt.
 
@@ -14,6 +14,11 @@ Chỉ nạp tài liệu được owner xác nhận APPROVED và còn hiệu lự
 | Mẫu tin và kênh liên hệ chính thức | | | | | | | |
 | SLA, lịch làm việc và chuyển cấp | | | | | | | |
 | Ánh xạ trạng thái CMS và bằng chứng sẵn sàng bán | | | | | | | |
+| Hợp đồng hợp tác và phụ lục (phí, đối soát, chấm dứt) | | | | | | | |
+| Chiết khấu Affiliate (phụ lục, cơ sở tính, đối soát, chi hộ) | | | | | | | |
+| SOP 12 bước, bàn giao, xử lý sự cố | | | | | | | |
+
+Ba dòng cuối thêm theo kiến trúc Data Pipeline v1.0 mục 7 và kết quả xử lý batch mô phỏng; vẫn để trống, chưa có tài liệu APPROVED nào được xác nhận. Sổ nguồn (mã nguồn, hash, mã Gate 0) và sổ KU (mã KU, người duyệt) lưu nội bộ, không đưa vào bảng này.
 
 Thiếu nguồn: “Chưa có căn cứ xác nhận”. Khi đổi phiên bản, dừng hướng dẫn cũ; owner kiểm tra hiệu lực trước khi thay. Không nạp hồ sơ thật hoặc dữ liệu Đỏ.
 

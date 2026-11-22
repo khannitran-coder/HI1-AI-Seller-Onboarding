@@ -182,6 +182,7 @@ Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là
 | skills-draft/ | Hai bản nháp chưa kích hoạt, không cài |
 | templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp |
 | tests/ | 27 ca thiết kế, fixture SIM và expected JSON; không hồ sơ thật |
+| kb-workspace/ | Đầu ra mô phỏng của bước biên tập tri thức (candidate KU DRAFT, log mâu thuẫn/khoảng trống, đối soát label). Không phải kho APPROVED, không nạp Project |
 | tools/ | Kiểm và đóng gói Skill |
 | .github/ | Workflow kiểm tra tự động |
 | CHANGELOG.md / AUDIT.md | Lịch sử thay đổi / nhật ký kiểm định |

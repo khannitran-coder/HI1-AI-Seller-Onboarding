@@ -26,6 +26,8 @@ Chỉ là nháp; không dùng gửi thật khi chưa có nguồn APPROVED. Nhân
 
 [CHỜ COO DUYỆT – D-04] Dòng Tammi: xác nhận còn hiệu lực trước khi gửi.
 
+[CHƯA CÓ NGUỒN TRONG BATCH MÔ PHỎNG SIM-BATCH-001] Văn bản nguồn mở shop có 8 mục, không có câu mở đầu. Mục 9 (bộ hợp đồng và phụ lục) chỉ có căn cứ gián tiếp từ hợp đồng mẫu (đoạn nêu phụ lục đi kèm); dòng Tammi không có trong nguồn nào đã xử lý. Nhân viên xác nhận với owner trước khi gửi.
+
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
 
 Cần người duyệt trước khi gửi/lưu: Có

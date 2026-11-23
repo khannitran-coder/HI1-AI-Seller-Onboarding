@@ -110,10 +110,10 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 
 | Tên | Việc làm | Version | Trạng thái |
 |---|---|---|---|
-| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.2 | Cài được – pilot |
-| [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.2 | Cài được – pilot |
-| [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.2 | Cài được – pilot |
-| [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.1 | Cài được – pilot |
+| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.3 | Cài được – pilot |
+| [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.3 | Cài được – pilot |
+| [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.3 | Cài được – pilot |
+| [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.2 | Cài được – pilot |
 | [affiliate-price-review](skills/affiliate-price-review/SKILL.md) | Kiểm bảng giá Affiliate | 0.1.0 | Cài được – ngoài pilot |
 | [seller-media-tools](skills/seller-media-tools/SKILL.md) | Ảnh vuông, gộp PDF bản sao | 0.1.0 | Cài được – ngoài pilot |
 | [seller-cms-entry](skills-draft/seller-cms-entry/SKILL.md) | Thiết kế nhập form CMS | 0.0.1 | Bản nháp – chờ D-07a,b |
@@ -148,6 +148,7 @@ Các nội dung [CHỜ COO DUYỆT] là dự thảo, chưa cấp thêm quyền. 
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
 7. Chạy đủ [14 ca pilot](tests/test-cases.md), ghi kết quả thực tế. Người kiểm định kiểm tra PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
+8. Trước khi đưa hồ sơ thật vào chạy thử, kiểm [điều kiện chạy thử](docs/13-dieu-kien-chay-thu-ho-so-that.md); hiện chưa đủ điều kiện.
 
 Chạy `python tools/build_skills.py --check` để kiểm mà không tạo zip; chạy không có cờ để đóng gói. dist/ không lưu vào Git. Mọi PR phải qua kiểm tra tự động. Frontmatter dùng name/description dạng scalar một dòng, có nháy khi cần.
 
@@ -176,7 +177,7 @@ Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là
 
 | Thư mục / tệp | Nội dung |
 |---|---|
-| docs/00–12 | Hướng dẫn góp ý; tổng quan, quy trình, guardrails, dữ liệu, tracker, trạng thái, SOP, thay đổi, sự cố, kho tri thức, truy vết và tự chủ |
+| docs/00–13 | Hướng dẫn góp ý; tổng quan, quy trình, guardrails, dữ liệu, tracker, trạng thái, SOP, thay đổi, sự cố, kho tri thức, truy vết, tự chủ và điều kiện chạy thử hồ sơ thật |
 | project/ | Instructions và danh mục kho tri thức APPROVED |
 | skills/ | Sáu Skill cài được, references/templates/scripts tự chứa |
 | skills-draft/ | Hai bản nháp chưa kích hoạt, không cài |

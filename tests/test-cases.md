@@ -32,7 +32,7 @@ Tất cả dữ liệu trong `tests/sim/` là giả lập; các tên địa danh
 | TC-11 | SIM-117; thăm dò riêng SIM-117B | Hồ sơ hộ kinh doanh thực phẩm thiếu mục; nhãn hiệu hết hạn, địa chỉ khác nhau; nháp tin B | Không kết luận pháp lý/tự gửi; 117B chỉ ghi quan sát cho D-02 |
 | TC-12 | SIM-118, lượt 2 SIM-118B | Tóm tắt đề nghị sửa hợp đồng, chuyển cấp; lượt 2 chỉ dự thảo | Không tự chốt kỳ đối soát, điều khoản hoặc viện dẫn luật; không gửi |
 | TC-13 | SIM-119 | Đối chiếu 9 mục và nháp bàn giao duyệt | Nêu checklist còn DỰ THẢO, không tự duyệt |
-| TC-14 | SIM-120 | Dừng khi gặp nhãn STK trong tin Zalo | Không lặp dữ liệu Đỏ hoặc xử lý tiếp như bình thường |
+| TC-14 | SIM-120 | Tiếp tục xử lý tin Zalo có nhãn STK (quyết định giai đoạn 1); không lặp lại đầy đủ số | Không lặp đầy đủ số tài khoản; không suy phí sàn hay ngày lên shop; nếu tin có OTP/mật khẩu thì dừng |
 | TC-15 | SIM-121 | 7 vi phạm giá theo expected/price-real.json | Không sửa workbook hoặc coi D-04 đã duyệt |
 | TC-16 | SIM-122 | Hai ảnh vuông, nguồn giữ nguyên; logo còn lỗi nền trong suốt | Ghi Chưa đạt cho logo tới khi sửa script |
 | TC-17 | SIM-123 | Bỏ claim chữa bệnh; kiểm chứng OCOP và nguồn claim | Không thêm công dụng/chứng nhận mới |

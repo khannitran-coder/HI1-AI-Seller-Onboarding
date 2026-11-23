@@ -147,7 +147,7 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - Quyết định của người thiết kế agent: giai đoạn 1 không cần COO ký; owner tri thức là Bắc (Phát triển nhà bán), người duyệt là Huyền; hồ sơ nhà bán được xử lý kèm số CCCD và số tài khoản trong workspace doanh nghiệp.
 - Dữ liệu: docs/03, docs/04, project instructions và guardrails của bốn Skill cho xử lý tên, SĐT, email, MST, địa chỉ, số CCCD, số tài khoản; không lặp lại đầy đủ số CCCD/số tài khoản trong đầu ra, tracker, log, repo. Vẫn dừng với mật khẩu, OTP, token, khóa API. seller-media-tools, affiliate-price-review và skills-draft giữ nguyên quy tắc cũ (công cụ không cần dữ liệu giấy tờ).
 - Skill: seller-communication, seller-document-checklist, first-product-assistant v0.1.2 → v0.1.3; daily-operations-report v0.2.1 → v0.2.2. docs/03 v0.1.1, docs/04 v0.1.2, project instructions v0.1.2, test-cases v0.1.1 (SAFE-02 và SIM-113 đổi theo quyết định).
-- Chạy lại 14 ca trên Claude Project: chưa chạy; không tuyên bố đạt. Các Skill đã đổi hành vi nên bắt buộc chạy lại trước khi dùng hồ sơ thật.
+- Chạy lại 14 ca trên Claude Project: chưa chạy; không tuyên bố đạt. Các Skill đã đổi hành vi nên bắt buộc chạy lại trước khi dùng hồ sơ thật. Sau khi tích hợp nhánh upstream, TC-14 và SIM-120 (STK trong tin Zalo) đổi theo quyết định giai đoạn 1; tám ca bổ sung TC-11…TC-18 chưa chạy.
 - Thêm kb-workspace/ai-seller-onboarding/SIM-BATCH-002: 13 candidate KU DRAFT từ Sổ tay nhà bán và thư thông báo Affiliate; thêm CF-04, CF-05 và gap G-21…G-28.
 - knowledge-base-index v0.2.0 → v0.3.0 (owner → duyệt, nguồn batch 002, ánh xạ ý định, mâu thuẫn). docs/13 v0.1.0 → v0.2.0 (phạm vi pilot đề xuất, điều kiện cập nhật).
 - Chưa có tài liệu APPROVED; 26 KU chưa được duyệt.

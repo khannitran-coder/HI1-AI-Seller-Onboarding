@@ -32,7 +32,7 @@ Trạng thái ghi theo bằng chứng trong repo; việc chưa có bằng chứn
 |---|---|---|---|
 | 1 | Phạm vi pilot, dữ liệu vào AI, gói Claude | Người thiết kế agent | Đã quyết: dữ liệu, gói (gói doanh nghiệp đã mua, chờ cài đặt) và phạm vi ở mục 2 |
 | 2 | Project “HI1 Seller Onboarding” và Project thử nghiệm tách biệt đã tạo; sáu Skill cài từ bản đóng gói và xác minh khả dụng; không cài skills-draft | Người cấu hình | Chưa xác nhận |
-| 3 | Nguồn APPROVED cho các nhóm trong [danh mục](../project/knowledge-base-index.md) | Bắc (owner), Huyền (duyệt) | Chưa duyệt. Đã có 26 KU DRAFT cho: thông tin và giấy tờ mở shop, hợp đồng, Affiliate, CMS và app, đơn hàng, thanh toán, đổi trả. Chưa có nguồn cho: điều kiện duyệt/từ chối nhà bán, ngành hàng cấm, trạng thái hồ sơ trên CMS, SLA |
+| 3 | Nguồn APPROVED cho các nhóm trong [danh mục](../project/knowledge-base-index.md); Huyền ghi phê duyệt vào bản sao của [mẫu](../templates/phe-duyet-ku.csv) rồi chạy `tools/export_kb.py --approvals` để tạo gói vận hành | Bắc (owner), Huyền (duyệt) | Chưa duyệt; gói vận hành chưa có (gói thử nghiệm `kb-draft` đã sinh). Đã có 26 KU DRAFT cho: thông tin và giấy tờ mở shop, hợp đồng, Affiliate, CMS và app, đơn hàng, thanh toán, đổi trả. Chưa có nguồn cho: điều kiện duyệt/từ chối nhà bán, ngành hàng cấm, trạng thái hồ sơ trên CMS, SLA |
 | 4 | Owner và người duyệt từng nhóm | Người thiết kế agent | Đã xác định: Bắc là owner, Huyền duyệt |
 | 5 | Gate 0 cho tài liệu đưa vào kho dùng chung | Owner tài liệu | Đã áp dụng cho nguồn đã xử lý: khối có số tài khoản và chữ ký bị loại khỏi KU. Hồ sơ nhà bán xử lý từng ca không cần che theo quyết định giai đoạn 1 |
 | 6 | Mâu thuẫn trong nhóm sẽ nạp đã được owner quyết (CF-01…CF-05) | Bắc | Chưa |

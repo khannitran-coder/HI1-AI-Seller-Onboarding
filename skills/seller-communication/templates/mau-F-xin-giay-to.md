@@ -14,11 +14,25 @@ Sàn Hi1 - Sàn Việt Nam, là Sàn TIỀN KIỂM ĐẦU VÀO, để mở shop 
 9. Bộ hợp đồng và phụ lục Hợp đồng (Sàn Hi1 gửi đính kèm)
 ( Sản phẩm tham gia chương trình Affiliate của Hi1 sẽ được đồng bộ lên siêu App Tammi của Viettel)
 
+### Bản ngắn (theo văn bản mở shop trên Drive, sửa 21/11/2026)
+
+Anh/Chị cung cấp giúp em các mục thông tin dưới đây để em hỗ trợ mở shop nhé ạ.
+1. Đăng ký kinh doanh (File PDF)
+2. Tên shop: (Shop đặt tên)
+3. Số điện thoại quản trị: (Không thay được sau khi tạo shop):
+4. Địa chỉ kho hàng: (địa chỉ để ship đến lấy hàng).
+5. Logo công ty: (Hình ảnh)
+6. Email:
+7. Số tài khoản ngân hàng của công ty (Không dùng số cá nhân):
+8. Các bộ giấy tờ về sản phẩm ( giấy công bố, giấy chứng nhận..)
+
 ---
 
 ## Ghi chú cho nhân viên (không gửi)
 
-version: 0.1.2
+version: 0.1.4
+
+Chọn một trong hai bản: bản đầy đủ (9 mục) hoặc bản ngắn (8 mục, khớp văn bản mở shop trên Drive). Không ghép hai bản.
 
 [CHỜ COO DUYỆT – D-04]
 

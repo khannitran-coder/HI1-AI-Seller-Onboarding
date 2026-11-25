@@ -152,6 +152,23 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - knowledge-base-index v0.2.0 → v0.3.0 (owner → duyệt, nguồn batch 002, ánh xạ ý định, mâu thuẫn). docs/13 v0.1.0 → v0.2.0 (phạm vi pilot đề xuất, điều kiện cập nhật).
 - Chưa có tài liệu APPROVED; 26 KU chưa được duyệt.
 
+## Đối chiếu Drive, revision r2 và nơi đặt tài liệu — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Đối chiếu thư mục Drive: không có file mới hoặc sửa sau 21/11/2026. Xem trực tiếp ảnh: SIM-BATCH-001 r2 sửa c0001, c0019 (thêm nhận diện ứng dụng), c0006 (cờ conflict), thêm c0021 và mâu thuẫn CF-06 về “0 phí trung gian”.
+- Sự cố: ảnh hướng dẫn tải app trên Drive hiển thị thông tin đăng nhập (G-29). Không ghi giá trị vào repo; ảnh gốc không được nạp hoặc gửi cho tới khi đổi mật khẩu và che.
+- seller-communication v0.1.3 → v0.1.4: Mẫu F thêm bản ngắn theo văn bản mở shop trên Drive. 14 ca chưa chạy.
+- tools/export_kb.py: lấy revision mới nhất; phê duyệt bắt buộc đúng revision (templates/phe-duyet-ku.csv thêm cột revision). kb-draft: 33 KU.
+- knowledge-base-index v0.4.0 → v0.5.0: thêm c0021, CF-06 và mục F (nơi đặt tài liệu).
+
+## Danh mục kho tri thức v0.4.0 và công cụ sinh gói nạp — 2026-11-23
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- project/knowledge-base-index v0.3.0 → v0.4.0: cột Nạp Project chỉ rõ tệp thử nghiệm cho từng nhóm; thêm mục E (hai Project, cách tạo gói, quy tắc tệp phê duyệt).
+- Thêm tools/export_kb.py (thư viện chuẩn): đọc candidate trong kb-workspace và sinh project/kb-draft (catalog và 6 tệp nhóm, 32 KU, khoảng 24.000 token, chỉ Project thử nghiệm). Với --approvals, chỉ sinh project/kb từ các dòng APPROVED có người duyệt và ngày duyệt; KU có cờ conflict cần conflict_resolved=yes. Công cụ không tự đặt trạng thái APPROVED.
+- Thêm templates/phe-duyet-ku.csv; .gitignore bỏ các tệp phe-duyet-*.csv (chứa tên người duyệt).
+- Đã thử luồng APPROVED trên tệp phê duyệt thử: đúng các dòng bị bỏ khi thiếu người duyệt hoặc conflict chưa quyết. Chưa có phê duyệt thật nên chưa có project/kb. 14 ca vẫn chưa chạy.
+
 ## Chốt phạm vi pilot — 2026-11-23
 
 - Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).

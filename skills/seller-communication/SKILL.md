@@ -5,9 +5,9 @@ description: "Soạn nháp tin lịch sự theo mẫu A–I, giữ placeholder v
 
 # seller-communication
 
-version: 0.1.3
+version: 0.1.4
 
-v0.1.3 – pilot, chưa COO duyệt
+v0.1.4 – pilot, chưa COO duyệt
 
 ## Mục đích
 

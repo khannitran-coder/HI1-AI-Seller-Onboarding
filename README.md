@@ -111,7 +111,7 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 | Tên | Việc làm | Version | Trạng thái |
 |---|---|---|---|
 | [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.3 | Cài được – pilot |
-| [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.3 | Cài được – pilot |
+| [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.4 | Cài được – pilot |
 | [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.3 | Cài được – pilot |
 | [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.2 | Cài được – pilot |
 | [affiliate-price-review](skills/affiliate-price-review/SKILL.md) | Kiểm bảng giá Affiliate | 0.1.0 | Cài được – ngoài pilot |
@@ -144,7 +144,7 @@ Các nội dung [CHỜ COO DUYỆT] là dự thảo, chưa cấp thêm quyền. 
 1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Tạo Claude Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md).
 3. Chạy `python tools/build_skills.py` → lấy zip trong dist/. Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
-4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt.
+4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt. Gói nạp được sinh bằng `python tools/export_kb.py`: `project/kb-draft/` chỉ cho Project thử nghiệm, `project/kb/` (khi có tệp phê duyệt) cho Project vận hành; chi tiết ở mục E của danh mục.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
 7. Chạy đủ [14 ca pilot](tests/test-cases.md), ghi kết quả thực tế. Người kiểm định kiểm tra PR trước merge; COO duyệt chính sách trước vận hành thật. Không push trực tiếp main.
@@ -184,7 +184,7 @@ Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là
 | templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp |
 | tests/ | 27 ca thiết kế, fixture SIM và expected JSON; không hồ sơ thật |
 | kb-workspace/ | Đầu ra mô phỏng của bước biên tập tri thức (candidate KU DRAFT, log mâu thuẫn/khoảng trống, đối soát label). Không phải kho APPROVED, không nạp Project |
-| tools/ | Kiểm và đóng gói Skill |
+| tools/ | Kiểm và đóng gói Skill (build_skills.py); sinh catalog và gói nạp Project từ candidate KU (export_kb.py) |
 | .github/ | Workflow kiểm tra tự động |
 | CHANGELOG.md / AUDIT.md | Lịch sử thay đổi / nhật ký kiểm định |
 

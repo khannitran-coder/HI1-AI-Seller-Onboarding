@@ -81,7 +81,7 @@ Tài liệu nguồn đã được xác nhận duyệt ngày 25/11/2026, nhưng c
 | [002:c0002 r1](SIM-BATCH-002/r1/candidates/c0002.md) | Giấy tờ cung cấp khi đăng ký shop, kể cả thực phẩm, TPCN, mỹ phẩm và hàng nhập khẩu | Checklist hồ sơ và giấy tờ mở shop |  |
 | [002:c0004 r1](SIM-BATCH-002/r1/candidates/c0004.md) | Thông tin nhà bán cung cấp để tạo và thiết lập gian hàng | Checklist hồ sơ và giấy tờ mở shop |  |
 | [002:c0001 r1](SIM-BATCH-002/r1/candidates/c0001.md) | Mô hình F2C của Hi1 và đối tượng nhà bán được hợp tác | Chính sách nhà bán: mô hình F2C, quy định cơ bản, thông điệp phí |  |
-| [001:c0019 r2](SIM-BATCH-001/r2/candidates/c0019.md) | Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước) | Hướng dẫn App Nhà Bán và CMS |  |
+| [001:c0019 r4](SIM-BATCH-001/r4/candidates/c0019.md) | Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước) | Hướng dẫn App Nhà Bán và CMS |  |
 | [002:c0005 r1](SIM-BATCH-002/r1/candidates/c0005.md) | CMS (admin.hi1.vn): đăng nhập, cập nhật thông tin shop và quản lý thương hiệu | Hướng dẫn App Nhà Bán và CMS | Đọc từ ảnh, đối chiếu kỹ |
 | [002:c0006 r1](SIM-BATCH-002/r1/candidates/c0006.md) | CMS: tạo và đăng sản phẩm, giá, tồn kho, sản phẩm chờ duyệt | Hướng dẫn App Nhà Bán và CMS | Đọc từ ảnh, đối chiếu kỹ |
 | [002:c0007 r1](SIM-BATCH-002/r1/candidates/c0007.md) | CMS: tiếp nhận, xác nhận và in đơn hàng | Hướng dẫn App Nhà Bán và CMS |  |

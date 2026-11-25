@@ -4,7 +4,7 @@
 
 ### 001:c0019 — Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước)
 - Trạng thái: DRAFT (chưa duyệt)
-- Phiên bản candidate: r2
+- Phiên bản candidate: r4
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-009 (Hướng Dẫn Tải APP.jpg, Ảnh 'HƯỚNG DẪN TẢI APP Hi1 – NHÀ BÁN': bước 1–4 (khung 1), bước 5–8 (khung 2)); SIM-SRC-008 (GIAO DIỆN APP.jpg, Hai biểu tượng ứng dụng và tên hiển thị dưới biểu tượng)
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
@@ -30,7 +30,7 @@ Không nêu.
 **Chứng từ**
 Không nêu.
 
-> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): Bản r2: đã đối chiếu trực quan ảnh hướng dẫn, 8 bước khớp; bỏ cờ ocr_low. KHÔNG gửi hoặc nạp ảnh gốc “Hướng Dẫn Tải APP.jpg”: ảnh chụp màn hình ở bước 4 hiển thị thông tin đăng nhập, cần che và đổi mật khẩu trước (Gap G-29). Chỉ dùng phần chữ trong KU này.
+> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): Bản r4: nội dung KU không đổi so với r2 (8 bước đã đối chiếu ảnh). Theo quyết định 25/11/2026, nhân viên được gửi ảnh “Hướng Dẫn Tải APP” hiện tại, sau khi người phụ trách xác nhận mật khẩu hiển thị ở bước 4 đã đổi hoặc tài khoản mẫu đã khóa (docs/07). Không nạp ảnh gốc vào Claude (Gap G-29).
 
 
 ### 002:c0005 — CMS (admin.hi1.vn): đăng nhập, cập nhật thông tin shop và quản lý thương hiệu

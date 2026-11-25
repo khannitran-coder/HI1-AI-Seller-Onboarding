@@ -12,7 +12,7 @@ Số KU: 33. est_tokens ≈ số ký tự / 3 của file candidate.
 | 001:c0021 | Thông điệp phí trên tờ rơi mở shop: 0 phí sàn, 0 phí nền tảng, 0 phí trung gian | L1/RULE | {"seller_type": ["DN", "HKD", "HTX"]} | chưa có | 587 | DRAFT | conflict | chinh-sach-nha-ban.md |
 | 002:c0001 | Mô hình F2C của Hi1 và đối tượng nhà bán được hợp tác | L1/RULE | chưa xác nhận | chưa có | 730 | DRAFT |  | chinh-sach-nha-ban.md |
 | 002:c0010 | Quy định cơ bản cho nhà bán: giá niêm yết, phí ship, nguồn gốc hàng hóa | L1/RULE | chưa xác nhận | chưa có | 765 | DRAFT | conflict | chinh-sach-nha-ban.md |
-| 001:c0019 | Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước) | L1/RULE | chưa xác nhận | chưa có | 890 | DRAFT |  | app-cms.md |
+| 001:c0019 | Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước) | L1/RULE | chưa xác nhận | chưa có | 902 | DRAFT |  | app-cms.md |
 | 002:c0005 | CMS (admin.hi1.vn): đăng nhập, cập nhật thông tin shop và quản lý thương hiệu | L1/RULE | chưa xác nhận | chưa có | 629 | DRAFT | ocr_low | app-cms.md |
 | 002:c0006 | CMS: tạo và đăng sản phẩm, giá, tồn kho, sản phẩm chờ duyệt | L1/RULE | chưa xác nhận | chưa có | 705 | DRAFT | ocr_low | app-cms.md |
 | 002:c0007 | CMS: tiếp nhận, xác nhận và in đơn hàng | L1/RULE | chưa xác nhận | chưa có | 508 | DRAFT |  | app-cms.md |

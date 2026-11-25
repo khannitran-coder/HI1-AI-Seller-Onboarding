@@ -152,6 +152,18 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - knowledge-base-index v0.2.0 → v0.3.0 (owner → duyệt, nguồn batch 002, ánh xạ ý định, mâu thuẫn). docs/13 v0.1.0 → v0.2.0 (phạm vi pilot đề xuất, điều kiện cập nhật).
 - Chưa có tài liệu APPROVED; 26 KU chưa được duyệt.
 
+## SOP pilot và quy trình hỏi owner — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- docs/07 v0.1.0 → v0.2.0: thêm trang SOP pilot, quy trình Hỏi owner làm tay (pilot chưa nối công cụ gửi tin), gửi ảnh hướng dẫn app theo quyết định người thiết kế agent kèm điều kiện xác nhận đã đổi mật khẩu; sửa các chỗ trái quyết định dữ liệu giai đoạn 1; mẫu tin A–I; tab nhật ký AI.
+- Thêm templates/hang-cho-hoi-owner.csv. SIM-BATCH-001 r4: c0019 sửa ghi chú, phiếu duyệt đổi sang r4.
+- Chưa gán người ghi sự cố, nhân viên pilot; chưa xác nhận đổi mật khẩu. 14 ca chưa chạy.
+
+## Hoãn xử lý mâu thuẫn, chạy pilot trước — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Quyết định của người thiết kế agent: CF-01…CF-06 xử lý sau; pilot chạy với 22 KU không mâu thuẫn sau khi người duyệt ghi phiếu. docs/13 điều kiện 6 cập nhật. Đã thử sinh gói vận hành 22 KU bằng phiếu giả ngoài repo; chưa có phê duyệt thật. 14 ca chưa chạy.
+
 ## Xác nhận duyệt nguồn Drive và phiếu duyệt KU — 2026-11-25
 
 - Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).

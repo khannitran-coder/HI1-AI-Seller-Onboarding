@@ -1,6 +1,6 @@
 # SOP hằng ngày cho nhân viên
 
-v0.2.0 – pilot, chưa COO duyệt
+v0.2.1 – pilot, chưa COO duyệt
 
 ## SOP pilot (đọc trước)
 
@@ -14,7 +14,7 @@ Theo quyết định của người thiết kế agent, 22–25/11/2026. Pilot b
 | Dữ liệu được đưa vào | Tên, SĐT, email, MST, địa chỉ, số CCCD người đại diện, số tài khoản công ty; chỉ phần cần dùng. Công cụ ảnh/PDF và bảng giá không nhận giấy tờ tuỳ thân |
 | Dữ liệu cấm | Mật khẩu, OTP, token, khóa API |
 | Đầu ra | Không chép đầy đủ số CCCD, số tài khoản vào tin nhắn, báo cáo, tracker, phiếu |
-| Cách chạy | Làm song song: AI soạn nháp, nhân viên so lại và tự gửi. Không gửi nhà bán nội dung AI khi chưa có nguồn đã duyệt |
+| Cách chạy | Làm song song: AI soạn nháp, nhân viên so lại và tự gửi. Không gửi nhà bán nội dung AI khi chưa có KU đã duyệt (tài liệu nguồn đã duyệt chưa đủ) |
 | Chưa có căn cứ | AI ghi “Chưa có căn cứ xác nhận” thì không tự trả lời; làm theo mục Hỏi owner |
 | Nội dung đang hoãn | Thời điểm đổi giá/tỷ lệ Affiliate; ngày đối soát và chi hoa hồng; cơ sở tính chiết khấu; xử lý vi phạm và khóa shop, quy định niêm yết giá trong Sổ tay; số ngày chờ nhận tiền; phí nhà bán chịu. Không gửi câu “0 phí trung gian” |
 | Dừng ngay | Theo điều kiện dừng ở [docs/13](13-dieu-kien-chay-thu-ho-so-that.md) mục 4. Người ghi sự cố: (chưa gán) |

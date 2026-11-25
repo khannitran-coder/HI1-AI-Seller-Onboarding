@@ -1,12 +1,13 @@
 # Chính sách nhà bán: mô hình F2C, quy định cơ bản, thông điệp phí
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0021 — Thông điệp phí trên tờ rơi mở shop: 0 phí sàn, 0 phí nền tảng, 0 phí trung gian
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r2
 - Loại: L1/RULE; đối tượng: staff; phạm vi: {"seller_type": ["DN", "HKD", "HTX"]}
 - Nguồn: SIM-SRC-002 (61e9c3c2dec45e9a07d5.jpg, Dải chữ đỏ dưới tiêu đề)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0006
 
@@ -30,6 +31,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 01 Giới thiệu mô hình sàn F2C; mục 02 Ghi chú dưới phần Cung cấp thông tin)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0006
 
@@ -54,6 +56,7 @@ Không nêu ở mục này.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 05 — khung 'Quy định cơ bản cho nhà bán' A–C)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0004
 

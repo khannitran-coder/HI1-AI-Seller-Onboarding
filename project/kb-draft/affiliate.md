@@ -1,12 +1,13 @@
 # Chiết khấu Affiliate
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0012 — Phụ lục Affiliate: định nghĩa, căn cứ tính và phân bổ chiết khấu Affiliate Tổng (A)
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 2; Điều 3; Điều 4)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0006; exception_of 001:c0007
 
@@ -34,6 +35,7 @@ Danh sách đính kèm theo từng sản phẩm (chưa có trong nguồn).
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 5 khoản 1–5)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0012
 
@@ -60,6 +62,7 @@ Bảng đối soát do Hi1 lập.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 6 khoản 1–6)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0013
 
@@ -83,6 +86,7 @@ Hóa đơn VAT; bảng đối soát.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 7; Điều 8; Điều 9)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: exception_of 001:c0006; depends_on 001:c0012
 
@@ -108,6 +112,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 10 khoản 1–5)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0012
 
@@ -129,6 +134,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-004 (Phụ lục Affiliate Hi1 11.11.2026.docx, Điều 11; Điều 12)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: exception_of 001:c0002
 
@@ -157,6 +163,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-005 (PL GIÁ BÁN CÓ AFFILIATE.xlsx, Sheet Bang_Nhap_Affiliate: ô LƯU Ý, VÍ DỤ, hàng tiêu đề cột; Sheet Huong_Dan: bước 1–4)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0012
 
@@ -183,6 +190,7 @@ Bảng giá do nhà bán nhập (file Excel).
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-012 (Kính gửi Quý Nhà bán.docx, Toàn văn thư 'Kính gửi Quý Nhà bán')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0012
 

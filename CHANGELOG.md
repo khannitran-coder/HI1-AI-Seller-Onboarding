@@ -201,3 +201,11 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
 - docs/13 mục 2: người thiết kế agent chốt phạm vi pilot theo bảng đề xuất: DN/HTX/HKD có MST và hóa đơn; hàng thông thường (nhóm có điều kiện chỉ đối chiếu giấy tờ và chuyển kiểm duyệt); AI hỗ trợ bước 3, 4, 5, 7, 8, 12; 10–15 hồ sơ, 2–4 tuần, 2–3 nhân viên; chạy song song, AI chỉ soạn nháp.
 - Ngày bắt đầu pilot: 24/11/2026 (chốt 2026-11-23); kết thúc dự kiến 08/12 đến 22/12/2026. Chưa chọn tên nhân viên tham gia; điều kiện chạy thử ở mục 3 của docs/13 chưa đạt tại thời điểm chốt, nên hồ sơ thật chỉ nhận khi đạt. Không đổi Skill; 14 ca chưa chạy.
+
+## Trạng thái duyệt tài liệu nguồn — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Lý do: người thiết kế agent xác nhận mọi tài liệu nguồn đã được duyệt.
+- Thay đổi: thêm sổ nguồn `kb-workspace/ai-seller-onboarding/so-nguon.csv` (10 tài liệu APPROVED, 2 không dùng); danh mục v0.5.2 tách cột duyệt tài liệu nguồn khỏi trạng thái KU; gói `kb-draft` ghi trạng thái tài liệu nguồn từng KU; docs/07 v0.2.1; docs/13 v0.2.1 (sửa số KU thành 33).
+- Skill: seller-document-checklist v0.1.3 → v0.1.4 (chỉ nhãn nguồn, không đổi quy trình). 14 ca chưa chạy.
+- Không đổi: chưa KU nào APPROVED, chưa có gói `project/kb/`; CF-01…CF-06 còn hoãn; candidate giữ nguyên revision nên phiếu duyệt đang chờ vẫn dùng được.

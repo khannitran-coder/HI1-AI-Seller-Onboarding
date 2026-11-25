@@ -21,7 +21,7 @@ GROUPS = {
     'affiliate': ('Chiết khấu Affiliate', ['001:c0012', '001:c0013', '001:c0014', '001:c0015', '001:c0016', '001:c0017', '001:c0018', '002:c0013']),
 }
 GROUP_OF = {i: g for g, (_, ids) in GROUPS.items() for i in ids}
-BANNER_DRAFT = ('> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. '
+BANNER_DRAFT = ('> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. '
                 'Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.\n')
 BANNER_OK = '> **Chỉ gồm KU đã APPROVED theo file phê duyệt.** Còn hiệu lực và đúng phạm vi mới được dùng; xem giao thức truy xuất trong knowledge-base-index.\n'
 
@@ -60,12 +60,22 @@ def load(workspace):
     return [latest[key] for key in sorted(latest)]
 
 
+def read_sources(workspace):
+    """Sổ nguồn: source_id -> ngày xác nhận, chỉ các tài liệu nguồn APPROVED. Không ảnh hưởng trạng thái KU."""
+    path = Path(workspace) / 'so-nguon.csv'
+    if not path.exists():
+        return {}
+    with open(path, encoding='utf-8-sig', newline='') as f:
+        return {r['source_id']: r['ngay_xac_nhan'] for r in csv.DictReader(f)
+                if r['trang_thai_nguon'] == 'APPROVED' and r['ngay_xac_nhan']}
+
+
 def scope_text(meta):
     facets = {k: v for k, v in meta['scope']['facets'].items() if v is not None}
     return json.dumps(facets, ensure_ascii=False) if facets else 'chưa xác nhận'
 
 
-def render(meta, approval=None):
+def render(meta, approval=None, sources=None):
     s = meta['sections']
     lines = [f"### {meta['key']} — {meta['title']}"]
     if approval:
@@ -76,6 +86,11 @@ def render(meta, approval=None):
     lines.append(f"- Loại: {meta['layer']}/{meta['authority_type_proposed']}; đối tượng: {', '.join(meta['audience_proposed'])}; phạm vi: {scope_text(meta)}")
     refs = '; '.join(f"{r['source_id']} ({r['doc_version']}, {r['locator']})" for r in meta['refs'])
     lines.append(f"- Nguồn: {refs}")
+    ids = [r['source_id'] for r in meta['refs']]
+    if sources and ids and all(i in sources for i in ids):
+        lines.append(f"- Tài liệu nguồn: đã duyệt (xác nhận {max(sources[i] for i in ids)}); trạng thái KU ghi ở dòng Trạng thái")
+    else:
+        lines.append('- Tài liệu nguồn: chưa ghi nhận duyệt trong sổ nguồn')
     flags = list(meta.get('flags', []))
     if approval and approval['effective_from'] and 'missing_effective_date' in flags:
         flags.remove('missing_effective_date')
@@ -93,7 +108,7 @@ def render(meta, approval=None):
     return '\n'.join(lines) + '\n'
 
 
-def write_pack(out_dir, items, banner, approvals=None):
+def write_pack(out_dir, items, banner, approvals=None, sources=None):
     out_dir.mkdir(parents=True, exist_ok=True)
     chosen = [m for m in items if m['key'] in GROUP_OF and (approvals is None or m['key'] in approvals)]
     for old in out_dir.glob('*.md'):
@@ -105,7 +120,7 @@ def write_pack(out_dir, items, banner, approvals=None):
             continue
         body = [f'# {name}', '', banner]
         for m in members:
-            body += [render(m, approvals.get(m['key']) if approvals else None), '']
+            body += [render(m, approvals.get(m['key']) if approvals else None, sources), '']
         (out_dir / f'{group}.md').write_text('\n'.join(body), encoding='utf-8', newline='\n')
         for m in members:
             window = m['effective_window_proposed']
@@ -147,14 +162,15 @@ def main():
         if hasattr(stream, 'reconfigure'):
             stream.reconfigure(encoding='utf-8')
     items = load(args.workspace)
+    sources = read_sources(args.workspace)
     out = Path(args.out)
     print(f'Đọc {len(items)} candidate.')
-    print(f"kb-draft: {write_pack(out / 'kb-draft', items, BANNER_DRAFT)} KU (chỉ Project thử nghiệm)")
+    print(f"kb-draft: {write_pack(out / 'kb-draft', items, BANNER_DRAFT, sources=sources)} KU (chỉ Project thử nghiệm)")
     if args.approvals:
         approved, skipped = read_approvals(args.approvals, items)
         for key, why in skipped:
             print(f'Bỏ qua {key}: {why}', file=sys.stderr)
-        print(f"kb: {write_pack(out / 'kb', items, BANNER_OK, approved)} KU APPROVED")
+        print(f"kb: {write_pack(out / 'kb', items, BANNER_OK, approved, sources)} KU APPROVED")
     else:
         print('Không có --approvals: không tạo gói vận hành (project/kb).')
     return 0

@@ -1,18 +1,18 @@
 # Danh mục kho tri thức
 
-v0.5.1 – pilot, chưa COO duyệt
+v0.5.2 – pilot, chưa COO duyệt
 
-**Hiện trạng: chưa có tài liệu hoặc KU nào APPROVED.** Danh mục này chỉ để TÌM đúng nhóm tài liệu; không phải căn cứ trả lời. Mọi dòng bên dưới đang ở DRAFT, không được nạp vào Project và không dùng tư vấn cho tới khi người duyệt chuyển sang APPROVED. Khi chưa có dòng APPROVED đúng nhóm, agent trả đúng câu “Chưa có căn cứ xác nhận”. Không upload bản pilot để thay nguồn duyệt. Riêng Project thử nghiệm (dữ liệu mô phỏng) được nạp gói DRAFT ở mục E để kiểm hành vi; câu trả lời ở đó vẫn phải ghi rõ nguồn chưa duyệt.
+**Hiện trạng 25/11/2026: tài liệu nguồn nghiệp vụ đã duyệt; chưa có KU nào APPROVED.** Danh mục này chỉ để TÌM đúng nhóm tài liệu; không phải căn cứ trả lời. KU của mọi dòng bên dưới đang ở DRAFT, không được nạp vào Project và không dùng tư vấn cho tới khi người duyệt chuyển sang APPROVED. Khi chưa có dòng có Trạng thái KU là APPROVED đúng nhóm, agent trả đúng câu “Chưa có căn cứ xác nhận”. Không upload bản pilot để thay nguồn duyệt. Riêng Project thử nghiệm (dữ liệu mô phỏng) được nạp gói DRAFT ở mục E để kiểm hành vi; câu trả lời ở đó vẫn phải ghi rõ nguồn chưa duyệt.
 
 Owner và người duyệt: theo quyết định của người thiết kế agent (2026-11-22), owner là Bắc (Phát triển nhà bán), người duyệt là Huyền. Người duyệt không tự duyệt KU do chính mình soạn; mỗi KU có hai người khác nhau soạn và duyệt.
 
-Tài liệu nguồn trên Drive: người thiết kế agent xác nhận ngày 25/11/2026 là đã được duyệt (chưa đối chiếu sổ nguồn). Đây là duyệt tài liệu nguồn; KU trích xuất vẫn là DRAFT cho tới khi người duyệt ghi phiếu duyệt, và các mâu thuẫn vẫn phải được owner quyết. Sổ tay nhà bán và thư thông báo Affiliate cũng được xác nhận đã duyệt trong cùng ngày, với cùng giới hạn trên.
+Duyệt tài liệu nguồn: người thiết kế agent xác nhận ngày 25/11/2026 mọi tài liệu nguồn nghiệp vụ đang dùng (thư mục Drive, Sổ tay nhà bán, thư thông báo Affiliate) đã được duyệt; danh sách từng tài liệu ở [sổ nguồn](../kb-workspace/ai-seller-onboarding/so-nguon.csv). Đây là duyệt tài liệu nguồn, chưa phải duyệt KU: KU trích xuất vẫn là DRAFT cho tới khi người duyệt ghi phiếu duyệt, và các mâu thuẫn giữa tài liệu vẫn phải được owner quyết. “Nguồn APPROVED” trong giao thức dưới đây và trong các Skill là KU có trạng thái APPROVED trong gói vận hành; tài liệu nguồn đã duyệt chưa đủ để trả lời.
 
 ## A. Giao thức truy xuất (bắt buộc)
 
 1. Bảng B và C chỉ dùng để tìm. Tên nhóm, ý định hay tóm tắt không phải căn cứ trả lời.
 2. Trước khi trả lời nghiệp vụ, mở tài liệu hoặc KU đầy đủ và các KU liên quan (ngoại lệ, phụ thuộc, bản thay thế). Thiếu một phần thì không kết luận.
-3. Chỉ dùng dòng có Trạng thái APPROVED, còn hiệu lực và đúng phạm vi (loại nhà bán, ngành hàng, kênh). DRAFT và VERIFIED không dùng.
+3. Chỉ dùng dòng có Trạng thái KU là APPROVED, còn hiệu lực và đúng phạm vi (loại nhà bán, ngành hàng, kênh). DRAFT và VERIFIED không dùng.
 4. Case (L2) và bài học (L3) chỉ để tham khảo nội bộ, không nói với nhà bán như quy định.
 5. Hai nguồn mâu thuẫn: không chọn hộ, ghi cả hai và chuyển owner.
 6. Không có căn cứ: ghi “Chưa có căn cứ xác nhận” và chuyển owner của nhóm đó. Không hứa ngày duyệt, doanh thu, ưu đãi hay SLA chưa duyệt.
@@ -22,19 +22,19 @@ Tài liệu nguồn trên Drive: người thiết kế agent xác nhận ngày 2
 
 Cột Version ghi theo tên file hoặc ngày sửa trên Drive, không phải số phiên bản đã duyệt. KU tạm là mã `batch:cXXXX` trong kb-workspace, với 001 là SIM-BATCH-001 và 002 là SIM-BATCH-002; chỉ để người duyệt đối chiếu. Người duyệt và ngày hiệu lực để trống tới khi duyệt.
 
-| Nhóm tài liệu cần tìm | Tài liệu hiện có (chưa duyệt) | Owner → duyệt | Version | Ngày hiệu lực | Trạng thái | Người duyệt | Ngày rà soát tiếp | KU tạm | Nạp Project |
-|---|---|---|---|---|---|---|---|---|---|
-| Checklist hồ sơ theo loại hình/ngành hàng | Thông tin và giấy tờ mở shop (văn bản mở shop, tờ rơi, Sổ tay nhà bán); giấy tờ riêng cho thực phẩm, TPCN, mỹ phẩm, hàng nhập khẩu. Chưa có checklist theo loại hình DN/HKD/HTX và chưa có OCOP | Bắc → Huyền | Sổ tay không rõ ngày; văn bản mở shop sửa 21/11/2026 | | DRAFT | | | 001:c0001; 002:c0002, c0004 | Thử nghiệm: kb-draft/checklist-mo-shop.md; vận hành: chưa |
-| Chính sách nhà bán và điều kiện phê duyệt | Mô hình F2C và đối tượng hợp tác (nhà sản xuất, nhập khẩu, đại lý ủy quyền); quy định cơ bản (giá niêm yết, phí ship, nguồn gốc hàng). Chưa có điều kiện duyệt, từ chối, tiêu chí | Bắc → Huyền | Sổ tay không rõ ngày | | DRAFT | | | 001:c0021; 002:c0001, c0010 | Thử nghiệm: kb-draft/chinh-sach-nha-ban.md; vận hành: chưa |
-| Chính sách nội dung, ngành hàng cấm/có điều kiện | Chỉ có quy định chung “không bán hàng giả, nhái, cấm”. Chưa có danh mục cấm hoặc có điều kiện | Bắc → Huyền | | | DRAFT (một phần) | | | 002:c0010 | Thử nghiệm: kb-draft/chinh-sach-nha-ban.md; vận hành: chưa |
-| Hướng dẫn App Nhà Bán Hi1 hiện hành | Hướng dẫn tải và dùng app; CMS (đăng nhập, thông tin shop, thương hiệu, sản phẩm, đơn hàng); app Hi1 Seller. Menu chưa được xác minh bằng ảnh chụp hiện hành | Bắc → Huyền | Sổ tay không rõ ngày; ảnh hướng dẫn sửa 02/10/2026 (đã đối chiếu trực quan; không nạp ảnh gốc vì lộ thông tin đăng nhập) | | DRAFT | | | 001:c0019; 002:c0005–c0008 | Thử nghiệm: kb-draft/app-cms.md; vận hành: chưa |
-| Hướng dẫn vận chuyển/thanh toán/xử lý đơn | Trạng thái đơn hàng, quy trình đơn, thanh toán COD/online, đối soát, đổi trả; hợp đồng mẫu Điều 4 và 6. Biểu phí thanh toán và biểu cước vận chuyển chưa có nội dung | Bắc → Huyền | 11.11.2026; Sổ tay | | DRAFT | | | 001:c0006–c0008; 002:c0007, c0009, c0011, c0012 | Thử nghiệm: kb-draft/don-hang-thanh-toan.md; vận hành: chưa |
-| Mẫu tin và kênh liên hệ chính thức | Mẫu tin A–I trong skills/seller-communication/templates; mẫu A–D đề xuất trong bảng trả lời của COO. Cấu hình Skill, không tạo KU | Bắc → Huyền | v0.1.2 | | DRAFT | | | | Không |
-| SLA, lịch làm việc và chuyển cấp | SLA đề xuất thí điểm và ba cấp chuyển cấp trong bảng trả lời của COO (tài liệu nêu rõ chưa phải quy định hiện hành) | Bắc → Huyền | | | DRAFT | | | | Không |
-| Ánh xạ trạng thái CMS và bằng chứng sẵn sàng bán | Tám nhãn hồ sơ trong docs/06 (khớp bảng trả lời COO), mã CMS thật [CHỜ XÁC MINH]. Sổ tay chỉ có trạng thái đơn hàng và sản phẩm | Bắc → Huyền | v0.1.0 | | DRAFT | | | 002:c0009 (đơn hàng) | Thử nghiệm: kb-draft/don-hang-thanh-toan.md; vận hành: chưa |
-| Hợp đồng hợp tác và phụ lục (phí, đối soát, chấm dứt) | Hợp đồng hợp tác mẫu; quy trình ký hợp đồng và phụ lục. Khối thông tin các bên cần bản che | Bắc → Huyền | 11.11.2026 | | DRAFT | | | 001:c0002–c0011; 002:c0003 | Thử nghiệm: kb-draft/hop-dong.md; vận hành: chưa |
-| Chiết khấu Affiliate (phụ lục, cơ sở tính, đối soát, chi hộ) | Phụ lục Affiliate; bảng nhập giá; thư thông báo triển khai (dự kiến 1/7/2026). Có mâu thuẫn CF-01…CF-03 chưa quyết | Bắc → Huyền | 11.11.2026; thư sửa 25/06/2026 | | DRAFT | | | 001:c0012–c0018; 002:c0013 | Thử nghiệm: kb-draft/affiliate.md; vận hành: chưa |
-| SOP 12 bước, bàn giao, xử lý sự cố | docs/02, docs/07, docs/09 của repo | Bắc → Huyền | v0.1.0 | | DRAFT | | | | Không |
+| Nhóm tài liệu cần tìm | Tài liệu hiện có | Duyệt tài liệu nguồn | Owner → duyệt | Version | Ngày hiệu lực | Trạng thái KU | Người duyệt | Ngày rà soát tiếp | KU tạm | Nạp Project |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Checklist hồ sơ theo loại hình/ngành hàng | Thông tin và giấy tờ mở shop (văn bản mở shop, tờ rơi, Sổ tay nhà bán); giấy tờ riêng cho thực phẩm, TPCN, mỹ phẩm, hàng nhập khẩu. Chưa có checklist theo loại hình DN/HKD/HTX và chưa có OCOP | Đã duyệt 25/11/2026 | Bắc → Huyền | Sổ tay không rõ ngày; văn bản mở shop sửa 21/11/2026 | | DRAFT | | | 001:c0001; 002:c0002, c0004 | Thử nghiệm: kb-draft/checklist-mo-shop.md; vận hành: chưa |
+| Chính sách nhà bán và điều kiện phê duyệt | Mô hình F2C và đối tượng hợp tác (nhà sản xuất, nhập khẩu, đại lý ủy quyền); quy định cơ bản (giá niêm yết, phí ship, nguồn gốc hàng). Chưa có điều kiện duyệt, từ chối, tiêu chí | Đã duyệt 25/11/2026 | Bắc → Huyền | Sổ tay không rõ ngày | | DRAFT | | | 001:c0021; 002:c0001, c0010 | Thử nghiệm: kb-draft/chinh-sach-nha-ban.md; vận hành: chưa |
+| Chính sách nội dung, ngành hàng cấm/có điều kiện | Chỉ có quy định chung “không bán hàng giả, nhái, cấm”. Chưa có danh mục cấm hoặc có điều kiện | Đã duyệt 25/11/2026 (chỉ có quy định chung) | Bắc → Huyền | | | DRAFT (một phần) | | | 002:c0010 | Thử nghiệm: kb-draft/chinh-sach-nha-ban.md; vận hành: chưa |
+| Hướng dẫn App Nhà Bán Hi1 hiện hành | Hướng dẫn tải và dùng app; CMS (đăng nhập, thông tin shop, thương hiệu, sản phẩm, đơn hàng); app Hi1 Seller. Menu chưa được xác minh bằng ảnh chụp hiện hành | Đã duyệt 25/11/2026 | Bắc → Huyền | Sổ tay không rõ ngày; ảnh hướng dẫn sửa 02/10/2026 (đã đối chiếu trực quan; không nạp ảnh gốc vì lộ thông tin đăng nhập) | | DRAFT | | | 001:c0019; 002:c0005–c0008 | Thử nghiệm: kb-draft/app-cms.md; vận hành: chưa |
+| Hướng dẫn vận chuyển/thanh toán/xử lý đơn | Trạng thái đơn hàng, quy trình đơn, thanh toán COD/online, đối soát, đổi trả; hợp đồng mẫu Điều 4 và 6. Biểu phí thanh toán và biểu cước vận chuyển chưa có nội dung | Đã duyệt 25/11/2026 | Bắc → Huyền | 11.11.2026; Sổ tay | | DRAFT | | | 001:c0006–c0008; 002:c0007, c0009, c0011, c0012 | Thử nghiệm: kb-draft/don-hang-thanh-toan.md; vận hành: chưa |
+| Mẫu tin và kênh liên hệ chính thức | Mẫu tin A–I trong skills/seller-communication/templates; mẫu A–D đề xuất trong bảng trả lời của COO. Cấu hình Skill, không tạo KU | Chưa ghi nhận (mẫu trong repo) | Bắc → Huyền | v0.1.2 | | DRAFT | | | | Không |
+| SLA, lịch làm việc và chuyển cấp | SLA đề xuất thí điểm và ba cấp chuyển cấp trong bảng trả lời của COO (tài liệu nêu rõ chưa phải quy định hiện hành) | Chưa: tài liệu nêu là đề xuất | Bắc → Huyền | | | DRAFT | | | | Không |
+| Ánh xạ trạng thái CMS và bằng chứng sẵn sàng bán | Tám nhãn hồ sơ trong docs/06 (khớp bảng trả lời COO), mã CMS thật [CHỜ XÁC MINH]. Sổ tay chỉ có trạng thái đơn hàng và sản phẩm | Một phần: Sổ tay đã duyệt; nhãn docs/06 chưa ghi nhận | Bắc → Huyền | v0.1.0 | | DRAFT | | | 002:c0009 (đơn hàng) | Thử nghiệm: kb-draft/don-hang-thanh-toan.md; vận hành: chưa |
+| Hợp đồng hợp tác và phụ lục (phí, đối soát, chấm dứt) | Hợp đồng hợp tác mẫu; quy trình ký hợp đồng và phụ lục. Khối thông tin các bên cần bản che | Đã duyệt 25/11/2026 | Bắc → Huyền | 11.11.2026 | | DRAFT | | | 001:c0002–c0011; 002:c0003 | Thử nghiệm: kb-draft/hop-dong.md; vận hành: chưa |
+| Chiết khấu Affiliate (phụ lục, cơ sở tính, đối soát, chi hộ) | Phụ lục Affiliate; bảng nhập giá; thư thông báo triển khai (dự kiến 1/7/2026). Có mâu thuẫn CF-01…CF-03 chưa quyết | Đã duyệt 25/11/2026 | Bắc → Huyền | 11.11.2026; thư sửa 25/06/2026 | | DRAFT | | | 001:c0012–c0018; 002:c0013 | Thử nghiệm: kb-draft/affiliate.md; vận hành: chưa |
+| SOP 12 bước, bàn giao, xử lý sự cố | docs/02, docs/07, docs/09 của repo | Chưa ghi nhận (tài liệu repo) | Bắc → Huyền | v0.1.0 | | DRAFT | | | | Không |
 
 Ngoài phạm vi nhà bán (không đưa vào agent này): ưu đãi “Chủ tịch tặng” dành cho khách hàng (001:c0020), thuộc Marketing.
 
@@ -92,7 +92,7 @@ Khi chạy, agent chỉ tìm trong các tệp đã nạp vào Project knowledge.
 | Bản gốc (Word, PDF, Excel, ảnh) | Thư mục Drive nghiệp vụ, phân quyền theo vai trò | Không |
 | Candidate đã chuyển sang .md, kèm metadata | `kb-workspace/ai-seller-onboarding/<batch>/<revision>/candidates/` | Không |
 | Tệp phê duyệt của người duyệt | Thư mục nội bộ hạn chế quyền, ngoài repo | Không |
-| Tài liệu đã duyệt, dạng .md | `project/kb/` do công cụ sinh, rồi tải lên Project knowledge | Có |
+| KU đã duyệt, dạng .md | `project/kb/` do công cụ sinh, rồi tải lên Project knowledge | Có |
 | Gói nháp để thử | `project/kb-draft/` | Chỉ Project thử nghiệm |
 
 Không phải mọi tài liệu đã được chuyển sang .md. Chỉ nội dung đã tách thành candidate mới nằm trong gói. Chưa chuyển: biểu phí thanh toán và cước vận chuyển (Phụ lục trống), VTP.pdf và Ủy quyền KTA scan.pdf (đã loại), video hướng dẫn, dòng dữ liệu mẫu trong bảng Excel, nội dung quảng bá.

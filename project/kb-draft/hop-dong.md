@@ -1,12 +1,13 @@
 # Hợp đồng hợp tác và phụ lục
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0002 — Hợp đồng hợp tác: phạm vi sử dụng Sàn và quyền quyết định giá của nhà bán
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 1. Nội dung hợp tác)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0017
 
@@ -31,6 +32,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 2. Nghĩa vụ và quyền lợi của Bên A — phần Nghĩa vụ 1–5)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0007
 
@@ -56,6 +58,7 @@ Không nêu.
 - Phiên bản candidate: r3
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 2 — phần Quyền lợi 1–5)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0010
 
@@ -83,6 +86,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 3. Nghĩa vụ và quyền lợi của Bên B)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0009
 
@@ -105,6 +109,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 5 khoản 1–4)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 
 **Điều kiện**
@@ -128,6 +133,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 8 khoản 1–4)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0011
 
@@ -151,6 +157,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 7; Điều 9; Điều 10; đoạn 'Đi kèm là 03 phụ lục')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, image_described, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0018
 
@@ -179,6 +186,7 @@ Phụ lục 01, 02, 03 đính kèm hợp đồng (nội dung Phụ lục 01–02
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 02 — khung 'Ký hợp đồng với sàn TMĐT F2C Hi1')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0011
 

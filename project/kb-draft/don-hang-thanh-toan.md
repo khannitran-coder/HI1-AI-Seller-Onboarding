@@ -1,12 +1,13 @@
 # Đơn hàng, thanh toán, đối soát, đổi trả
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0006 — Hợp đồng hợp tác: phí dịch vụ và chi phí nhà bán chịu
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r2
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 4. Phí dịch vụ và chi phí)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, image_described, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0007
 
@@ -32,6 +33,7 @@ Phụ lục 01 (biểu phí dịch vụ trung gian thanh toán) — chưa có n�
 - Phiên bản candidate: r3
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 6 khoản 1–2)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0006
 
@@ -57,6 +59,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 6 khoản 3–4)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0007
 
@@ -80,6 +83,7 @@ Chứng từ xác nhận giao hàng của đơn vị vận chuyển; dữ liệu
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 04 — khung 'Các trạng thái đơn hàng trên Hi1 Seller' A–G)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, ocr_low, scope_unconfirmed
 - Quan hệ: depends_on 002:c0011
 
@@ -109,6 +113,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 05 — khung 'Quy trình vận hành', 'Hình thức thanh toán', 'Sơ đồ trạng thái đơn hàng Hi1', 'Đối soát 1 tháng 2 lần')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0007
 
@@ -135,6 +140,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 06 Quản lý khách hàng và chăm sóc sau bán — khung 'Quản lý khách hàng', 'Chính sách đổi trả hàng')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, ocr_low, scope_unconfirmed
 - Quan hệ: depends_on 002:c0009; depends_on 001:c0009
 

@@ -1,12 +1,13 @@
 # Checklist hồ sơ và giấy tờ mở shop
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0001 — Thông tin và giấy tờ nhà bán cung cấp để mở shop
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r2
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: {"seller_type": ["DN", "HKD", "HTX"]}
 - Nguồn: SIM-SRC-001 (VĂN MỞ SHOP.docx, Đoạn mở đầu + mục 1–8); SIM-SRC-002 (61e9c3c2dec45e9a07d5.jpg, Khung 'ĐIỀU KIỆN MỞ SHOP' mục 1–7; khung 'Điều kiện bắt buộc'; dòng 'cho doanh nghiệp, HTX, hộ kinh doanh')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 
 **Điều kiện**
@@ -38,6 +39,7 @@ Số điện thoại quản trị không thay được sau khi tạo shop. Tài 
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: {"category": ["thực phẩm", "TPCN", "mỹ phẩm"]}
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 02 Đăng ký tài khoản người bán — khung 'Cung cấp thông tin')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0001
 
@@ -64,6 +66,7 @@ Giấy đăng ký kinh doanh; giấy xác nhận công bố an toàn thực ph�
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 02 — khung 'Tạo và thiết lập gian hàng')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0001
 

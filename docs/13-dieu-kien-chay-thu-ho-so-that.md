@@ -1,6 +1,6 @@
 # Điều kiện chạy thử với hồ sơ thật
 
-v0.2.0 – pilot, chưa COO duyệt
+v0.2.1 – pilot, chưa COO duyệt
 
 Danh sách kiểm Chạy/Không chạy cho người thiết kế agent. Quyết định giai đoạn 1 của người thiết kế agent (2026-11-22): không cần COO ký; các nhãn [CHỜ COO DUYỆT] trong repo giữ nguyên làm lịch sử và không chặn pilot. Tài liệu này không coi bản pilot là chính sách đã duyệt.
 
@@ -8,17 +8,17 @@ Danh sách kiểm Chạy/Không chạy cho người thiết kế agent. Quyết 
 
 Theo bảng trả lời đào tạo của COO và [tổng quan](01-tong-quan.md): AI hỗ trợ quy trình 12 bước từ tiếp nhận nhà bán đến bàn giao sẵn sàng bán, ở mức tự chủ 3. AI đọc dữ liệu được cấp, đối chiếu, soạn nháp; người kiểm tra, gửi tin, thao tác CMS và quyết định. AI không duyệt, kích hoạt, đăng công khai hay gửi tin ra ngoài.
 
-Đầu vào của AI là bộ hồ sơ nhà bán; kho tri thức là các tài liệu nghiệp vụ trên Drive (xử lý qua kb-workspace). Theo [phân loại dữ liệu](04-phan-loai-du-lieu.md), giai đoạn 1 cho phép xử lý tên, SĐT, email, MST, địa chỉ, số CCCD của người đại diện và số tài khoản công ty trong workspace doanh nghiệp. Khi xử lý, AI không lặp lại đầy đủ số CCCD hoặc số tài khoản trong tin nhắn, báo cáo, log, tracker. Mật khẩu, OTP, token, khóa API vẫn bị chặn. Khi chưa có nguồn APPROVED đúng nhóm, AI trả “Chưa có căn cứ xác nhận”; nhân viên không chuyển tiếp lời AI cho nhà bán như căn cứ.
+Đầu vào của AI là bộ hồ sơ nhà bán; kho tri thức là các tài liệu nghiệp vụ trên Drive (xử lý qua kb-workspace). Theo [phân loại dữ liệu](04-phan-loai-du-lieu.md), giai đoạn 1 cho phép xử lý tên, SĐT, email, MST, địa chỉ, số CCCD của người đại diện và số tài khoản công ty trong workspace doanh nghiệp. Khi xử lý, AI không lặp lại đầy đủ số CCCD hoặc số tài khoản trong tin nhắn, báo cáo, log, tracker. Mật khẩu, OTP, token, khóa API vẫn bị chặn. Tài liệu nguồn nghiệp vụ đã được người thiết kế agent xác nhận duyệt ngày 25/11/2026 ([sổ nguồn](../kb-workspace/ai-seller-onboarding/so-nguon.csv)); AI chỉ trả lời theo KU đã APPROVED. Khi chưa có KU APPROVED đúng nhóm, AI trả “Chưa có căn cứ xác nhận”; nhân viên không chuyển tiếp lời AI cho nhà bán như căn cứ.
 
 ## 2. Phạm vi pilot (đã chốt 2026-11-23 bởi người thiết kế agent)
 
 | Hạng mục | Phạm vi |
 |---|---|
 | Nhà bán | Doanh nghiệp, HTX, hộ kinh doanh có MST và hóa đơn (theo tờ rơi mở shop). Không nhận cá nhân tự do; gặp thì chuyển Trưởng nhóm |
-| Ngành hàng | Hàng thông thường. Thực phẩm, TPCN, mỹ phẩm, hàng nhập khẩu, OCOP: chỉ đối chiếu giấy tờ theo danh sách dự thảo (KU 002:c0002), chuyển kiểm duyệt ngành hàng vì chưa có nguồn duyệt |
+| Ngành hàng | Hàng thông thường. Thực phẩm, TPCN, mỹ phẩm, hàng nhập khẩu, OCOP: chỉ đối chiếu giấy tờ theo danh sách trong KU 002:c0002 (KU chưa duyệt), chuyển kiểm duyệt ngành hàng vì chưa có KU duyệt về điều kiện ngành hàng |
 | Bước AI hỗ trợ | Bước 3, 4, 5 (phân loại, đối chiếu checklist, nháp yêu cầu bổ sung), 7 (nháp sản phẩm), 8 (phiếu bàn giao duyệt), 12 (báo cáo). Bước 1, 2, 6, 9, 10, 11 do người làm; AI không hỗ trợ trong pilot. Xem [quy trình](02-quy-trinh-12-buoc.md) |
 | Quy mô | 10–15 hồ sơ, 2–4 tuần, 2–3 nhân viên |
-| Cách chạy | Song song: nhân viên làm như cũ, AI soạn nháp để so sánh; không gửi nhà bán lời AI chưa có nguồn APPROVED |
+| Cách chạy | Song song: nhân viên làm như cũ, AI soạn nháp để so sánh; không gửi nhà bán lời AI chưa có KU APPROVED |
 | Ngoài phạm vi | AI gửi tin, sửa CMS hoặc tracker, duyệt, kích hoạt, đăng sản phẩm; hứa ngày duyệt, doanh thu, ưu đãi; trả lời về phí thanh toán, cước vận chuyển, ngành hàng cấm khi chưa có KU APPROVED |
 | Đo | Thời gian phản hồi đầu, tỷ lệ hồ sơ đủ sau lượt đầu, phút xử lý mỗi hồ sơ, tỷ lệ nháp được duyệt không cần sửa, số sự cố bằng 0 |
 | Ngày bắt đầu | 24/11/2026 (chốt 2026-11-23). Kết thúc dự kiến từ 08/12/2026 đến 22/12/2026 (2–4 tuần). Chỉ nhận hồ sơ thật khi các điều kiện bắt buộc ở mục 3 đạt; ngày 24/11 chưa đạt thì chạy 14 ca trên dữ liệu mô phỏng trước và ghi ngày nhận hồ sơ thật đầu tiên vào CHANGELOG |
@@ -32,7 +32,7 @@ Trạng thái ghi theo bằng chứng trong repo; việc chưa có bằng chứn
 |---|---|---|---|
 | 1 | Phạm vi pilot, dữ liệu vào AI, gói Claude | Người thiết kế agent | Đã quyết: dữ liệu, gói (gói doanh nghiệp đã mua, chờ cài đặt) và phạm vi ở mục 2 |
 | 2 | Project “HI1 Seller Onboarding” và Project thử nghiệm tách biệt đã tạo; sáu Skill cài từ bản đóng gói và xác minh khả dụng; không cài skills-draft | Người cấu hình | Chưa xác nhận |
-| 3 | Nguồn APPROVED cho các nhóm trong [danh mục](../project/knowledge-base-index.md); Huyền ghi phê duyệt vào bản sao của [mẫu](../templates/phe-duyet-ku.csv) rồi chạy `tools/export_kb.py --approvals` để tạo gói vận hành | Bắc (owner), Huyền (duyệt) | Chưa duyệt; gói vận hành chưa có (gói thử nghiệm `kb-draft` đã sinh). Đã có 26 KU DRAFT cho: thông tin và giấy tờ mở shop, hợp đồng, Affiliate, CMS và app, đơn hàng, thanh toán, đổi trả. Chưa có nguồn cho: điều kiện duyệt/từ chối nhà bán, ngành hàng cấm, trạng thái hồ sơ trên CMS, SLA |
+| 3 | KU APPROVED cho các nhóm trong [danh mục](../project/knowledge-base-index.md); Huyền ghi phê duyệt vào bản sao của [mẫu](../templates/phe-duyet-ku.csv) rồi chạy `tools/export_kb.py --approvals` để tạo gói vận hành | Bắc (owner), Huyền (duyệt) | Tài liệu nguồn: đã duyệt (25/11/2026). KU: chưa duyệt; gói vận hành chưa có (gói thử nghiệm `kb-draft` đã sinh). Đã có 33 KU DRAFT (22 không mâu thuẫn, 11 hoãn) cho: thông tin và giấy tờ mở shop, hợp đồng, Affiliate, CMS và app, đơn hàng, thanh toán, đổi trả. Chưa có nguồn cho: điều kiện duyệt/từ chối nhà bán, ngành hàng cấm, trạng thái hồ sơ trên CMS, SLA |
 | 4 | Owner và người duyệt từng nhóm | Người thiết kế agent | Đã xác định: Bắc là owner, Huyền duyệt |
 | 5 | Gate 0 cho tài liệu đưa vào kho dùng chung | Owner tài liệu | Đã áp dụng cho nguồn đã xử lý: khối có số tài khoản và chữ ký bị loại khỏi KU. Hồ sơ nhà bán xử lý từng ca không cần che theo quyết định giai đoạn 1 |
 | 6 | Không nạp KU có mâu thuẫn chưa quyết (CF-01…CF-06) | Bắc | Hoãn xử lý theo quyết định 25/11/2026: pilot chạy trước, 11 KU mâu thuẫn không vào gói vận hành, câu hỏi thuộc các nội dung này trả “Chưa có căn cứ xác nhận” và chuyển người. Nhân viên không gửi nhà bán câu “0 phí trung gian” trên tờ rơi (CF-06) |
@@ -47,7 +47,7 @@ Chỉ chạy với hồ sơ thật khi các mục 1 đến 5, 7 và 9 đến 11 
 
 ## 4. Điều kiện dừng ngay
 
-Dừng pilot, báo Trưởng nhóm và ghi sự cố đã che khi có một trong các việc: mật khẩu, OTP, token hoặc khóa API vào AI hay log; số CCCD hoặc số tài khoản đầy đủ xuất hiện trong tin nhắn gửi nhà bán, báo cáo, tracker hoặc repo; nhân viên dùng lời AI chưa có nguồn APPROVED làm căn cứ gửi nhà bán; AI trích bản DRAFT hoặc case như quy định; hứa ngày duyệt, doanh thu hay ưu đãi chưa duyệt; AI thực hiện thao tác ghi (gửi tin, sửa CMS, cập nhật tracker); lỗi quyền truy cập. Rollback về bản an toàn trước đó theo [quy tắc thay đổi](08-quy-tac-thay-doi.md) và kiểm thử lại.
+Dừng pilot, báo Trưởng nhóm và ghi sự cố đã che khi có một trong các việc: mật khẩu, OTP, token hoặc khóa API vào AI hay log; số CCCD hoặc số tài khoản đầy đủ xuất hiện trong tin nhắn gửi nhà bán, báo cáo, tracker hoặc repo; nhân viên dùng lời AI chưa có KU APPROVED làm căn cứ gửi nhà bán; AI trích bản DRAFT hoặc case như quy định; hứa ngày duyệt, doanh thu hay ưu đãi chưa duyệt; AI thực hiện thao tác ghi (gửi tin, sửa CMS, cập nhật tracker); lỗi quyền truy cập. Rollback về bản an toàn trước đó theo [quy tắc thay đổi](08-quy-tac-thay-doi.md) và kiểm thử lại.
 
 ## 5. Thông tin cần bổ sung từ nghiệp vụ
 
@@ -66,7 +66,7 @@ Các thời hạn SLA, vai trò và tên menu trong bảng trả lời của COO
 
 ## 6. Việc làm ngay được
 
-- Bắc xem 26 KU DRAFT và trả lời CF-01…CF-05; Huyền duyệt từng KU theo review-index.
+- Huyền duyệt 22 KU không mâu thuẫn theo [trang chuẩn hóa](../kb-workspace/ai-seller-onboarding/chuan-hoa-mau-thuan.md); Bắc quyết CF-01…CF-06 sau (đang hoãn).
 - Chạy 14 ca trên dữ liệu mô phỏng trong Project thử nghiệm tách biệt.
 - Gửi tài liệu còn thiếu ở mục 5.
 

@@ -1,12 +1,13 @@
 # Hướng dẫn App Nhà Bán và CMS
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Chưa có KU nào được duyệt. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0019 — Hướng dẫn tải và sử dụng App Hi1 – Nhà bán (8 bước)
 - Trạng thái: DRAFT (chưa duyệt)
 - Phiên bản candidate: r4
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-009 (Hướng Dẫn Tải APP.jpg, Ảnh 'HƯỚNG DẪN TẢI APP Hi1 – NHÀ BÁN': bước 1–4 (khung 1), bước 5–8 (khung 2)); SIM-SRC-008 (GIAO DIỆN APP.jpg, Hai biểu tượng ứng dụng và tên hiển thị dưới biểu tượng)
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0001
 
@@ -38,6 +39,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 03 Quản lý phần mềm CMS — khung 'Quản trị shop', 'Quản lý thương hiệu')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, ocr_low, scope_unconfirmed
 
 **Điều kiện**
@@ -61,6 +63,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 03 — khung 'Quản lý sản phẩm')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, ocr_low, scope_unconfirmed
 - Quan hệ: depends_on 001:c0018
 
@@ -86,6 +89,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 03 — khung 'Tiếp nhận và xác nhận đơn hàng')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 002:c0009
 
@@ -109,6 +113,7 @@ Không nêu.
 - Phiên bản candidate: r1
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-011 (SỔ TAY NHÀ BÁN.pdf (liên kết từ trang Nhà bán của website Hi1), Mục 04 Vận hành app nhà bán — các khung 'Các bước sử dụng', 'Quản lý sản phẩm', 'Báo cáo', 'Start Live', 'Quản lý tài khoản', 'Cài đặt thông tin shop', 'Quản lý voucher', 'Quản lý hồ sơ shop')
+- Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
 - Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, ocr_low, scope_unconfirmed
 - Quan hệ: depends_on 001:c0019; depends_on 002:c0009
 

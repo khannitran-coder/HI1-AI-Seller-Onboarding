@@ -31,7 +31,7 @@ Menu: Customize > Skills > “+” > “+ Create skill” > “Upload a skill”
 
 Tải lần lượt từ `dist/`: `seller-document-checklist.zip`, `seller-communication.zip`, `first-product-assistant.zip`, `daily-operations-report.zip`, `affiliate-price-review.zip`, `seller-media-tools.zip`. Nếu trình tải báo lỗi mô tả quá dài, dùng zip cùng tên trong `dist/short/` và ghi vào bảng kết quả. Bật cả sáu Skill. Không cài gì từ `skills-draft/`.
 
-Phiên bản phải thấy trong `SKILL.md`: checklist 0.1.3, communication 0.1.4, first-product 0.1.3, daily-report 0.2.2, affiliate 0.1.0, media 0.1.0.
+Phiên bản phải thấy trong `SKILL.md`: checklist 0.1.4, communication 0.1.4, first-product 0.1.3, daily-report 0.2.2, affiliate 0.1.0, media 0.1.0.
 
 Trong pilot không cấp Skill cho toàn tổ chức; chỉ chia sẻ cho người tham gia.
 

@@ -98,8 +98,6 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 - Google Sheet không phân quyền theo dòng và không có nhật ký bất biến.
 - Không nhắc việc theo thời gian thực.
 - Kiểm bảng giá Affiliate và chuẩn bị media có Skill chỉ hỗ trợ kiểm/chuẩn bị bản sao; hợp đồng và nhập CMS chỉ có bản nháp chưa kích hoạt, chưa có quyền tự động hoá.
-- Gói Claude Pro không chia sẻ được Project và Skill; dùng chung cho nhóm cần gói Team.
-
 ### Hướng phát triển
 
 - v0.2: affiliate-price-review và seller-media-tools cài được để kiểm/chuẩn bị nháp; seller-contract-draft là bản nháp D-08b chưa cài/kích hoạt.

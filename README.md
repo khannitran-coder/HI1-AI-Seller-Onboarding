@@ -141,9 +141,11 @@ Các nội dung [CHỜ COO DUYỆT] là dự thảo, chưa cấp thêm quyền. 
 
 ## Cài đặt
 
+Hướng dẫn cài vào tài khoản doanh nghiệp kèm prompt cho Claude desktop: [project/cai-dat-claude.md](project/cai-dat-claude.md).
+
 1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Tạo Claude Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md).
-3. Chạy `python tools/build_skills.py` → lấy zip trong dist/. Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
+3. Chạy `python tools/build_skills.py` → lấy zip trong dist/ (mỗi zip chứa thư mục trùng tên Skill; dist/short/ là bản mô tả ≤200 ký tự dùng khi claude.ai báo mô tả quá dài). Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt. Gói nạp được sinh bằng `python tools/export_kb.py`: `project/kb-draft/` chỉ cho Project thử nghiệm, `project/kb/` (khi có tệp phê duyệt) cho Project vận hành; chi tiết ở mục E của danh mục.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.

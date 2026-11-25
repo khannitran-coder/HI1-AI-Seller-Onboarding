@@ -18,14 +18,14 @@ Số KU: 33. est_tokens ≈ số ký tự / 3 của file candidate.
 | 002:c0007 | CMS: tiếp nhận, xác nhận và in đơn hàng | L1/RULE | chưa xác nhận | chưa có | 508 | DRAFT |  | app-cms.md |
 | 002:c0008 | App Hi1 Seller: đăng nhập, quản lý sản phẩm, báo cáo, livestream, tài khoản và cài đặt shop | L1/RULE | chưa xác nhận | chưa có | 952 | DRAFT | ocr_low | app-cms.md |
 | 001:c0006 | Hợp đồng hợp tác: phí dịch vụ và chi phí nhà bán chịu | L1/RULE | chưa xác nhận | chưa có | 870 | DRAFT | conflict | don-hang-thanh-toan.md |
-| 001:c0007 | Hợp đồng hợp tác: điều kiện ghi nhận, lịch đối soát và công thức thanh toán | L1/RULE | chưa xác nhận | chưa có | 701 | DRAFT |  | don-hang-thanh-toan.md |
+| 001:c0007 | Hợp đồng hợp tác: điều kiện ghi nhận, lịch đối soát và công thức thanh toán | L1/RULE | chưa xác nhận | chưa có | 749 | DRAFT | conflict | don-hang-thanh-toan.md |
 | 001:c0008 | Hợp đồng hợp tác: xử lý chênh lệch số liệu đối soát và chậm thanh toán | L1/RULE | chưa xác nhận | chưa có | 630 | DRAFT |  | don-hang-thanh-toan.md |
 | 002:c0009 | App Hi1 Seller: các trạng thái đơn hàng và cách nhà bán xử lý | L1/RULE | chưa xác nhận | chưa có | 883 | DRAFT | ocr_low | don-hang-thanh-toan.md |
 | 002:c0011 | Quy trình vận hành đơn hàng, hình thức thanh toán và đối soát (theo Sổ tay) | L1/RULE | chưa xác nhận | chưa có | 872 | DRAFT | conflict | don-hang-thanh-toan.md |
 | 002:c0012 | Quản lý thông tin khách hàng và chính sách đổi trả | L1/RULE | chưa xác nhận | chưa có | 724 | DRAFT | ocr_low | don-hang-thanh-toan.md |
 | 001:c0002 | Hợp đồng hợp tác: phạm vi sử dụng Sàn và quyền quyết định giá của nhà bán | L1/RULE | chưa xác nhận | chưa có | 717 | DRAFT | conflict | hop-dong.md |
 | 001:c0003 | Hợp đồng hợp tác: nghĩa vụ của Hi1 (Bên A) | L1/RULE | chưa xác nhận | chưa có | 720 | DRAFT |  | hop-dong.md |
-| 001:c0004 | Hợp đồng hợp tác: quyền của Hi1 (Bên A), gồm kiểm duyệt nội dung và thời hạn khắc phục | L1/RULE | chưa xác nhận | chưa có | 698 | DRAFT |  | hop-dong.md |
+| 001:c0004 | Hợp đồng hợp tác: quyền của Hi1 (Bên A), gồm kiểm duyệt nội dung và thời hạn khắc phục | L1/RULE | chưa xác nhận | chưa có | 745 | DRAFT | conflict | hop-dong.md |
 | 001:c0005 | Hợp đồng hợp tác: nghĩa vụ và quyền lợi của nhà bán (Bên B) | L1/RULE | chưa xác nhận | chưa có | 732 | DRAFT |  | hop-dong.md |
 | 001:c0009 | Hợp đồng hợp tác: bảo mật, bảo vệ dữ liệu cá nhân và sở hữu trí tuệ | L1/RULE | chưa xác nhận | chưa có | 788 | DRAFT |  | hop-dong.md |
 | 001:c0010 | Hợp đồng hợp tác: chấm dứt, bồi thường, bất khả kháng và tất toán | L1/RULE | chưa xác nhận | chưa có | 647 | DRAFT |  | hop-dong.md |

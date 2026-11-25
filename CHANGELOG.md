@@ -152,6 +152,21 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - knowledge-base-index v0.2.0 → v0.3.0 (owner → duyệt, nguồn batch 002, ánh xạ ý định, mâu thuẫn). docs/13 v0.1.0 → v0.2.0 (phạm vi pilot đề xuất, điều kiện cập nhật).
 - Chưa có tài liệu APPROVED; 26 KU chưa được duyệt.
 
+## Xác nhận duyệt nguồn Drive và phiếu duyệt KU — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Người dùng xác nhận trong hội thoại: tài liệu Drive gửi cập nhật ngày 25/11 đã được duyệt. Ghi ở SIM-BATCH-001 r3 manifest và đầu knowledge-base-index (v0.5.1). Chưa KU nào chuyển APPROVED; chờ phiếu duyệt của người duyệt.
+- SIM-BATCH-001 r3: c0004 và c0007 gắn cờ conflict còn thiếu (CF-04, CF-05); nội dung không đổi.
+- Tạo phiếu duyệt điền sẵn cho 20 KU nguồn Drive (11 không mâu thuẫn, 9 có mâu thuẫn); tệp lưu cục bộ, Git bỏ qua.
+- Người dùng xác nhận thêm Sổ tay nhà bán và thư Affiliate đã được duyệt: ghi ở SIM-BATCH-002 manifest; phiếu thêm 13 KU (11 không mâu thuẫn, 2 có mâu thuẫn). Chưa KU nào APPROVED.
+
+## Đóng gói cho claude.ai và hướng dẫn cài đặt — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- tools/build_skills.py: zip chứa thư mục trùng tên Skill (trước đây SKILL.md ở gốc zip, không đúng cấu trúc claude.ai yêu cầu); thêm dist/short/ dùng mô tả ≤200 ký tự từ tools/claude-ai-descriptions.json. Không đổi SKILL.md.
+- Thêm project/cai-dat-claude.md (hướng dẫn và prompt cài đặt); README trỏ tới.
+- Chưa thử tải lên claude.ai; 14 ca chưa chạy.
+
 ## Đối chiếu Drive, revision r2 và nơi đặt tài liệu — 2026-11-25
 
 - Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).

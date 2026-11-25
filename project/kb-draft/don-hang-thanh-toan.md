@@ -29,10 +29,10 @@ Phụ lục 01 (biểu phí dịch vụ trung gian thanh toán) — chưa có n�
 
 ### 001:c0007 — Hợp đồng hợp tác: điều kiện ghi nhận, lịch đối soát và công thức thanh toán
 - Trạng thái: DRAFT (chưa duyệt)
-- Phiên bản candidate: r1
+- Phiên bản candidate: r3
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 6 khoản 1–2)
-- Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
+- Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0006
 
 **Điều kiện**
@@ -48,6 +48,8 @@ Phụ lục 01 (biểu phí dịch vụ trung gian thanh toán) — chưa có n�
 
 **Chứng từ**
 Không nêu.
+
+> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): Bản r3: gắn cờ conflict cho CF-05 (đối ứng 002:c0011); nội dung KU không đổi.
 
 
 ### 001:c0008 — Hợp đồng hợp tác: xử lý chênh lệch số liệu đối soát và chậm thanh toán

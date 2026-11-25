@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA = ROOT/'skills/daily-operations-report/references/tracker-schema.json'
+SHORT = ROOT/'tools/claude-ai-descriptions.json'
 
 
 def scalar(value):
@@ -68,6 +69,13 @@ def check():
         except (OSError, ValueError, KeyError, TypeError) as exc:
             issues.append(f'{folder.name}: {exc}')
     try:
+        short = json.loads(SHORT.read_text(encoding='utf-8'))
+        for folder in folders:
+            if not 1 <= len(short.get(folder.name, '')) <= 200:
+                issues.append(f'{folder.name}: mô tả ngắn thiếu hoặc quá 200 ký tự')
+    except (ValueError, OSError, AttributeError, TypeError):
+        issues.append('Không đọc được tools/claude-ai-descriptions.json')
+    try:
         schema = json.loads(SCHEMA.read_text(encoding='utf-8'))
         with (ROOT/'templates/tracker-header.csv').open(encoding='utf-8-sig', newline='') as f:
             if next(csv.reader(f)) != schema['columns']:
@@ -112,13 +120,23 @@ def main():
     print(f'Đạt: {len(folders)} Skill; frontmatter, version, tham chiếu, schema/header và quét bí mật.')
     if not args.check:
         out = ROOT/'dist'
-        out.mkdir(exist_ok=True)
+        (out/'short').mkdir(parents=True, exist_ok=True)
+        short = json.loads(SHORT.read_text(encoding='utf-8'))
         for folder in folders:
-            with zipfile.ZipFile(out/(folder.name+'.zip'), 'w', zipfile.ZIP_DEFLATED) as archive:
-                for file in sorted(folder.rglob('*')):
-                    if file.is_file() and '__pycache__' not in file.parts and file.suffix != '.pyc':
-                        archive.write(file, file.relative_to(folder))
-            print(f'dist/{folder.name}.zip')
+            # claude.ai yêu cầu zip chứa thư mục trùng tên Skill; dist/short dùng mô tả ≤200 ký tự.
+            for target, description in ((out, None), (out/'short', short[folder.name])):
+                with zipfile.ZipFile(target/(folder.name+'.zip'), 'w', zipfile.ZIP_DEFLATED) as archive:
+                    for file in sorted(folder.rglob('*')):
+                        if not file.is_file() or '__pycache__' in file.parts or file.suffix == '.pyc':
+                            continue
+                        arcname = f'{folder.name}/{file.relative_to(folder).as_posix()}'
+                        if description and file == folder/'SKILL.md':
+                            line = 'description: ' + json.dumps(description, ensure_ascii=False)
+                            text = file.read_text(encoding='utf-8').replace('\r\n', '\n')
+                            archive.writestr(arcname, re.sub(r'^description: .*$', lambda _: line, text, count=1, flags=re.M))
+                        else:
+                            archive.write(file, arcname)
+                print(f'{target.relative_to(ROOT).as_posix()}/{folder.name}.zip')
     return 0
 
 

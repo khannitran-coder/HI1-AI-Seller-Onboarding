@@ -1,10 +1,12 @@
 # Danh mục kho tri thức
 
-v0.5.0 – pilot, chưa COO duyệt
+v0.5.1 – pilot, chưa COO duyệt
 
 **Hiện trạng: chưa có tài liệu hoặc KU nào APPROVED.** Danh mục này chỉ để TÌM đúng nhóm tài liệu; không phải căn cứ trả lời. Mọi dòng bên dưới đang ở DRAFT, không được nạp vào Project và không dùng tư vấn cho tới khi người duyệt chuyển sang APPROVED. Khi chưa có dòng APPROVED đúng nhóm, agent trả đúng câu “Chưa có căn cứ xác nhận”. Không upload bản pilot để thay nguồn duyệt. Riêng Project thử nghiệm (dữ liệu mô phỏng) được nạp gói DRAFT ở mục E để kiểm hành vi; câu trả lời ở đó vẫn phải ghi rõ nguồn chưa duyệt.
 
 Owner và người duyệt: theo quyết định của người thiết kế agent (2026-11-22), owner là Bắc (Phát triển nhà bán), người duyệt là Huyền. Người duyệt không tự duyệt KU do chính mình soạn; mỗi KU có hai người khác nhau soạn và duyệt.
+
+Tài liệu nguồn trên Drive: người thiết kế agent xác nhận ngày 25/11/2026 là đã được duyệt (chưa đối chiếu sổ nguồn). Đây là duyệt tài liệu nguồn; KU trích xuất vẫn là DRAFT cho tới khi người duyệt ghi phiếu duyệt, và các mâu thuẫn vẫn phải được owner quyết. Sổ tay nhà bán và thư thông báo Affiliate cũng được xác nhận đã duyệt trong cùng ngày, với cùng giới hạn trên.
 
 ## A. Giao thức truy xuất (bắt buộc)
 

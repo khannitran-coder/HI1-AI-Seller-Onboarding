@@ -39,3 +39,8 @@ pending_human:
 ## Quy tắc Vàng đã áp dụng
 
 Không đưa vào KU: số hotline, địa chỉ văn phòng, liên kết nhóm Zalo. Tên miền CMS (admin.hi1.vn) giữ nguyên vì là địa chỉ hệ thống của Hi1 cần cho hướng dẫn.
+
+## Xác nhận của người dùng ngày 25/11/2026
+
+Người thiết kế agent xác nhận trong hội thoại: Sổ tay nhà bán (SIM-SRC-011) và thư “Kính gửi Quý Nhà bán” (SIM-SRC-012) đã được duyệt. Chưa đối chiếu sổ nguồn. Đây là duyệt tài liệu nguồn, chưa phải phê duyệt từng KU trích xuất; không giải quyết CF-04, CF-05 và các khoảng trống ở gap-log.
+

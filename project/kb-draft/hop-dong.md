@@ -53,10 +53,10 @@ Không nêu.
 
 ### 001:c0004 — Hợp đồng hợp tác: quyền của Hi1 (Bên A), gồm kiểm duyệt nội dung và thời hạn khắc phục
 - Trạng thái: DRAFT (chưa duyệt)
-- Phiên bản candidate: r1
+- Phiên bản candidate: r3
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: chưa xác nhận
 - Nguồn: SIM-SRC-003 (MC. Mẫu Hợp đồng hợp tác 11.11.2026.docx, Điều 2 — phần Quyền lợi 1–5)
-- Cờ: gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
+- Cờ: conflict, gate0_unverified, inferred, missing_effective_date, missing_owner, scope_unconfirmed
 - Quan hệ: depends_on 001:c0010
 
 **Điều kiện**
@@ -74,6 +74,8 @@ Ngoại lệ của mục 1: được tạm ẩn/gỡ ngay lập tức nếu có 
 
 **Chứng từ**
 Không nêu.
+
+> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): Bản r3: gắn cờ conflict cho CF-04 (đối ứng 002:c0010); nội dung KU không đổi.
 
 
 ### 001:c0005 — Hợp đồng hợp tác: nghĩa vụ và quyền lợi của nhà bán (Bên B)

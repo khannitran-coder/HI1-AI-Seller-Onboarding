@@ -1,8 +1,8 @@
-# Chuẩn hóa 33 KU: 11 KU có mâu thuẫn, 22 KU chờ duyệt
+# Chuẩn hóa 33 KU: 11 KU có mâu thuẫn, 22 KU còn lại
 
 Ngày lập: 25/11/2026. Người chuẩn hóa và duyệt: Huyền. Owner quyết nội dung nghiệp vụ: Bắc.
 
-Tài liệu nguồn đã được xác nhận duyệt ngày 25/11/2026, nhưng các cặp dưới đây nói khác nhau nên chưa đưa vào gói vận hành. Mã KU: 001 là đợt tài liệu Drive, 002 là đợt Sổ tay nhà bán.
+Tài liệu nguồn đã được xác nhận duyệt ngày 25/11/2026, nhưng các cặp dưới đây nói khác nhau nên chưa có quy tắc thống nhất. Cập nhật 25/11/2026: người thiết kế agent đã duyệt cả 33 KU cho pilot; 11 KU dưới đây được nạp kèm nhãn mâu thuẫn. Việc còn lại: đối chiếu từng KU với tài liệu gốc và chốt CF-01…CF-06. Mã KU: 001 là đợt tài liệu Drive, 002 là đợt Sổ tay nhà bán.
 
 ## Cách làm
 
@@ -73,11 +73,11 @@ Tài liệu nguồn đã được xác nhận duyệt ngày 25/11/2026, nhưng c
 - Quyết định: …
 - Người quyết, ngày hiệu lực: …
 
-## 22 KU không có mâu thuẫn (duyệt được ngay)
+## 22 KU không có mâu thuẫn (đã duyệt cho pilot, cần đối chiếu lại)
 
 | KU | Tiêu đề | Nhóm | Lưu ý khi duyệt |
 |---|---|---|---|
-| [001:c0001 r2](SIM-BATCH-001/r2/candidates/c0001.md) | Thông tin và giấy tờ nhà bán cung cấp để mở shop | Checklist hồ sơ và giấy tờ mở shop |  |
+| [001:c0001 r5](SIM-BATCH-001/r5/candidates/c0001.md) | Thông tin và giấy tờ nhà bán cung cấp để mở shop | Checklist hồ sơ và giấy tờ mở shop |  |
 | [002:c0002 r1](SIM-BATCH-002/r1/candidates/c0002.md) | Giấy tờ cung cấp khi đăng ký shop, kể cả thực phẩm, TPCN, mỹ phẩm và hàng nhập khẩu | Checklist hồ sơ và giấy tờ mở shop |  |
 | [002:c0004 r1](SIM-BATCH-002/r1/candidates/c0004.md) | Thông tin nhà bán cung cấp để tạo và thiết lập gian hàng | Checklist hồ sơ và giấy tờ mở shop |  |
 | [002:c0001 r1](SIM-BATCH-002/r1/candidates/c0001.md) | Mô hình F2C của Hi1 và đối tượng nhà bán được hợp tác | Chính sách nhà bán: mô hình F2C, quy định cơ bản, thông điệp phí |  |

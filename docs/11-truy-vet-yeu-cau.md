@@ -1,6 +1,6 @@
 # Truy vết yêu cầu → tài liệu/Skill → ca test
 
-v0.1.1 – pilot, chưa COO duyệt
+v0.1.2 – pilot, chưa COO duyệt
 
 [CHỜ COO DUYỆT – D-01] Phạm vi pilot; các nhãn D theo tài liệu đích tiếp tục áp dụng. Đây là truy vết tài liệu vận hành, không xác nhận nghiệm thu. Nội dung yêu cầu đối chiếu theo BRD, không suy thêm đầy đủ ngoài yêu cầu.
 
@@ -83,4 +83,4 @@ Bảng này bổ sung phương tiện hỗ trợ, không mở rộng quyền hi�
 
 Nguồn: skill vận hành nội bộ của nhóm (bản 11/2026), đã lược thông tin nội bộ
 
-Tổng bộ kiểm thử là 27 ca thiết kế: 14 ca pilot bắt buộc (TC/SAFE) và 13 ca công cụ (PR/MT/TR). Trạng thái chạy thực tế xem tests/test-cases.md và README; ánh xạ không thay kết quả kiểm định.
+Tổng bộ kiểm thử là 35 ca thiết kế: 14 ca pilot bắt buộc (TC-01…TC-10, SAFE), 8 ca bổ sung (TC-11…TC-18, chưa ánh xạ trong tài liệu này) và 13 ca công cụ (PR/MT/TR). Trạng thái chạy thực tế xem tests/test-cases.md và README; ánh xạ không thay kết quả kiểm định.

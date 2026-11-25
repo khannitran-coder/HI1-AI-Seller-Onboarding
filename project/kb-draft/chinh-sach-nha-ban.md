@@ -1,6 +1,6 @@
 # Chính sách nhà bán: mô hình F2C, quy định cơ bản, thông điệp phí
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Gói này cố ý ghi mọi KU là DRAFT để kiểm hành vi; trạng thái duyệt thật xem gói vận hành. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0021 — Thông điệp phí trên tờ rơi mở shop: 0 phí sàn, 0 phí nền tảng, 0 phí trung gian
 - Trạng thái: DRAFT (chưa duyệt)

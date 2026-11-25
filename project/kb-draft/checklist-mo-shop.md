@@ -1,10 +1,10 @@
 # Checklist hồ sơ và giấy tờ mở shop
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Gói này cố ý ghi mọi KU là DRAFT để kiểm hành vi; trạng thái duyệt thật xem gói vận hành. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0001 — Thông tin và giấy tờ nhà bán cung cấp để mở shop
 - Trạng thái: DRAFT (chưa duyệt)
-- Phiên bản candidate: r2
+- Phiên bản candidate: r5
 - Loại: L1/RULE; đối tượng: staff, seller; phạm vi: {"seller_type": ["DN", "HKD", "HTX"]}
 - Nguồn: SIM-SRC-001 (VĂN MỞ SHOP.docx, Đoạn mở đầu + mục 1–8); SIM-SRC-002 (61e9c3c2dec45e9a07d5.jpg, Khung 'ĐIỀU KIỆN MỞ SHOP' mục 1–7; khung 'Điều kiện bắt buộc'; dòng 'cho doanh nghiệp, HTX, hộ kinh doanh')
 - Tài liệu nguồn: đã duyệt (xác nhận 2026-11-25); trạng thái KU ghi ở dòng Trạng thái
@@ -29,9 +29,9 @@ Nhà bán cung cấp các mục sau để Hi1 hỗ trợ mở shop:
 Số điện thoại quản trị không thay được sau khi tạo shop. Tài khoản ngân hàng phải của công ty, không dùng số cá nhân. Nguồn không nêu mục nào được miễn. Tờ rơi chỉ liệt kê 7 mục thông tin (không có mục 8) nhưng nêu giấy tờ công bố sản phẩm là điều kiện bắt buộc.
 
 **Chứng từ**
-Đăng ký kinh doanh (PDF); logo công ty; bộ giấy tờ sản phẩm (giấy công bố, giấy chứng nhận…); hóa đơn đầu vào – đầu ra. Giá trị số tài khoản là dữ liệu Đỏ: chỉ ghi nhận có/không, không đưa vào AI.
+Đăng ký kinh doanh (PDF); logo công ty; bộ giấy tờ sản phẩm (giấy công bố, giấy chứng nhận…); hóa đơn đầu vào – đầu ra.
 
-> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): VĂN MỞ SHOP.docx thực chất là mẫu tin gửi nhà bán (cấu hình skill) — phần văn bản mẫu ghi ở Gap Log G-06; KU này chỉ giữ nội dung quy tắc. Bản r2: đã đối chiếu trực quan ảnh tờ rơi, 7 mục và điều kiện bắt buộc khớp; bỏ cờ ocr_low.
+> Ghi chú cho người duyệt (không dùng để trả lời nhà bán): VĂN MỞ SHOP.docx thực chất là mẫu tin gửi nhà bán (cấu hình skill) — phần văn bản mẫu ghi ở Gap Log G-06; KU này chỉ giữ nội dung quy tắc. Bản r2: đã đối chiếu trực quan ảnh tờ rơi, 7 mục và điều kiện bắt buộc khớp; bỏ cờ ocr_low. Bản r5: bỏ câu quy tắc xử lý số tài khoản ở mục Chứng từ vì là cấu hình hành vi AI, không phải chứng từ nhà bán nộp, và đã trái quyết định phân loại dữ liệu giai đoạn 1 ngày 22/11/2026; nội dung nghiệp vụ không đổi.
 
 
 ### 002:c0002 — Giấy tờ cung cấp khi đăng ký shop, kể cả thực phẩm, TPCN, mỹ phẩm và hàng nhập khẩu

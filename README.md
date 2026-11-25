@@ -108,7 +108,7 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 
 | Tên | Việc làm | Version | Trạng thái |
 |---|---|---|---|
-| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.4 | Cài được – pilot |
+| [seller-document-checklist](skills/seller-document-checklist/SKILL.md) | Đối chiếu 9 mục hồ sơ | 0.1.5 | Cài được – pilot |
 | [seller-communication](skills/seller-communication/SKILL.md) | Soạn nháp mẫu tin A–I | 0.1.4 | Cài được – pilot |
 | [first-product-assistant](skills/first-product-assistant/SKILL.md) | Nháp sản phẩm, kiểm claim | 0.1.3 | Cài được – pilot |
 | [daily-operations-report](skills/daily-operations-report/SKILL.md) | Báo cáo tracker, nháp chuyển cấp | 0.2.2 | Cài được – pilot |
@@ -162,27 +162,28 @@ Daily report dùng JSON nghiệp vụ trong references; thay enum/quy tắc sử
 
 ## Kiểm thử
 
-Tổng **27 ca** trong [test-cases](tests/test-cases.md):
+Tổng **35 ca** trong [test-cases](tests/test-cases.md):
 
 | Nhóm | Số ca | Phạm vi | Trạng thái |
 |---|---|---|---|
 | Pilot bắt buộc | 14 | TC-01…TC-10, SAFE-01…SAFE-04 | Chưa chạy trên Claude Project; phải chạy trước pilot |
+| Bổ sung từ case nhân viên | 8 | TC-11…TC-18, dữ liệu trong tests/sim/ | Chưa chạy trên Claude Project |
 | Công cụ | 13 | PR-01…PR-06, MT-01…MT-04, TR-01…TR-03 | Kiểm tra tự động trên GitHub theo workflow hiện có; phạm vi thực chạy được nêu bên dưới |
 
 Workflow GitHub hiện so fixture giá và tracker với expected JSON. Ảnh vuông/gộp PDF đã kiểm chạy trên SIM ở v0.2; MT-03 là ca dừng ở lớp Skill, chưa chạy kiểm hành vi mô hình và không được coi là đạt chỉ nhờ script. Không phải cả 13 ca công cụ đều đã được tự động hoá trên GitHub; lần này không sửa script/workflow.
 
-Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là 14 ca pilot bắt buộc; 27 là tổng số ca thiết kế. Người kiểm định ghi kết quả thực tế, không suy UAT từ kiểm tra tĩnh.
+Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là 14 ca pilot bắt buộc; 35 là tổng số ca thiết kế. Người kiểm định ghi kết quả thực tế, không suy UAT từ kiểm tra tĩnh.
 
 ## Cấu trúc thư mục
 
 | Thư mục / tệp | Nội dung |
 |---|---|
 | docs/00–13 | Hướng dẫn góp ý; tổng quan, quy trình, guardrails, dữ liệu, tracker, trạng thái, SOP, thay đổi, sự cố, kho tri thức, truy vết, tự chủ và điều kiện chạy thử hồ sơ thật |
-| project/ | Instructions và danh mục kho tri thức APPROVED |
+| project/ | Instructions, hướng dẫn cài đặt, danh mục kho tri thức và gói nạp do export_kb.py sinh: kb-draft/ (Project thử nghiệm), kb/ (Project vận hành) |
 | skills/ | Sáu Skill cài được, references/templates/scripts tự chứa |
 | skills-draft/ | Hai bản nháp chưa kích hoạt, không cài |
-| templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp |
-| tests/ | 27 ca thiết kế, fixture SIM và expected JSON; không hồ sơ thật |
+| templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp, mẫu phê duyệt KU, hàng chờ hỏi owner |
+| tests/ | 35 ca thiết kế, input SIM, fixture và expected JSON; không hồ sơ thật |
 | kb-workspace/ | Đầu ra mô phỏng của bước biên tập tri thức (candidate KU DRAFT, log mâu thuẫn/khoảng trống, đối soát label). Không phải kho APPROVED, không nạp Project |
 | tools/ | Kiểm và đóng gói Skill (build_skills.py); sinh catalog và gói nạp Project từ candidate KU (export_kb.py) |
 | .github/ | Workflow kiểm tra tự động |

@@ -209,3 +209,20 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - Thay đổi: thêm sổ nguồn `kb-workspace/ai-seller-onboarding/so-nguon.csv` (10 tài liệu APPROVED, 2 không dùng); danh mục v0.5.2 tách cột duyệt tài liệu nguồn khỏi trạng thái KU; gói `kb-draft` ghi trạng thái tài liệu nguồn từng KU; docs/07 v0.2.1; docs/13 v0.2.1 (sửa số KU thành 33).
 - Skill: seller-document-checklist v0.1.3 → v0.1.4 (chỉ nhãn nguồn, không đổi quy trình). 14 ca chưa chạy.
 - Không đổi: chưa KU nào APPROVED, chưa có gói `project/kb/`; CF-01…CF-06 còn hoãn; candidate giữ nguyên revision nên phiếu duyệt đang chờ vẫn dùng được.
+
+## Duyệt 33 KU cho pilot — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận). Người quyết: người thiết kế agent.
+- Lý do: có kho tri thức dùng được để chạy pilot.
+- Thay đổi: 33 KU APPROVED cho pilot, sinh `project/kb/`; 11 KU mâu thuẫn nạp kèm nhãn (thay quyết định hoãn nạp cùng ngày). Công cụ nhận `conflict_resolved=hoan`; mẫu phiếu thêm cột `mau_thuan_chua_quyet`. Danh mục v0.6.0, instructions v0.1.3, docs/07 v0.2.2, docs/13 v0.2.2, hướng dẫn cài đặt v0.1.1.
+- Skill: seller-document-checklist v0.1.4 → v0.1.5 (chỉ ghi chú nguồn). 14 ca và hành vi với KU mâu thuẫn chưa chạy.
+- Giới hạn: người duyệt được chỉ định (Huyền) chưa duyệt; chưa đối chiếu từng KU với nguồn; CF-01…CF-06 chưa quyết.
+
+## Sửa lỗi sau rà soát repo — 2026-11-25
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- tools/export_kb.py: phiếu duyệt không có KU APPROVED hợp lệ thì dừng với exit 2 và giữ nguyên `project/kb/`; trước đó công cụ xoá 6 tệp nhóm.
+- SIM-BATCH-001 r5: KU c0001 bỏ câu quy tắc xử lý số tài khoản trái quyết định giai đoạn 1 (22/11/2026); sinh lại `project/kb-draft/`. Người thiết kế agent duyệt r5 cho pilot cùng ngày (chưa đối chiếu lại với nguồn), đã sinh lại `project/kb/` đủ 33 KU.
+- README, docs/11 v0.1.2 và tests/test-cases.md v0.1.2: sửa tổng số ca thành 35, cập nhật mô tả project/, templates/, tests/.
+- Project instructions v0.1.3 → v0.1.4: mẫu tin A–I, thêm điều hướng affiliate-price-review và seller-media-tools. Cần dán lại vào Project đã tạo. Danh mục v0.6.1 ghi revision và phê duyệt của c0001.
+- Không đổi Skill. 14 ca chưa chạy.

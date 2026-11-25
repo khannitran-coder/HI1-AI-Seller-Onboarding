@@ -1,12 +1,12 @@
 # Danh mục KU
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Gói này cố ý ghi mọi KU là DRAFT để kiểm hành vi; trạng thái duyệt thật xem gói vận hành. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 Số KU: 33. est_tokens ≈ số ký tự / 3 của file candidate.
 
 | ID tạm | Tiêu đề | Loại | Phạm vi | Hiệu lực | est_tokens | Trạng thái | Cờ | Tệp |
 |---|---|---|---|---|---|---|---|---|
-| 001:c0001 | Thông tin và giấy tờ nhà bán cung cấp để mở shop | L1/RULE | {"seller_type": ["DN", "HKD", "HTX"]} | chưa có | 910 | DRAFT |  | checklist-mo-shop.md |
+| 001:c0001 | Thông tin và giấy tờ nhà bán cung cấp để mở shop | L1/RULE | {"seller_type": ["DN", "HKD", "HTX"]} | chưa có | 957 | DRAFT |  | checklist-mo-shop.md |
 | 002:c0002 | Giấy tờ cung cấp khi đăng ký shop, kể cả thực phẩm, TPCN, mỹ phẩm và hàng nhập khẩu | L1/RULE | {"category": ["thực phẩm", "TPCN", "mỹ phẩm"]} | chưa có | 776 | DRAFT |  | checklist-mo-shop.md |
 | 002:c0004 | Thông tin nhà bán cung cấp để tạo và thiết lập gian hàng | L1/RULE | chưa xác nhận | chưa có | 704 | DRAFT |  | checklist-mo-shop.md |
 | 001:c0021 | Thông điệp phí trên tờ rơi mở shop: 0 phí sàn, 0 phí nền tảng, 0 phí trung gian | L1/RULE | {"seller_type": ["DN", "HKD", "HTX"]} | chưa có | 587 | DRAFT | conflict | chinh-sach-nha-ban.md |

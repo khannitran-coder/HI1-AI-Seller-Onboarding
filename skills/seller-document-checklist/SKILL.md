@@ -5,9 +5,9 @@ description: "Đối chiếu danh sách tên/loại chứng từ với checklist
 
 # seller-document-checklist
 
-version: 0.1.4
+version: 0.1.5
 
-v0.1.4 – pilot, chưa COO duyệt
+v0.1.5 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -45,7 +45,7 @@ Checklist thực tế của nhóm (thay checklist dự thảo trước) [CHỜ C
 
 Điều kiện chủ thể [CHỜ COO DUYỆT – D-04]: doanh nghiệp, HTX hoặc hộ kinh doanh có MST và xuất được hoá đơn. Nhóm hàng thực phẩm/OCOP giữ thêm ATVSTP, chứng nhận OCOP; phạm vi áp dụng từng mục cần COO xác nhận, không tự miễn. Cá nhân tự do chưa có căn cứ nhận hồ sơ, chuyển Trưởng nhóm.
 
-Nhãn nguồn theo batch mô phỏng SIM-BATCH-001 (tài liệu nguồn được người thiết kế agent xác nhận duyệt ngày 25/11/2026; candidate vẫn DRAFT, chưa phải nguồn APPROVED): mục 1–7 khớp tờ rơi mở shop (SIM-SRC-002) và mục 1–8 khớp văn bản mở shop (SIM-SRC-001); điều kiện chủ thể DN/HTX/HKD có MST và hoá đơn khớp tờ rơi. [CHƯA CÓ NGUỒN] Mục 9 chỉ có căn cứ gián tiếp từ hợp đồng mẫu; ATVSTP và chứng nhận OCOP chưa có nguồn trong batch, chờ nguồn và owner.
+Nhãn nguồn theo batch mô phỏng SIM-BATCH-001 (tài liệu nguồn được người thiết kế agent xác nhận duyệt ngày 25/11/2026; trạng thái duyệt của từng KU xem trong gói kho tri thức của Project): mục 1–7 khớp tờ rơi mở shop (SIM-SRC-002) và mục 1–8 khớp văn bản mở shop (SIM-SRC-001); điều kiện chủ thể DN/HTX/HKD có MST và hoá đơn khớp tờ rơi. [CHƯA CÓ NGUỒN] Mục 9 chỉ có căn cứ gián tiếp từ hợp đồng mẫu; ATVSTP và chứng nhận OCOP chưa có nguồn trong batch, chờ nguồn và owner.
 
 Nhận danh sách tên/loại, cờ có/không và nội dung hồ sơ theo quyết định giai đoạn 1; không lặp lại đầy đủ số CCCD/STK; dùng placeholder khi xuất báo cáo rộng. “Có” không xác nhận đúng chủ thể hay hợp lệ.
 

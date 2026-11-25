@@ -1,6 +1,6 @@
 # Đơn hàng, thanh toán, đối soát, đổi trả
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Gói này cố ý ghi mọi KU là DRAFT để kiểm hành vi; trạng thái duyệt thật xem gói vận hành. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0006 — Hợp đồng hợp tác: phí dịch vụ và chi phí nhà bán chịu
 - Trạng thái: DRAFT (chưa duyệt)

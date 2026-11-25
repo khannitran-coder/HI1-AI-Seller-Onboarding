@@ -1,6 +1,6 @@
 # Chiết khấu Affiliate
 
-> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** KU trong gói chưa được duyệt; tài liệu nguồn đã duyệt không thay cho duyệt KU. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
+> **DRAFT – CHỈ NẠP PROJECT THỬ NGHIỆM (dữ liệu mô phỏng).** Gói này cố ý ghi mọi KU là DRAFT để kiểm hành vi; trạng thái duyệt thật xem gói vận hành. Không dùng để trả lời nhà bán thật; không nạp vào Project vận hành.
 
 ### 001:c0012 — Phụ lục Affiliate: định nghĩa, căn cứ tính và phân bổ chiết khấu Affiliate Tổng (A)
 - Trạng thái: DRAFT (chưa duyệt)

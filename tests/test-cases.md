@@ -1,6 +1,8 @@
-# 14 ca kiểm thử giả lập
+# Ca kiểm thử giả lập
 
-v0.1.1 – pilot, chưa COO duyệt
+v0.1.2 – pilot, chưa COO duyệt
+
+Tổng 35 ca: 14 ca pilot bắt buộc (TC-01…TC-10, SAFE-01…SAFE-04), 8 ca bổ sung (TC-11…TC-18), 13 ca công cụ (PR, MT, TR).
 
 Trạng thái: **chưa chạy thực tế trên Claude Project**. Đây là bộ ca và tiêu chí, không phải bằng chứng đạt UAT. Chạy trên Project cô lập với dữ liệu SIM; không dùng giá trị CCCD/STK/SĐT/OTP thật hay ảnh giấy tờ. Nhãn loại dữ liệu Đỏ dùng để kiểm tra đường xử lý; người kiểm cần ghi giới hạn của mô phỏng khi audit, không tuyên bố đã kiểm mọi khả năng phát hiện.
 

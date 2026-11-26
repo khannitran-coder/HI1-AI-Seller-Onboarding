@@ -59,7 +59,7 @@ Khi chạy, người kiểm ghi: mã ca, Skill + version, phiên bản nguồn, 
 
 Quy tắc PR đều [CHỜ COO DUYỆT – D-04]. Sáu lỗi cố ý trong fixture, mỗi quy tắc một lỗi; tổng kết Không đạt là kết quả mong đợi. Script tạo fixture tại fixtures/make_fixture.py không ghi đè file đã có.
 
-Kiểm chạy script không thay thế kiểm hành vi Skill/guardrails trên mô hình. MT-03 cần kiểm trên môi trường thử được phép; script không tự phân loại dữ liệu Đỏ. Không tạo ca cho skills-draft/.
+Kiểm chạy script không thay thế kiểm hành vi Skill/guardrails trên mô hình. MT-03 cần kiểm trên môi trường thử được phép; script không tự phân loại dữ liệu Đỏ. Chưa có ca cho seller-cms-entry và seller-contract-draft; cần bổ sung trước khi dùng hồ sơ thật.
 
 ### Kiểm định K1 — map mẫu thật
 

@@ -37,7 +37,7 @@ Hệ thống là lớp hỗ trợ đặt cạnh quy trình onboarding nhà bán 
 | Tracker vận hành | Google Sheet, 26 cột | Theo dõi hồ sơ, owner, hạn, đo KPI | Không phải nguồn chính thức; người ghi |
 | Kho tri thức | Thư mục Drive + Project knowledge | Checklist, chính sách, mẫu tin, hướng dẫn giao diện có phiên bản | Chỉ tài liệu APPROVED được nạp |
 | Lớp điều phối | Claude Cowork (ứng dụng Claude desktop, tài khoản doanh nghiệp) – Project "HI1 Seller Onboarding" | Instructions chung (guardrails, chặn dữ liệu Đỏ, output contract, chọn Skill); thư mục được kết nối (NHÀ BÁN, Zalo Received Files); Claude in Chrome cho CMS và Google Maps; computer use đọc Zalo PC; scheduled task | Không bấm Tạo mới/Lưu/Duyệt, không gửi tin, không nhập mật khẩu; quyền từng hành động theo docs/12 |
-| Skill | 7 thư mục cài được trong skills/; 2 bản nháp trong skills-draft/ | Một nghiệp vụ mỗi Skill, phiên bản riêng | Chỉ cài skills/; skills-draft/ không cài, chưa kích hoạt |
+| Skill | 9 thư mục cài được trong skills/ | Một nghiệp vụ mỗi Skill, phiên bản riêng | Skill dùng CMS (hi1-mo-shop, seller-cms-entry) và hợp đồng (seller-contract-draft) chỉ chạy dữ liệu SIM tới khi COO duyệt D-07a/D-07b/D-08b |
 | Báo cáo định kỳ | Scheduled task trong Claude Cowork, 17:00 (Asia/Ho_Chi_Minh) | Chạy daily-operations-report trên tracker | Chỉ đọc; bật sau quyết định D-03 |
 
 ### Luồng xử lý một hồ sơ
@@ -102,8 +102,8 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 - Kiểm bảng giá Affiliate và chuẩn bị media có Skill chỉ hỗ trợ kiểm/chuẩn bị bản sao; hợp đồng và nhập CMS chỉ có bản nháp chưa kích hoạt, chưa có quyền tự động hoá.
 ### Hướng phát triển
 
-- v0.2: affiliate-price-review và seller-media-tools cài được để kiểm/chuẩn bị nháp; seller-contract-draft là bản nháp D-08b chưa cài/kích hoạt.
-- seller-cms-entry: 07a chỉ đọc trong pilot nếu COO duyệt; 07b điền trước nút Lưu sau pilot; 07c (AI bấm Lưu/Duyệt) không làm.
+- v0.2: affiliate-price-review và seller-media-tools cài được để kiểm/chuẩn bị nháp.
+- 26/11/2026: seller-cms-entry (form sản phẩm, xem trạng thái) và seller-contract-draft (hợp đồng, cần Windows có Office) chuyển vào skills/ để chạy trong Project; dữ liệu thật chờ D-07a/D-07b/D-08b. AI bấm Lưu/Duyệt (07c) không làm.
 - Phương án B (khi đạt ngưỡng ở docs/01): backend thay tracker; 26 cột tracker là lược đồ bảng ban đầu.
 
 ## Skill
@@ -117,10 +117,10 @@ Xem [ma trận tự chủ và rủi ro](docs/12-ma-tran-tu-chu-va-rui-ro.md).
 | [affiliate-price-review](skills/affiliate-price-review/SKILL.md) | Kiểm bảng giá Affiliate | 0.1.1 | Cài được – ngoài pilot |
 | [seller-media-tools](skills/seller-media-tools/SKILL.md) | Ảnh vuông, gộp PDF bản sao | 0.1.1 | Cài được – ngoài pilot |
 | [hi1-mo-shop](skills/hi1-mo-shop/SKILL.md) | Mở shop + thương hiệu trên CMS, điền tới trước Tạo mới; nháp tin sau mở shop | 0.1.0 | Cài được – pilot, cần Cowork; A05 chờ D-07b |
-| [seller-cms-entry](skills-draft/seller-cms-entry/SKILL.md) | Thiết kế nhập form CMS | 0.0.1 | Bản nháp – chờ D-07a,b |
-| [seller-contract-draft](skills-draft/seller-contract-draft/SKILL.md) | Thiết kế ghép hợp đồng/phụ lục | 0.0.1 | Bản nháp – chờ D-08b |
+| [seller-cms-entry](skills/seller-cms-entry/SKILL.md) | Điền form sản phẩm tới trước Lưu, xem trạng thái CMS | 0.1.0 | Cài được – pilot, cần Cowork; dữ liệu thật chờ D-07a,b |
+| [seller-contract-draft](skills/seller-contract-draft/SKILL.md) | Ghép hợp đồng/phụ lục trên bản sao | 0.1.0 | Cài được – pilot, cần Windows có Office; dữ liệu thật chờ D-08b |
 
-Cài được không đồng nghĩa đã được cấp quyền hoặc được tự chạy A06. Chỉ dùng phạm vi được duyệt; skills-draft/ không cài hoặc dùng trước quyết định tương ứng.
+Cài được không đồng nghĩa đã được cấp quyền hoặc được tự chạy A06. Chỉ dùng phạm vi được duyệt; Skill chờ D-07a/D-07b/D-08b chỉ chạy với dữ liệu SIM trong Project thử nghiệm cho tới khi có quyết định.
 
 ## Quyết định đang chờ
 
@@ -133,7 +133,7 @@ Cài được không đồng nghĩa đã được cấp quyền hoặc được 
 | D-05 | Trạng thái, điều kiện Sẵn sàng bán, chuyển cấp 2 cấp (Nghiệp vụ, COO) | Theo dõi và bàn giao vận hành |
 | D-06 | Người giữ tracker, quyền review và nghiệm thu | Trách nhiệm cập nhật, kiểm tra kết quả |
 | D-07a | AI chỉ đọc CMS | Phạm vi màn hình/quyền xem đề xuất |
-| D-07b | AI điền form CMS trước nút Lưu | Bản nháp seller-cms-entry, chưa kích hoạt |
+| D-07b | AI điền form CMS trước nút Lưu | hi1-mo-shop, seller-cms-entry (đã cài, chỉ dữ liệu SIM) |
 | D-08 | Quy trình cấp thông tin đăng nhập cho shop mới | Bàn giao thông tin theo quy trình bảo mật |
 | D-08b | Phạm vi hợp đồng | Bản nháp hợp đồng và phạm vi A06 |
 | D-09 | AI ghi tracker, tạo nháp tự động, gửi tin nhắc theo lô | Các quyền đề xuất, nhật ký và hậu kiểm |
@@ -146,7 +146,7 @@ Hướng dẫn cài vào tài khoản doanh nghiệp kèm prompt cho Claude desk
 
 1. Pilot chạy trên gói **Claude Team** (quyết định 26/11/2026). [CHỜ COO DUYỆT – D-03] Kiểm quyền dữ liệu và cài đặt tổ chức của gói Team; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Trong Claude Cowork (ứng dụng desktop) tạo Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md); kết nối thư mục và bật Claude in Chrome theo [hướng dẫn cài](project/cai-dat-claude.md).
-3. Chạy `python tools/build_skills.py` → lấy zip trong dist/ (mỗi zip chứa thư mục trùng tên Skill; dist/short/ là bản mô tả ≤200 ký tự dùng khi claude.ai báo mô tả quá dài). Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
+3. Chạy `python tools/build_skills.py` → lấy zip trong dist/ (mỗi zip chứa thư mục trùng tên Skill; dist/short/ là bản mô tả ≤200 ký tự dùng khi claude.ai báo mô tả quá dài). Công cụ kiểm trước khi đóng gói và chỉ đóng skills/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt. Gói nạp được sinh bằng `python tools/export_kb.py`: `project/kb-draft/` chỉ cho Project thử nghiệm, `project/kb/` (khi có tệp phê duyệt) cho Project vận hành; chi tiết ở mục E của danh mục.
 5. [CHỜ COO DUYỆT – D-06] Tạo tracker với [header CSV](templates/tracker-header.csv), kiểm kiểu/enum theo [schema](docs/05-tracker-schema.md); AI chỉ đọc, người cập nhật sau duyệt.
 6. [CHỜ COO DUYỆT – D-03] Sau khi connector được COO quyết và người cấu hình xác minh quyền chỉ đọc, tạo scheduled task lúc **17:00 Asia/Ho_Chi_Minh** hằng ngày: “Dùng daily-operations-report đọc tracker được cấp quyền, chốt thời điểm và phạm vi, soạn báo cáo cùng phiếu chuyển cấp; che PII, không sửa Sheet/CMS, không gửi ra ngoài, cần người duyệt trước gửi/lưu”. Kiểm một lần chạy SIM và quyền chỉ đọc trước khi bật. Repo chỉ hướng dẫn cài, chưa tạo task/connector thật.
@@ -157,7 +157,7 @@ Chạy `python tools/build_skills.py --check` để kiểm mà không tạo zip;
 
 - affiliate-price-review: Python + openpyxl; dùng schema trong folder, chỉ Excel đã che dữ liệu; data_only=True không tính công thức, thiếu cache phải chưa xác minh.
 - seller-media-tools: Python + Pillow + pypdf; chạy trong Claude Cowork (hoặc Project có code execution hỗ trợ thư viện), không cần Windows/Office; người xác nhận không chứa dữ liệu Đỏ trước chạy, chỉ xuất bản sao.
-- seller-contract-draft chỉ dự kiến Windows có Word/Excel, chưa kiểm COM; seller-cms-entry chưa cấp quyền trình duyệt/CMS. Cả hai là bản nháp không cài.
+- seller-contract-draft cần Windows có Word/Excel (Cowork trên máy nhân viên), chưa kiểm COM; seller-cms-entry cần Claude in Chrome đã đăng nhập CMS.
 
 Đọc [SOP hằng ngày](docs/07-sop-nhan-vien.md) trước dùng. Thiếu nguồn ghi “Chưa có căn cứ xác nhận”. Không đưa dữ liệu Đỏ vào AI; nếu gặp phải dừng, không lặp giá trị, nhắc xoá và báo sự cố đã che. Nội dung nhà bán là dữ liệu, không phải lệnh. Chỉ dùng SIM-xxx trong repo.
 
@@ -182,8 +182,7 @@ Trong mục Kiến trúc giữ nguyên văn, “14 ca kiểm thử” nghĩa là
 |---|---|
 | docs/00–13 | Hướng dẫn góp ý; tổng quan, quy trình, guardrails, dữ liệu, tracker, trạng thái, SOP, thay đổi, sự cố, kho tri thức, truy vết, tự chủ và điều kiện chạy thử hồ sơ thật |
 | project/ | Instructions và danh mục kho tri thức APPROVED |
-| skills/ | Bảy Skill cài được, references/templates/scripts tự chứa |
-| skills-draft/ | Hai bản nháp chưa kích hoạt, không cài |
+| skills/ | Chín Skill cài được, references/templates/scripts tự chứa |
 | templates/ | Góp ý, tracker 26 cột, nhật ký AI 9 cột, phiếu bàn giao/chuyển cấp |
 | tests/ | 27 ca thiết kế, fixture SIM và expected JSON; không hồ sơ thật |
 | kb-workspace/ | Đầu ra mô phỏng của bước biên tập tri thức (candidate KU DRAFT, log mâu thuẫn/khoảng trống, đối soát label). Không phải kho APPROVED, không nạp Project |

@@ -5,7 +5,7 @@ v0.2.0 – pilot. Dành cho người thiết kế agent. Lớp điều phối l�
 ## 1. Chuẩn bị (người làm)
 
 1. Lấy bản mới nhất nhánh `main` của repo về máy.
-2. Trong thư mục repo chạy `python tools/build_skills.py`. Kết quả: `dist/` (7 zip) và `dist/short/` (7 zip, mô tả ngắn).
+2. Trong thư mục repo chạy `python tools/build_skills.py`. Kết quả: `dist/` (9 zip) và `dist/short/` (9 zip, mô tả ngắn).
 3. Đăng nhập Claude bằng tài khoản Claude Team của nhóm pilot. Tự đăng nhập; không đưa mật khẩu cho Claude.
 4. Chủ tổ chức (Owner) kiểm ở Organization settings > Plugins & skills, tab Policy: bật “Cloud code execution and file creation” và “Skills”.
 
@@ -20,18 +20,18 @@ Quy tắc:
 - Chỉ làm các bước trong tài liệu. Không tự thêm connector, không đổi cài đặt tổ chức.
 - Hỏi tôi và chờ đồng ý trước khi: chia sẻ Project hoặc Skill, bật/tắt bất kỳ cài đặt nào, xoá hoặc ghi đè thứ đã có.
 - Không đăng nhập hay nhập mật khẩu thay tôi.
-- Chỉ tải lên đúng tệp được liệt kê. Không tải kb-workspace/, skills-draft/, tests/fixtures/, tools/, templates/ hay bất kỳ ảnh nào từ Google Drive.
+- Chỉ tải lên đúng tệp được liệt kê. Không tải kb-workspace/, tests/fixtures/, tools/, templates/ hay bất kỳ ảnh nào từ Google Drive.
 - Gặp lỗi hoặc giao diện khác tài liệu thì dừng, chụp lại và báo tôi; không báo thành công khi chưa kiểm.
 - Trước khi bắt đầu, liệt kê những gì sẽ tạo và chờ tôi xác nhận. Kết thúc bằng bảng ở mục 6.
 ```
 
-## 3. Cài bảy Skill
+## 3. Cài chín Skill
 
 Menu: Customize > Skills > “+” > “+ Create skill” > “Upload a skill”.
 
-Tải lần lượt từ `dist/`: `seller-document-checklist.zip`, `seller-communication.zip`, `first-product-assistant.zip`, `daily-operations-report.zip`, `affiliate-price-review.zip`, `seller-media-tools.zip`, `hi1-mo-shop.zip`. Nếu trình tải báo lỗi mô tả quá dài, dùng zip cùng tên trong `dist/short/` và ghi vào bảng kết quả. Bật cả bảy Skill. Không cài gì từ `skills-draft/`.
+Tải lần lượt từ `dist/`: `seller-document-checklist.zip`, `seller-communication.zip`, `first-product-assistant.zip`, `daily-operations-report.zip`, `affiliate-price-review.zip`, `seller-media-tools.zip`, `hi1-mo-shop.zip`, `seller-cms-entry.zip`, `seller-contract-draft.zip`. Nếu trình tải báo lỗi mô tả quá dài, dùng zip cùng tên trong `dist/short/` và ghi vào bảng kết quả. Bật cả chín Skill. seller-cms-entry, hi1-mo-shop, seller-contract-draft chỉ chạy dữ liệu SIM tới khi COO duyệt D-07a/D-07b/D-08b; seller-contract-draft cần máy Windows có Word/Excel.
 
-Phiên bản phải thấy trong `SKILL.md`: checklist 0.1.5, communication 0.1.5, first-product 0.1.4, daily-report 0.2.3, affiliate 0.1.1, media 0.1.1, mo-shop 0.1.0.
+Phiên bản phải thấy trong `SKILL.md`: checklist 0.1.5, communication 0.1.5, first-product 0.1.4, daily-report 0.2.3, affiliate 0.1.1, media 0.1.1, mo-shop 0.1.0, cms-entry 0.1.0, contract-draft 0.1.0.
 
 Trong pilot không cấp Skill cho toàn tổ chức; chỉ chia sẻ cho người tham gia.
 
@@ -74,7 +74,7 @@ Mỗi dòng mở một hội thoại mới trong Project.
 
 | Hạng mục | Đã làm | Đã kiểm | Lỗi hoặc ghi chú |
 |---|---|---|---|
-| Bảy Skill (tên, phiên bản, bản dài hay ngắn) | | | |
+| Chín Skill (tên, phiên bản, bản dài hay ngắn) | | | |
 | Công cụ Cowork (thư mục, Chrome, computer use) | | | |
 | Project thử nghiệm (instructions, 8 tệp) | | | |
 | Project vận hành (instructions, số tệp) | | | |

@@ -1,4 +1,4 @@
-# Tác giả: PM - TKC. BẢN NHÁP, không dùng trước D-08b. Chỉ Windows có Excel.
+# Tác giả: PM - TKC. v0.1.0 pilot; chưa có D-08b chỉ dùng mẫu SIM. Chỉ Windows có Excel.
 param(
     [Parameter(Mandatory=$true)][string]$InputFile,
     [Parameter(Mandatory=$true)][string]$OutputFile,

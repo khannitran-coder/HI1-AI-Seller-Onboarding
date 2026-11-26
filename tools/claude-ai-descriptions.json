@@ -3,7 +3,9 @@
   "daily-operations-report": "Đọc tracker chỉ đọc, tổng hợp báo cáo cuối ngày, hồ sơ tồn/quá hạn và phiếu chuyển cấp. Dùng khi “báo cáo cuối ngày”, “chốt ca”. Không sửa Sheet, không tự gửi.",
   "first-product-assistant": "Nháp sản phẩm đầu tiên, kiểm trường thiếu và claim cần chứng cứ. Dùng khi “đăng sản phẩm”, “viết mô tả”, “SKU”, “OCOP”. Không tự đăng, không sửa giá hay xuất xứ.",
   "hi1-mo-shop": "Mở shop và tạo thương hiệu trên CMS Hi1 từ Zalo PC và thư mục nhà bán; điền tới trước nút Tạo mới. Dùng khi “mở shop”, “tạo thương hiệu”. Không bấm Tạo mới, không nhập mật khẩu.",
+  "seller-cms-entry": "Điền form sản phẩm trên CMS tới trước nút Lưu, xem trạng thái shop/sản phẩm. Dùng khi “nhập sản phẩm lên CMS”, “sản phẩm chờ duyệt”. Không bấm Lưu, không sửa giá/tồn.",
   "seller-communication": "Soạn nháp tin gửi nhà bán theo mẫu A–I. Dùng khi “soạn tin”, “nhắc bổ sung”, “tin chào mừng”, “báo đã duyệt”. Không tự gửi, không hứa ngày duyệt, không xin OTP.",
+  "seller-contract-draft": "Chuẩn bị bản sao hợp đồng, phụ lục Affiliate từ mẫu đã duyệt, gộp PDF. Dùng khi “làm hợp đồng”, “ghép phụ lục”. Cần Windows có Office. Không ký, không gửi.",
   "seller-document-checklist": "Đối chiếu chứng từ nhà bán với checklist, lập bảng Đủ/Thiếu/Cần xác minh. Dùng khi “kiểm hồ sơ”, “thiếu giấy tờ gì”. Không kết luận pháp lý, không tự duyệt.",
   "seller-media-tools": "Làm bản sao ảnh vuông và gộp PDF đúng thứ tự. Dùng khi “ảnh vuông”, “nền trắng”, “gộp PDF”. Không dùng cho giấy tờ tuỳ thân hay sao kê, không ghi đè bản gốc."
 }

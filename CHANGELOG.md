@@ -225,3 +225,12 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 
 - Người thực hiện: PM - TKC.
 - Quyết định: nhóm chạy pilot trên gói Claude Team. Cập nhật docs/13 (điều kiện 1), README (Cài đặt bước 1), project/cai-dat-claude.md (tiêu đề, bước đăng nhập), docs/12 (R07). Không đổi Skill; 14 ca chưa chạy.
+
+## Chuyển hai Skill nháp vào skills/ — 2026-11-26
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Lý do: PM yêu cầu chạy seller-cms-entry và seller-contract-draft trong Project trên Claude Team.
+- Chuyển skills-draft/ → skills/ (xoá thư mục skills-draft). Cả hai 0.0.1 → 0.1.0; bỏ nhãn BẢN NHÁP; thêm mô tả ngắn; guardrails đồng bộ bản hiện hành (chính sách dữ liệu giai đoạn 1, chuyển cấp 2 cấp).
+- seller-cms-entry thu về form Quản lý sản phẩm và xem trạng thái; form Đối tác/Thương hiệu chuyển cho hi1-mo-shop để không trùng quy tắc. seller-contract-draft ghi rõ cần Windows có Word/Excel qua Cowork.
+- Dữ liệu thật vẫn chờ COO duyệt D-07a/D-07b/D-08b; trước đó chỉ chạy SIM trong Project thử nghiệm. Chưa có ca kiểm thử cho hai Skill này.
+- Cập nhật README, docs/02, docs/11, docs/12, docs/13, tests/test-cases.md, project/cai-dat-claude.md. build_skills --check đạt 9 Skill.

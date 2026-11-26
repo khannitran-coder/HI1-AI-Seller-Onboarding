@@ -1,4 +1,4 @@
-# Tác giả: PM - TKC. BẢN NHÁP, không dùng trước D-08b. Chỉ Windows có Word.
+# Tác giả: PM - TKC. v0.1.0 pilot; chưa có D-08b chỉ dùng mẫu SIM. Chỉ Windows có Word.
 param([Parameter(Mandatory=$true)][string]$Config)
 $ErrorActionPreference = 'Stop'
 $c = Get-Content -Raw -Encoding UTF8 $Config | ConvertFrom-Json

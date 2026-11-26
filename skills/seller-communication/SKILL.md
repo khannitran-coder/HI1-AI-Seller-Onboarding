@@ -5,9 +5,8 @@ description: "Soạn nháp tin lịch sự theo mẫu A–I, giữ placeholder v
 
 # seller-communication
 
-version: 0.1.4
-
-v0.1.4 – pilot, chưa COO duyệt
+version: 0.1.5
+v0.1.5 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -59,7 +58,7 @@ Không tự gửi; không hứa ngày duyệt, có đơn/doanh thu; không thêm
 
 ## Xử lý ngoại lệ
 
-Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 nhân viên + Trưởng nhóm; cấp 2 bộ phận chuyên môn phù hợp; cấp 3 COO nếu cần quyết định chính sách/quyền/nguồn. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
+Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 Nghiệp vụ (Trưởng nhóm hoặc bộ phận chuyên môn phù hợp); Cấp 2 COO nếu cần quyết định chính sách/quyền/nguồn/ngoại lệ. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
 
 ## Ví dụ 1 case giả lập
 

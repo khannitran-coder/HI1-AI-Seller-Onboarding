@@ -9,8 +9,7 @@ Có thể cài vào môi trường được cấp quyền; quy tắc nghiệp v�
 
 Tác giả: PM - TKC
 
-version: 0.1.0
-
+version: 0.1.1
 ## Mục đích
 
 Tạo bản sao media. Chạy trong Claude Project có code execution hỗ trợ thư viện hoặc Cowork; không cần Windows/Office. [CHỜ COO DUYỆT – D-08b] phạm vi hợp đồng; A06 chưa tự bật.

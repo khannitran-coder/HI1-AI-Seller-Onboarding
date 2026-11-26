@@ -209,3 +209,14 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - Thay đổi: thêm sổ nguồn `kb-workspace/ai-seller-onboarding/so-nguon.csv` (10 tài liệu APPROVED, 2 không dùng); danh mục v0.5.2 tách cột duyệt tài liệu nguồn khỏi trạng thái KU; gói `kb-draft` ghi trạng thái tài liệu nguồn từng KU; docs/07 v0.2.1; docs/13 v0.2.1 (sửa số KU thành 33).
 - Skill: seller-document-checklist v0.1.3 → v0.1.4 (chỉ nhãn nguồn, không đổi quy trình). 14 ca chưa chạy.
 - Không đổi: chưa KU nào APPROVED, chưa có gói `project/kb/`; CF-01…CF-06 còn hoãn; candidate giữ nguyên revision nên phiếu duyệt đang chờ vẫn dùng được.
+
+## Chuẩn hoá SOP, 12 bước, chuyển cấp 2 cấp, lớp điều phối Cowork — 2026-11-26
+
+- Người thực hiện: PM - TKC (đề xuất, chờ PM xác nhận).
+- Lý do: PM yêu cầu AI tham gia cả 12 bước ở mức tối ưu, chuyển cấp còn 2 cấp (Nghiệp vụ, COO), lớp điều phối chuyển từ Claude Project sang Claude Cowork; đồng bộ với skill hi1-mo-shop thêm cùng ngày.
+- docs/02 v0.1.0 → v0.2.0: bảng 12 bước có cột mức tự chủ, công cụ Cowork, điều kiện chuyển cấp; mục việc AI chưa làm. docs/07 v0.2.1 → v0.3.0: SOP chuẩn (vai trò, chuẩn bị đầu ca, câu lệnh mẫu 12 bước, chuyển cấp, ghi nhận, sự cố); thay mục 8 bước xử lý hồ sơ bằng bảng 12 bước, giữ các quy tắc dữ liệu và review.
+- Chuyển cấp: docs/03 v0.1.2, guardrails của 7 Skill và 2 bản nháp v0.1.1, instructions, phiếu chuyển cấp, enum escalation_to (docs/05 v0.1.2, tracker-schema.json 0.2.2): Cấp 1 Nghiệp vụ (Trưởng nhóm hoặc bộ phận chuyên môn), Cấp 2 COO.
+- Cowork: README, docs/01 v0.2.0, project/claude-project-instructions v0.2.0 (công cụ được dùng, chọn 7 Skill theo bước), project/cai-dat-claude v0.2.0 (mục 4b kết nối thư mục, Chrome, computer use; kiểm nhanh 6), docs/12 v0.2.0 (thêm A09; đề xuất A01/A05 vào M3 qua hi1-mo-shop, chờ COO duyệt D-07a/D-07b), docs/13 (bước AI hỗ trợ).
+- Skill: affiliate-price-review 0.1.0 → 0.1.1, daily-operations-report 0.2.2 → 0.2.3, first-product-assistant 0.1.3 → 0.1.4, seller-communication 0.1.4 → 0.1.5, seller-document-checklist 0.1.4 → 0.1.5, seller-media-tools 0.1.0 → 0.1.1 (chỉ nhãn chuyển cấp). hi1-mo-shop thêm version 0.1.0, references/guardrails.md, mô tả ngắn; bỏ đường dẫn ổ đĩa, mã trang CMS và chuỗi bị quét bí mật; sửa tham chiếu skill không tồn tại; nhắc điều kiện gửi ảnh “Hướng Dẫn Tải APP”.
+- Kiểm tra: build_skills --check đạt 7 Skill (trước sửa: hi1-mo-shop làm CI thất bại); fixture tracker/giá khớp expected. 14 ca chưa chạy.
+- Quyết định PM 26/11/2026: nới A05 theo hi1-mo-shop – AI điền số tài khoản công ty và tải logo trong form Đối tác, dừng trước Tạo mới; ảnh giấy tờ/CCCD và mật khẩu vẫn do người làm; A08 và R03 cập nhật tương ứng. Vẫn chờ COO duyệt D-07b trước khi dùng hồ sơ thật.

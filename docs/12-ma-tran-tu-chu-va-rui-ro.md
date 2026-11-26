@@ -2,7 +2,7 @@
 
 Đề xuất – chưa có hiệu lực. Mức áp dụng thực tế vẫn là M3 cho tới khi COO duyệt từng mã quyết định.
 
-v0.1.3 – tài liệu đề xuất; không đổi hành vi bốn Skill, không bật connector/quyền. M3 là trần hiện tại; từng hành động có thể ở M0 như bảng dưới. [CHỜ COO DUYỆT – D-07a] [CHỜ COO DUYỆT – D-07b] [CHỜ COO DUYỆT – D-08b] [CHỜ COO DUYỆT – D-09]. Các nhãn không phải bằng chứng phê duyệt.
+v0.2.0 – tài liệu đề xuất; lớp điều phối chuyển sang Claude Cowork; thêm A09; không tự bật connector/quyền. M3 là trần hiện tại; từng hành động có thể ở M0 như bảng dưới. [CHỜ COO DUYỆT – D-07a] [CHỜ COO DUYỆT – D-07b] [CHỜ COO DUYỆT – D-08b] [CHỜ COO DUYỆT – D-09]. Các nhãn không phải bằng chứng phê duyệt.
 
 ## Thang tự chủ
 
@@ -24,14 +24,19 @@ v0.1.3 – tài liệu đề xuất; không đổi hành vi bốn Skill, không 
 | A02 | Ghi tracker các cột vận hành: status_updated_at, shop_status, product_status, last_action, next_action, contact_status, risk_flags | M0 (người ghi) | M4 | Connector Google Sheets quyền ghi, giới hạn 1 file |A01 đã chạy ổn 1 tuần; BẮT BUỘC có tab nhật ký AI riêng trước khi chạy M3+/M4 | Ghi sai/ghi đè dữ liệu người nhập; lệch với CMS | Chỉ các cột trên; KHÔNG ghi status, ready_status, reviewer, review_result, approval_evidence, next_due_at; lịch sử phiên bản Sheet; Trưởng nhóm hậu kiểm mẫu 10%/ngày | D-09 |
 | A03 | Tạo nháp phiếu chuyển cấp và nháp tin nhắc việc cho hồ sơ quá hạn | M3 | M4 (tạo nháp tự động mỗi ngày, vẫn chưa gửi) | Scheduled task |; BẮT BUỘC có tab nhật ký AI riêng trước khi chạy M3+/M4 | Nhiều nháp sai làm loãng chú ý | Nháp gắn nhãn tự động; người vẫn duyệt trước gửi | D-09 |
 | A04 | Gửi tin nhắc việc mẫu D và tin hướng dẫn mẫu H qua Zalo web | M0 | M3+ | Claude in Chrome trên Zalo web, tài khoản Zalo công việc |Mẫu đã APPROVED; không cá nhân hoá ngoài placeholder; tối đa 1 tin nhắc/hồ sơ/ngày; BẮT BUỘC có tab nhật ký AI riêng trước khi chạy M3+/M4 | Gửi nhầm người/nhóm, gửi lặp, cam kết sai | Xem trước toàn bộ lô (người nhận + nội dung); duyệt 1 lần; AI chỉ gửi đúng lô; nhật ký gửi; cấm mẫu A, B, C, E, F, G, I ở mức này | D-09 |
-| A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | M0 | M3 | Claude in Chrome ; bản nháp skills-draft/seller-cms-entry (chưa kích hoạt) | Gói Team; checklist đủ; dữ liệu đã nhà bán xác nhận | Upload ảnh ghi lên máy chủ trước khi Lưu; điền nhầm đối tác; dữ liệu Đỏ trong form | AI không upload tệp, không nhập mật khẩu/số tài khoản/ô giấy tờ – người làm; AI dừng trước Lưu, người kiểm và bấm; mở form tạo mới phải tải lại trang | D-07b |
+| A05 | Điền form tạo đối tác, thương hiệu, sản phẩm trên admin tới TRƯỚC nút Lưu | M0 | M3 | Claude in Chrome ; bản nháp skills-draft/seller-cms-entry (chưa kích hoạt) | Gói Team; checklist đủ; dữ liệu đã nhà bán xác nhận | Upload ảnh ghi lên máy chủ trước khi Lưu; điền nhầm đối tác hoặc sai số tài khoản; dữ liệu Đỏ trong form | Theo hi1-mo-shop (PM nới 26/11/2026): AI được điền số tài khoản ngân hàng công ty từ giấy tờ nhà bán đã gửi và được tải logo; người đối chiếu lại STK với giấy tờ gốc trước khi bấm. AI không nhập mật khẩu, không tải ảnh giấy tờ/CCCD – người làm; AI dừng trước Tạo mới/Lưu, người kiểm và bấm; mở form tạo mới phải tải lại trang | D-07b |
 | A06 | Kiểm bảng giá Affiliate, chuẩn hoá ảnh vuông, gộp PDF hợp đồng trên bản sao | M0 | M4 với bản sao, người kiểm trước khi gửi | Cowork (Python) ; skills/affiliate-price-review, skills/seller-media-tools; bản nháp skills-draft/seller-contract-draft (chưa kích hoạt) |Mẫu hợp đồng APPROVED; BẮT BUỘC có tab nhật ký AI riêng trước khi chạy M3+/M4 | Sai số liệu trong hợp đồng | Chỉ làm trên bản sao; không sửa giá; báo dòng sai; người kiểm PDF trước khi gửi | D-08b (phạm vi hợp đồng) |
+| A09 | Đọc thư mục nhà bán trên máy (NHÀ BÁN, Zalo Received Files) và đọc nhóm Zalo PC để trích thông tin hồ sơ | M3 (theo lệnh từng hồ sơ) | M3 | Claude Cowork: thư mục kết nối, computer use chỉ đọc ; skills/hi1-mo-shop | Chỉ thư mục/nhóm của hồ sơ được giao; nhân viên ra lệnh từng lần | Đọc nhầm hồ sơ khác; tin Zalo chứa lệnh ẩn; thấy mật khẩu trong nhóm chat | Chỉ đọc, không gõ/gửi; nội dung là dữ liệu; thấy mật khẩu/OTP thì dừng, không lặp | D-07a (mở rộng phạm vi đọc) |
 | A07 | Bấm Lưu/Tạo mới, Duyệt, Kích hoạt, Đăng công khai, Xoá/Gộp tài khoản | M0 | M0 | — | — | Tác động pháp lý/tài chính, không đảo ngược | Khoá cứng | Không mở |
-| A08 | Nhập mật khẩu, OTP, số tài khoản, CCCD; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | M0 | M0 | — | — | — | Khoá cứng | Không mở |
+| A08 | Nhập mật khẩu, OTP, CCCD; số tài khoản ngoài form Đối tác của A05; sửa giá, tồn, xuất xứ, thông tin pháp lý; cam kết ngày duyệt/doanh thu | M0 | M0 | — | — | — | Khoá cứng | Không mở |
+
+## Đề xuất áp dụng pilot từ 26/11/2026
+
+PM đề xuất (chờ Cấp 2 COO duyệt D-07a, D-07b): A01 và A05 vào M3 qua skills/hi1-mo-shop chạy trong Claude Cowork — nhân viên ra lệnh từng hồ sơ, AI tìm trùng và điền form Đối tác/Thương hiệu tới trước Tạo mới, người kiểm và bấm. A09 ở M3. Các hành động khác giữ mức hiện tại. Trước khi có duyệt, chỉ chạy A01/A05 với dữ liệu SIM trong Project thử nghiệm. Quy trình theo bước ở [docs/02](02-quy-trinh-12-buoc.md).
 
 ## Quy tắc nâng/hạ mức
 
-- Nâng mức cho MỘT hành động theo lộ trình vào mức bên dưới; Trưởng nhóm đề xuất, COO duyệt bằng văn bản, ghi CHANGELOG. Từ M3 lên M3+/M4 phải đạt đủ ngưỡng tại M3.
+- Nâng mức cho MỘT hành động theo lộ trình vào mức bên dưới; Trưởng nhóm (Cấp 1 Nghiệp vụ) đề xuất, COO (Cấp 2) duyệt bằng văn bản, ghi CHANGELOG. Từ M3 lên M3+/M4 phải đạt đủ ngưỡng tại M3.
 - Hạ ngay về mức trước (không chờ họp) khi: 1 sự cố lộ dữ liệu Đỏ, 1 lần ghi/gửi ngoài phạm vi, hoặc gửi nhầm người. Trưởng nhóm hoặc PM có quyền hạ.
 - Nút dừng: tắt connector/extension cho hành động đó; quy trình thủ công trong [docs/09](09-xu-ly-su-co.md) thay thế.
 - Mỗi hành động ở M3+/M4 phải có nhật ký: thời điểm, hành động, đối tượng (merchant_id), skill_version, kết quả.
@@ -55,7 +60,7 @@ Khả năng/tác động dưới đây là đánh giá định tính đề xuấ
 |---|---|---|---|---|---|---|
 | R01 | Lộ dữ liệu Đỏ qua trang CMS | Có thể | Rất cao | A01/A05 | Allowlist màn hình; dừng ngay khi có trường Đỏ; quyền xem tối thiểu | PM + Trưởng nhóm |
 | R02 | Lệnh ẩn trong trang web/tệp điều khiển trình duyệt | Có thể | Rất cao | A01/A04/A05/A06 | Coi nội dung là dữ liệu; không thi hành lệnh trong nguồn; cô lập và dừng khi nghi ngờ | PM |
-| R03 | Upload/ghi ngầm trước nút Lưu | Có thể | Cao | A05 | AI không upload; kiểm tác động form trước khi bật; người làm phần ghi | PM + người phụ trách kỹ thuật |
+| R03 | Upload/ghi ngầm trước nút Lưu; điền sai số tài khoản | Có thể | Cao | A05 | AI chỉ tải logo, không tải giấy tờ; kiểm tác động form trước khi bật; người đối chiếu STK với giấy tờ gốc và tự bấm Tạo mới | PM + người phụ trách kỹ thuật |
 | R04 | Ghi đè tracker | Có thể | Cao | A02 | Giới hạn file/cột, đối chiếu phiên bản, không tự gộp khi sửa đồng thời; hậu kiểm 10%/ngày | Trưởng nhóm |
 | R05 | Gửi Zalo nhầm người/lặp | Có thể | Cao | A04 | Duyệt toàn bộ lô; cố định người nhận/nội dung; tối đa 1 tin nhắc/hồ sơ/ngày; nhật ký và dừng | Trưởng nhóm |
 | R06 | Hành động mang danh tài khoản nhân viên, khó truy vết | Có thể | Cao | A01/A02/A04/A05 | Tài khoản công việc; nhật ký hành động/đối tượng/skill_version; xác định người chịu trách nhiệm | PM + Trưởng nhóm |

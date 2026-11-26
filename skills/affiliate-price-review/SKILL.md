@@ -9,8 +9,7 @@ Có thể cài vào môi trường được cấp quyền; quy tắc nghiệp v�
 
 Tác giả: PM - TKC
 
-version: 0.1.0
-
+version: 0.1.1
 ## Mục đích
 
 Đọc bảng giá, không sửa workbook. [CHỜ COO DUYỆT – D-04] Toàn bộ quy tắc/ngưỡng; [CHỜ COO DUYỆT – D-08b] phạm vi hợp đồng.

@@ -1,11 +1,11 @@
 # Nháp phiếu chuyển cấp
 
-[CHỜ COO DUYỆT – D-05] — Cấp 1: nhân viên + Trưởng nhóm; cấp 2: bộ phận chuyên môn phù hợp; cấp 3: COO.
+[CHỜ COO DUYỆT – D-05] — Cấp 1 Nghiệp vụ: Trưởng nhóm hoặc bộ phận chuyên môn phù hợp (kiểm duyệt nhà bán, ngành hàng-pháp chế, kỹ thuật, CSKH-vận chuyển-thanh toán, owner tri thức). Cấp 2: COO (chính sách, quyền AI, nguồn, ngoại lệ, sự cố nghiêm trọng, Cấp 1 không xử lý được).
 
 | Trường | Nội dung |
 |---|---|
 | merchant_id | SIM-xxx |
-| mức độ | [cấp 1 / cấp 2 / cấp 3; lý do] |
+| mức độ | [cấp 1-<bộ phận nhận> / cấp 2-COO; lý do] |
 | mô tả | [đã che dữ liệu] |
 | tác động | [đã xác minh / chưa rõ] |
 | bằng chứng đã che dữ liệu | [tham chiếu an toàn, không token/PII] |

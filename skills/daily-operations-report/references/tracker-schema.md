@@ -1,6 +1,6 @@
 # Schema tracker
 
-Nguồn gốc: đồng bộ từ docs/05-tracker-schema.md v0.1.1. Ghi nguồn, không phụ thuộc file ngoài gói.
+Nguồn gốc: đồng bộ từ docs/05-tracker-schema.md v0.1.2. Ghi nguồn, không phụ thuộc file ngoài gói.
 
 v0.1.1 – pilot, chưa COO duyệt
 
@@ -28,7 +28,7 @@ Schema dưới đây là đề xuất pilot [CHỜ COO DUYỆT – D-06]. Enum n
 | next_due_at | thời gian | ISO 8601 có múi giờ; chỉ hạn đã xác nhận, thiếu thì để trống |
 | approval_evidence | chuỗi | Tham chiếu CMS/bằng chứng từ người có quyền, thời điểm; không chép nội dung nhạy cảm |
 | risk_flags | danh sách chuỗi | nghi trùng / mâu thuẫn / thiếu nguồn / lỗi hệ thống / chờ kiểm tra ngành hàng / sự cố dữ liệu / khác đã che |
-| escalation_to | enum | cấp 1 / cấp 2-kiểm duyệt nhà bán / cấp 2-ngành hàng-pháp chế / cấp 2-kỹ thuật / cấp 2-CSKH-vận chuyển-thanh toán / cấp 3-COO |
+| escalation_to | enum | cấp 1-trưởng nhóm / cấp 1-kiểm duyệt nhà bán / cấp 1-ngành hàng-pháp chế / cấp 1-kỹ thuật / cấp 1-CSKH-vận chuyển-thanh toán / cấp 1-owner tri thức / cấp 2-COO |
 | ai_used | boolean | true / false |
 | skill_version | chuỗi | Skill sinh nháp dạng seller-communication@0.1.1; nhiều Skill phân cách ; (ví dụ phiên bản cũ seller-communication@0.1.0); trống khi không dùng AI |
 | reviewer | chuỗi | Vai trò/mã người duyệt được phép, không PII |

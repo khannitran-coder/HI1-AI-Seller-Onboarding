@@ -5,9 +5,8 @@ description: "Chuẩn hoá nháp tiêu đề/mô tả từ dữ kiện nhà bán
 
 # first-product-assistant
 
-version: 0.1.3
-
-v0.1.3 – pilot, chưa COO duyệt
+version: 0.1.4
+v0.1.4 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -27,7 +26,7 @@ Tên, mô tả, giá, tồn, biến thể, đơn vị, khối lượng/kích th�
 2. Kiểm phiên bản chính sách nội dung APPROVED; thiếu/hết hiệu lực thì dừng kết luận tuân thủ và hướng dẫn đăng.
 3. Đối chiếu dữ kiện, liệt kê trường thiếu/mâu thuẫn; giá/xuất xứ mâu thuẫn thì yêu cầu nhà bán xác minh, không chọn một giá trị thay họ.
 4. Soạn tiêu đề/mô tả nháp chỉ từ dữ kiện nhất quán. Liệt kê claim cần chứng cứ: chính hãng, công dụng, chứng nhận, xuất xứ; không đưa claim chưa xác minh thành khẳng định trong nháp.
-5. Hàng có điều kiện gắn cờ đúng “Chờ kiểm tra ngành hàng”, chuyển cấp 2 ngành hàng-pháp chế. Xuất nháp, trường thiếu, claim cần chứng cứ và câu hỏi nhà bán cần xác nhận trong Tình trạng.
+5. Hàng có điều kiện gắn cờ đúng “Chờ kiểm tra ngành hàng”, chuyển Cấp 1 ngành hàng-pháp chế. Xuất nháp, trường thiếu, claim cần chứng cứ và câu hỏi nhà bán cần xác nhận trong Tình trạng.
 
 ## Khung nội dung SEO sản phẩm
 
@@ -68,7 +67,7 @@ Không tự sửa giá/tồn/xuất xứ; không thêm công dụng/chứng nh�
 
 ## Xử lý ngoại lệ
 
-Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 nhân viên + Trưởng nhóm; cấp 2 bộ phận chuyên môn phù hợp; cấp 3 COO nếu cần quyết định chính sách/quyền/nguồn. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
+Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 Nghiệp vụ (Trưởng nhóm hoặc bộ phận chuyên môn phù hợp); Cấp 2 COO nếu cần quyết định chính sách/quyền/nguồn/ngoại lệ. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
 
 ## Ví dụ 1 case giả lập
 

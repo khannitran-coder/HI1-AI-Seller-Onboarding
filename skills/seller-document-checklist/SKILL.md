@@ -5,9 +5,8 @@ description: "Đối chiếu danh sách tên/loại chứng từ với checklist
 
 # seller-document-checklist
 
-version: 0.1.4
-
-v0.1.4 – pilot, chưa COO duyệt
+version: 0.1.5
+v0.1.5 – pilot, chưa COO duyệt
 
 ## Mục đích
 
@@ -75,7 +74,7 @@ Không kết luận giấy tờ giả, hợp pháp/không hợp pháp; không mi
 
 ## Xử lý ngoại lệ
 
-Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 nhân viên + Trưởng nhóm; cấp 2 bộ phận chuyên môn phù hợp; cấp 3 COO nếu cần quyết định chính sách/quyền/nguồn. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
+Thiếu input: liệt kê trường thiếu, hỏi lại, không đoán. Thiếu nguồn: “Chưa có căn cứ xác nhận”. Nguồn mâu thuẫn/đổi phiên bản: dừng phần phụ thuộc và nhờ owner xác nhận, không dùng bản cũ. Nghi trùng: gắn cờ, không gộp/xoá. Dữ liệu Đỏ: dừng toàn bộ xử lý, nhắc xoá và ghi sự cố đã che. Ngoài quyền: không tiết lộ. [CHỜ COO DUYỆT – D-05] Cấp 1 Nghiệp vụ (Trưởng nhóm hoặc bộ phận chuyên môn phù hợp); Cấp 2 COO nếu cần quyết định chính sách/quyền/nguồn/ngoại lệ. Mọi ngoại lệ vẫn trả đủ output contract an toàn.
 
 ## Ví dụ 1 case giả lập
 
@@ -85,6 +84,6 @@ SIM-001, doanh nghiệp, ngành hàng giả lập thông thường, danh sách t
 |---|---|---|---|
 | Công bố chất lượng | Thiếu | Không có trong danh sách | Checklist vận hành 11/2026 dự thảo [CHỜ COO DUYỆT – D-04], Chưa có căn cứ xác nhận |
 
-Thiếu/vướng: chưa có checklist APPROVED. Việc cần làm: xin nguồn hiện hành. Ai làm: nhân viên + Trưởng nhóm. Hạn: Chưa xác nhận. Khi nào chuyển cấp: thiếu nguồn sang cấp 1; ngoại lệ chính sách sang COO. Nguồn (tài liệu + phiên bản): Chưa có căn cứ xác nhận.
+Thiếu/vướng: chưa có checklist APPROVED. Việc cần làm: xin nguồn hiện hành. Ai làm: nhân viên + Trưởng nhóm. Hạn: Chưa xác nhận. Khi nào chuyển cấp: thiếu nguồn sang Cấp 1 owner tri thức; ngoại lệ chính sách sang Cấp 2 COO. Nguồn (tài liệu + phiên bản): Chưa có căn cứ xác nhận.
 
 Cần người duyệt trước khi gửi/lưu: Có

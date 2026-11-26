@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "columns": [
     "merchant_id",
     "source_channel",
@@ -83,12 +83,13 @@
       "khác đã che"
     ],
     "escalation_to": [
-      "cấp 1",
-      "cấp 2-kiểm duyệt nhà bán",
-      "cấp 2-ngành hàng-pháp chế",
-      "cấp 2-kỹ thuật",
-      "cấp 2-CSKH-vận chuyển-thanh toán",
-      "cấp 3-COO"
+      "cấp 1-trưởng nhóm",
+      "cấp 1-kiểm duyệt nhà bán",
+      "cấp 1-ngành hàng-pháp chế",
+      "cấp 1-kỹ thuật",
+      "cấp 1-CSKH-vận chuyển-thanh toán",
+      "cấp 1-owner tri thức",
+      "cấp 2-COO"
     ],
     "review_result": [
       "duyệt nguyên",

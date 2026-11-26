@@ -1,4 +1,4 @@
-# Cài dự án vào tài khoản Claude doanh nghiệp
+# Cài dự án vào tài khoản Claude Team
 
 v0.2.0 – pilot. Dành cho người thiết kế agent. Lớp điều phối là Claude Cowork (ứng dụng Claude desktop) thay cho Project chỉ chạy trên web. Tên menu theo tài liệu hỗ trợ của Claude tra ngày 25/11/2026 ([tạo Skill](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills), [dùng Skill](https://support.claude.com/en/articles/12512180-use-skills-in-claude), [quản lý Skill cho tổ chức](https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization)); giao diện thực tế khác thì theo giao diện và ghi lại.
 
@@ -6,7 +6,7 @@ v0.2.0 – pilot. Dành cho người thiết kế agent. Lớp điều phối l�
 
 1. Lấy bản mới nhất nhánh `main` của repo về máy.
 2. Trong thư mục repo chạy `python tools/build_skills.py`. Kết quả: `dist/` (7 zip) và `dist/short/` (7 zip, mô tả ngắn).
-3. Đăng nhập claude.ai bằng tài khoản doanh nghiệp. Tự đăng nhập; không đưa mật khẩu cho Claude.
+3. Đăng nhập Claude bằng tài khoản Claude Team của nhóm pilot. Tự đăng nhập; không đưa mật khẩu cho Claude.
 4. Chủ tổ chức (Owner) kiểm ở Organization settings > Plugins & skills, tab Policy: bật “Cloud code execution and file creation” và “Skills”.
 
 ## 2. Prompt cho Claude trên desktop
@@ -14,7 +14,7 @@ v0.2.0 – pilot. Dành cho người thiết kế agent. Lớp điều phối l�
 Cần ứng dụng Claude desktop (Cowork) có quyền đọc thư mục repo và điều khiển trình duyệt (Claude in Chrome hoặc computer use). Nếu không có, Claude chỉ hướng dẫn từng bước và bạn bấm. Thay `<THƯ MỤC REPO>` bằng đường dẫn thật.
 
 ```text
-Cài dự án HI1 Seller Onboarding vào tài khoản Claude doanh nghiệp tôi đang đăng nhập. Mọi tệp nằm trong <THƯ MỤC REPO>. Đọc project/cai-dat-claude.md trong thư mục đó và làm đúng mục 3 đến mục 5 (gồm 4b).
+Cài dự án HI1 Seller Onboarding vào tài khoản Claude Team tôi đang đăng nhập. Mọi tệp nằm trong <THƯ MỤC REPO>. Đọc project/cai-dat-claude.md trong thư mục đó và làm đúng mục 3 đến mục 5 (gồm 4b).
 
 Quy tắc:
 - Chỉ làm các bước trong tài liệu. Không tự thêm connector, không đổi cài đặt tổ chức.

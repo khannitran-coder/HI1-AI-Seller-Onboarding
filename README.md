@@ -144,7 +144,7 @@ Các nội dung [CHỜ COO DUYỆT] là dự thảo, chưa cấp thêm quyền. 
 
 Hướng dẫn cài vào tài khoản doanh nghiệp kèm prompt cho Claude desktop: [project/cai-dat-claude.md](project/cai-dat-claude.md).
 
-1. [CHỜ COO DUYỆT – D-03] Kiểm gói Claude Team/Enterprise được cho phép và quyền dữ liệu; không tự thêm connector/quyền AI khi chưa có quyết định COO.
+1. Pilot chạy trên gói **Claude Team** (quyết định 26/11/2026). [CHỜ COO DUYỆT – D-03] Kiểm quyền dữ liệu và cài đặt tổ chức của gói Team; không tự thêm connector/quyền AI khi chưa có quyết định COO.
 2. Trong Claude Cowork (ứng dụng desktop) tạo Project “HI1 Seller Onboarding”; dán [instructions](project/claude-project-instructions.md); kết nối thư mục và bật Claude in Chrome theo [hướng dẫn cài](project/cai-dat-claude.md).
 3. Chạy `python tools/build_skills.py` → lấy zip trong dist/ (mỗi zip chứa thư mục trùng tên Skill; dist/short/ là bản mô tả ≤200 ký tự dùng khi claude.ai báo mô tả quá dài). Công cụ kiểm trước khi đóng gói và chỉ đóng skills/; tuyệt đối không cài skills-draft/. Cài zip trong mục Skills của giao diện hiện hành và xác minh chúng khả dụng trong Project; không coi nạp knowledge là cài Skill.
 4. Nạp chỉ các tài liệu APPROVED hiện hành theo [danh mục](project/knowledge-base-index.md), điền tên/owner/version/ngày hiệu lực sau xác nhận. Không nạp bản pilot như chính sách đã duyệt. Gói nạp được sinh bằng `python tools/export_kb.py`: `project/kb-draft/` chỉ cho Project thử nghiệm, `project/kb/` (khi có tệp phê duyệt) cho Project vận hành; chi tiết ở mục E của danh mục.

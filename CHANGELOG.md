@@ -220,3 +220,8 @@ Nguồn của phần công cụ v0.2: skill vận hành nội bộ của nhóm (
 - Skill: affiliate-price-review 0.1.0 → 0.1.1, daily-operations-report 0.2.2 → 0.2.3, first-product-assistant 0.1.3 → 0.1.4, seller-communication 0.1.4 → 0.1.5, seller-document-checklist 0.1.4 → 0.1.5, seller-media-tools 0.1.0 → 0.1.1 (chỉ nhãn chuyển cấp). hi1-mo-shop thêm version 0.1.0, references/guardrails.md, mô tả ngắn; bỏ đường dẫn ổ đĩa, mã trang CMS và chuỗi bị quét bí mật; sửa tham chiếu skill không tồn tại; nhắc điều kiện gửi ảnh “Hướng Dẫn Tải APP”.
 - Kiểm tra: build_skills --check đạt 7 Skill (trước sửa: hi1-mo-shop làm CI thất bại); fixture tracker/giá khớp expected. 14 ca chưa chạy.
 - Quyết định PM 26/11/2026: nới A05 theo hi1-mo-shop – AI điền số tài khoản công ty và tải logo trong form Đối tác, dừng trước Tạo mới; ảnh giấy tờ/CCCD và mật khẩu vẫn do người làm; A08 và R03 cập nhật tương ứng. Vẫn chờ COO duyệt D-07b trước khi dùng hồ sơ thật.
+
+## Gói Claude Team cho pilot — 2026-11-26
+
+- Người thực hiện: PM - TKC.
+- Quyết định: nhóm chạy pilot trên gói Claude Team. Cập nhật docs/13 (điều kiện 1), README (Cài đặt bước 1), project/cai-dat-claude.md (tiêu đề, bước đăng nhập), docs/12 (R07). Không đổi Skill; 14 ca chưa chạy.

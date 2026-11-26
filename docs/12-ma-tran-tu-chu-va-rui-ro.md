@@ -64,7 +64,7 @@ Khả năng/tác động dưới đây là đánh giá định tính đề xuấ
 | R04 | Ghi đè tracker | Có thể | Cao | A02 | Giới hạn file/cột, đối chiếu phiên bản, không tự gộp khi sửa đồng thời; hậu kiểm 10%/ngày | Trưởng nhóm |
 | R05 | Gửi Zalo nhầm người/lặp | Có thể | Cao | A04 | Duyệt toàn bộ lô; cố định người nhận/nội dung; tối đa 1 tin nhắc/hồ sơ/ngày; nhật ký và dừng | Trưởng nhóm |
 | R06 | Hành động mang danh tài khoản nhân viên, khó truy vết | Có thể | Cao | A01/A02/A04/A05 | Tài khoản công việc; nhật ký hành động/đối tượng/skill_version; xác định người chịu trách nhiệm | PM + Trưởng nhóm |
-| R07 | Dùng gói Pro (điều khoản cá nhân) cho dữ liệu thật | Có thể | Cao | A01–A06 | Xác nhận gói Team và điều khoản/quyền xử lý dữ liệu trước bật; không coi đăng ký gói là phê duyệt mọi dữ liệu | PM |
+| R07 | Dùng gói Pro (điều khoản cá nhân) cho dữ liệu thật | Có thể | Cao | A01–A06 | Pilot dùng gói Claude Team (quyết định 26/11/2026); xác nhận điều khoản/quyền xử lý dữ liệu trước bật; không coi đăng ký gói là phê duyệt mọi dữ liệu | PM |
 | R08 | Giao diện CMS/Zalo thay đổi làm thao tác sai | Có thể | Cao | A01/A04/A05 | Kiểm phiên bản, dừng khi màn hình lệch; cập nhật hướng dẫn và thử lại trước khôi phục | PM + Trưởng nhóm |
 | R09 | Quy trình cấp và bàn giao thông tin đăng nhập cho shop mới chưa đạt chuẩn bảo mật – xử lý theo D-08 | Chưa xác minh phạm vi | Rất cao | A04/A05/A08 | Xử lý theo D-08 | Trưởng nhóm + PM |
 
